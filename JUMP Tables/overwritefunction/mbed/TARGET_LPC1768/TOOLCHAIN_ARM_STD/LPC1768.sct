@@ -16,9 +16,9 @@ LR_IROM1 0x00000000 0x80000  {    ; load region size_region
 
     
 
-  ER_IROM2 0xE000 FIXED {
+  ER_IROM2 0x9000  FIXED {
 
-		foo.o (+RO)
+		blink.o (+RO)
 
   }
   

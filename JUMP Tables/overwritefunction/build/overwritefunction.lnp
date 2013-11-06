@@ -1,7 +1,7 @@
 --cpu Cortex-M3
 ".\build\main.o"
 ".\build\iap.o"
-".\build\foo.o"
+".\build\blink.o"
 --strict --scatter "mbed/TARGET_LPC1768/TOOLCHAIN_ARM_STD/LPC1768.sct"
 
 

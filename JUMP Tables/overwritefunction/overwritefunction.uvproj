@@ -425,9 +425,9 @@
               <FilePath>IAP/IAP.cpp</FilePath>
             </File>
             <File>
-              <FileName>foo.cpp</FileName>
+              <FileName>blink.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\foo.cpp</FilePath>
+              <FilePath>.\blink.cpp</FilePath>
             </File>
           </Files>
         </Group>
