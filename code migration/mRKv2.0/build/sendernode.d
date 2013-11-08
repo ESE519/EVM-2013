@@ -72,3 +72,4 @@
 .\build\sendernode.o: .\mbed\MRF24J40.h
 .\build\sendernode.o: .\mbed\bmac.h
 .\build\sendernode.o: IAP.h
+.\build\sendernode.o: .\mbed\jumptable.h

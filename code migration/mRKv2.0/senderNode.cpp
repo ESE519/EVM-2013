@@ -13,6 +13,8 @@
 #include "basic_rf.h"
 #include "bmac.h"
 #include "IAP.h"
+#include "jumptable.h"
+
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
 
@@ -54,9 +56,13 @@ int simple_function();
 void copy_code_ram();
 uint32_t anotherScore = 0;
 
+
+struct Jump_Table_Function 		table_function  __attribute__((at(0x10005000))); 
+
 int main(void)
 
 {
+		table_function.nrk_led_toggle = &nrk_led_toggle;
     printf("simple_function address is 0x%X\n\r", &simple_function);
     copy_code_ram();
     print_function((char *)&simple_function, 100);
@@ -72,8 +78,21 @@ int main(void)
 }
 
 int simple_function(){
-    int a=1,b=2;
-    return (a+b);
+	int a=1,b=2;
+	struct JUMP_TABLE *table;
+	
+
+	uint16_t addrh, addrl;
+	addrh = 0x1000;
+	addrl = 0x5000;
+	
+	
+	struct Jump_Table_Function *fnTable;
+	
+	fnTable = (struct Jump_Table_Function *)((addrh << 16) | addrl);
+	fnTable->nrk_led_toggle(ORANGE_LED);
+	
+	return (a+b);
 }
 
 /** Copying code to ram from flash**/

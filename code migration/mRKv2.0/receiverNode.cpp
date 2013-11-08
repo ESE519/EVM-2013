@@ -16,6 +16,9 @@
 #include <nrk_driver_list.h>
 #include <nrk_driver.h>
 #include "IAP.h"
+#include "jumptable.h"
+
+
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
 
@@ -52,10 +55,13 @@ char code[4096];
 void get_functionCode(char *cptr);
 typedef int (*function) ();
 function copied_function;
+
+struct Jump_Table_Function 		table_function  __attribute__((at(0x10005000))); 
+
 int main(void)
 
 {
-
+		table_function.nrk_led_toggle = &nrk_led_toggle;
     nrk_setup_ports();
     nrk_init();
     bmac_task_config();
@@ -87,7 +93,7 @@ void rx_task ()
             nrk_led_toggle(ORANGE_LED);
             local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
             
-            functionRecieved=1;
+            
             for(i=0;i<2;i++)
 							printf("%d", local_rx_buf[i]);
                              
@@ -106,7 +112,7 @@ void rx_task ()
                        
             //alloting space and writing the cvode in the flash
              if(functionSize % 256 ==0)
-               r  = iap.write( code, sector_start_adress[TARGET_SECTOR], functionSize);
+               r  = iap.write( code, sector_start_adress[TARGET_SECTOR], 256);
              else
 						   r  = iap.write( code, sector_start_adress[TARGET_SECTOR], 256);
            
@@ -118,8 +124,7 @@ void rx_task ()
 						
 					 copied_function=(function) (0xE000 | 1);    
 				 //calling the copi8ed function
-				 r = copied_function();
-				 printf("Value returned from copied function is %d\n",r);
+						functionRecieved=1;
           
         } 
 				 // pointing the function pointer to the copied code in the flash
@@ -130,7 +135,7 @@ void rx_task ()
 
 void tx_task ()
 {
-  
+		int r;
     uint8_t length, val;
   
     nrk_sig_t tx_done_signal;
@@ -149,6 +154,8 @@ void tx_task ()
 							tx_buf[1] = 100;
 							length = 2;
 							val=bmac_tx_pkt(tx_buf, length);
+							r = copied_function();
+							printf("Value returned from copied function is %d\n",r);
             }
 
         }

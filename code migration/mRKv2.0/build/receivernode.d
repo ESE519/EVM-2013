@@ -75,3 +75,4 @@
 .\build\receivernode.o: .\mbed\nrk_driver_list.h
 .\build\receivernode.o: .\mbed\nrk_driver.h
 .\build\receivernode.o: IAP.h
+.\build\receivernode.o: .\mbed\jumptable.h
