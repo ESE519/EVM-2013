@@ -16,13 +16,11 @@
 #include <nrk_driver_list.h>
 #include <nrk_driver.h>
 
-#include "jumptable.h"
-//#include "memory_manager.h"
+//#include "jumptable.h"
+#include "memory_manager.h"
+#include "function_manager.h"
 
 
-int set_start_address(uint32_t);
-int set_end_address(uint32_t);
-int copy_code_flash(char *, uint32_t);
 
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
@@ -61,13 +59,13 @@ void get_functionCode(char *cptr);
 typedef int (*function) ();
 function copied_function;
 
-struct Jump_Table_Function 		table_function  __attribute__((at(0x10005000))); 
+//struct Jump_Table_Function 		table_function  __attribute__((at(0x10005000))); 
 
 int main(void)
 
 {
 	int r;
-	table_function.nrk_led_toggle = &nrk_led_toggle;
+	function_register("led_toggle", strlen("led_toggle") + 1, (char *)&nrk_led_toggle);
     nrk_setup_ports();
     nrk_init();
     bmac_task_config();
@@ -93,6 +91,7 @@ void rx_task ()
 { 
     uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
     int i,r; 
+		char *fn_address;
     bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
     bmac_rx_pkt_set_buffer (rx_buf,102);
     //cleaning up the target sector in the flash
@@ -125,12 +124,19 @@ void rx_task ()
             //getting function size
             functionSize=256;
            
-           copy_code_flash(code, functionSize);
+           fn_address = copy_code_flash(code, functionSize, &r);
            
            functionRecieved = 0;
            bmac_rx_pkt_release ();   
 						
-					 copied_function=(function) (0xE000 | 1);    
+					if(fn_address) {	
+						copied_function=(function) ((uint32_t)fn_address | 1);    
+						printf("successfully copied\n\r");
+					}
+					
+					else {
+						printf("IAP copy error: %d\n\r", r);
+					}
 				 //calling the copi8ed function
 						functionRecieved=1;
           

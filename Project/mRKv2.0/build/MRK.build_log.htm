@@ -4,144 +4,48 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 Z:\home\rahul\Fall 2013\ese 519\GIT\EVM-2013\Project\mRKv2.0\MRK.uvproj
-Project File Date:  11/09/2013
+Project File Date:  11/10/2013
 
 <h2>Output:</h2>
 Build target 'mbed NXP LPC1768'
-compiling receiverNode2.cpp...
-receiverNode2.cpp(126): warning:  #69-D: integer conversion resulted in truncation
-              functionSize=256;
-receiverNode2.cpp(94): warning:  #177-D: variable "mole" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(94): warning:  #177-D: variable "from" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(94): warning:  #177-D: variable "received_round" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(95): warning:  #177-D: variable "r" was declared but never referenced
-      int i,r; 
-receiverNode2.cpp(147): warning:  #550-D: variable "val" was set but never used
-      uint8_t length, val;
-receiverNode2.cpp(150): warning:  #177-D: variable "ret" was declared but never referenced
-      nrk_sig_mask_t ret;
-receiverNode2.cpp(151): warning:  #177-D: variable "r_period" was declared but never referenced
-      nrk_time_t r_period;
-receiverNode2.cpp: 8 warnings, 0 errors
-linking...
-.\build\MRK.axf: error: L6047U: The size of this image (33028 bytes) exceeds the maximum allowed for this version of the linker
-Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
-".\build\MRK.axf" - 1 Error(s), 8 Warning(s).
-Target not created
-ced
-      nrk_sig_mask_t ret;
-receiverNode2.cpp(147): warning:  #177-D: variable "r_period" was declared but never referenced
-      nrk_time_t r_period;
-receiverNode2.cpp: 8 warnings, 4 errors
-".\build\MRK.axf" - 4 Error(s), 8 Warning(s).
-Target not created
-0-D: variable "rtype" was set but never used
-      uint8_t rtype;
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-      while ((volatile uint8_t) nrk_cur_task_TCB->suspend_flag == 1); // pdiener: make shure that was the right interrupt
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp: 2 warnings, 0 errors
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-   //**
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-      return 1;
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
+compiling senderNode.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+  #endif
+senderNode.cpp(144): warning:  #111-D: statement is unreachable
+                bmac_rx_pkt_release ();
+senderNode.cpp(165): warning:  #69-D: integer conversion resulted in truncation
+              tx_buf[1] = 256; //function Size
+senderNode.cpp(153): warning:  #550-D: variable "val" was set but never used
+      uint8_t val, sequenceNumber;
+senderNode.cpp(153): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+      uint8_t val, sequenceNumber;
+senderNode.cpp(154): warning:  #177-D: variable "r_period" was declared but never referenced
+      nrk_time_t r_period;   
+senderNode.cpp(223): warning:  #1-D: last line of file ends without a newline
   }
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-    uint32_t uClk;
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp: 4 warnings, 0 errors
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR; 
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR; 
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-              return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-              return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp: 5 warnings, 0 errors
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-              if(is_open==1) return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-                  return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-              return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-                          return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-              return NRK_ERROR;
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-  */
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp: 8 warnings, 0 errors
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-      if(dev_fd<0 || dev_fd>_nrk_driver_count)
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp: 1 warning, 0 errors
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(462): warning:  #550-D: variable "result" was set but never used
-        int8_t result;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(503): warning:  #177-D: variable "result" was declared but never referenced
-        uint8_t v,result, backoff, backoff_count;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #550-D: variable "e" was set but never used
-        int8_t e;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(556): warning:  #177-D: variable "backoff" was declared but never referenced
-        uint8_t backoff;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(804): warning:  #1-D: last line of file ends without a newline
-  */
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-  static uint8_t g_chan;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-  static int8_t tx_reserve;
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp: 7 warnings, 0 errors
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
-                LPC_GPIO1->FIOPIN ^= 1<<31;
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
-                LPC_GPIO1->FIOPIN ^= 1<<31;
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp: 2 warnings, 0 errors
-compiling MRF24J40.cpp...
-compiling IAP.cpp...
-compiling memory_manager.cpp...
-compiling receiverNode2.cpp...
-receiverNode2.cpp(122): warning:  #69-D: integer conversion resulted in truncation
-              functionSize=256;
-receiverNode2.cpp(90): warning:  #177-D: variable "mole" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(90): warning:  #177-D: variable "from" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(90): warning:  #177-D: variable "received_round" was declared but never referenced
-      uint8_t rssi,len,*local_rx_buf,mole, from, received_round;;
-receiverNode2.cpp(91): warning:  #177-D: variable "r" was declared but never referenced
-      int i,r; 
-receiverNode2.cpp(143): warning:  #550-D: variable "val" was set but never used
-      uint8_t length, val;
-receiverNode2.cpp(146): warning:  #177-D: variable "ret" was declared but never referenced
-      nrk_sig_mask_t ret;
-receiverNode2.cpp(147): warning:  #177-D: variable "r_period" was declared but never referenced
-      nrk_time_t r_period;
-receiverNode2.cpp: 8 warnings, 0 errors
+senderNode.cpp: 7 warnings, 0 errors
 linking...
-.\build\MRK.axf: Error: L6200E: Symbol iap multiply defined (by receivernode2.o and memory_manager.o).
-.\build\MRK.axf: Error: L6200E: Symbol current_sector multiply defined (by receivernode2.o and memory_manager.o).
-.\build\MRK.axf: Error: L6200E: Symbol current_address multiply defined (by receivernode2.o and memory_manager.o).
-.\build\MRK.axf: Error: L6200E: Symbol start_address multiply defined (by receivernode2.o and memory_manager.o).
-.\build\MRK.axf: Error: L6200E: Symbol end_address multiply defined (by receivernode2.o and memory_manager.o).
+Program Size: Code=30688 RO-data=1556 RW-data=332 ZI-data=57016  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Error(s), 7 Warning(s).
+king...
+Program Size: Code=30688 RO-data=1556 RW-data=332 ZI-data=57016  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Error(s), 10 Warning(s).
+
+  }
+senderNode.cpp: 10 warnings, 3 errors
+".\build\MRK.axf" - 3 Error(s), 10 Warning(s).
+Target not created
+s).
+Target not created
+e2.o and memory_manager.o).
 Not enough information to list image symbols.
 Not enough information to list the image map.
 Finished: 2 information, 0 warning and 5 error messages.
-".\build\MRK.axf" - 5 Error(s), 43 Warning(s).
+".\build\MRK.axf" - 5 Error(s), 8 Warning(s).
 Target not created

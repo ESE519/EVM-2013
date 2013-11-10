@@ -74,4 +74,7 @@
 .\build\receivernode2.o: .\mbed\ff_basic_sensor.h
 .\build\receivernode2.o: .\mbed\nrk_driver_list.h
 .\build\receivernode2.o: .\mbed\nrk_driver.h
-.\build\receivernode2.o: .\mbed\jumptable.h
+.\build\receivernode2.o: memory_manager.h
+.\build\receivernode2.o: IAP.h
+.\build\receivernode2.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\receivernode2.o: function_manager.h

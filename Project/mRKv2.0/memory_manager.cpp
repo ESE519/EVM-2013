@@ -1,5 +1,11 @@
 #include "memory_manager.h"
 
+unsigned int current_sector;
+uint32_t  current_address;
+
+uint32_t  start_address, end_address;
+IAP iap;
+
 
 int set_start_address(uint32_t address) {
 	uint32_t temp;
@@ -72,20 +78,24 @@ uint32_t get_end_address() {
 
 
 
-int copy_code_flash(char *code, unsigned int size) {
+char * copy_code_flash(char *code, unsigned int size, int *errno) {
 	unsigned int rem;
 	int r;
 	
-	if(size > 4096)
-		return -1;
+	if(size > 4096) {
+		*errno = -1;
+		return NULL;
+	}
 		
 	if( (size % 256) != 0) {
 		rem = size % 256;
 		size = size + rem;
 	}
 	
-	if((current_address + size) > end_address)
-		return -1;
+	if((current_address + size) > end_address) {
+		*errno = -1;
+		return NULL;
+	}
 		
 	//check if the writing here crosses sector boundary
 	if( (current_address + size) >= (unsigned int)sector_start_adress[current_sector + 1] ) {
@@ -94,8 +104,10 @@ int copy_code_flash(char *code, unsigned int size) {
 		current_address = (unsigned int) sector_start_adress[current_sector];
 		r = iap.prepare(current_sector, current_sector);
 		
-		if(r != 0)
-			return r;
+		if(r != 0) {
+			*errno = r;
+			return NULL;
+		}
 	
 	}
 	
@@ -105,7 +117,13 @@ int copy_code_flash(char *code, unsigned int size) {
 		current_address = current_address + size;
 	}
 	
-	return r;
+	*errno = r;
+	if(r) {
+		return NULL;
+	}
+	else{
+		return (char *)(current_address - size);
+	}
 }
 	
 

@@ -24,7 +24,8 @@
 ".\build\mrf24j40.o"
 ".\build\iap.o"
 ".\build\memory_manager.o"
-".\build\receivernode2.o"
+".\build\function_manager.o"
+".\build\sendernode.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o

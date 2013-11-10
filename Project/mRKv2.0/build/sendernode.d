@@ -71,5 +71,5 @@
 .\build\sendernode.o: .\mbed\basic_rf.h
 .\build\sendernode.o: .\mbed\MRF24J40.h
 .\build\sendernode.o: .\mbed\bmac.h
-.\build\sendernode.o: IAP.h
-.\build\sendernode.o: .\mbed\jumptable.h
+.\build\sendernode.o: function_manager.h
+.\build\sendernode.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h

@@ -12,8 +12,10 @@
 #include "mbed.h"
 #include "basic_rf.h"
 #include "bmac.h"
-#include "IAP.h"
-#include "jumptable.h"
+//#include "IAP.h"
+//#include "jumptable.h"
+
+#include "function_manager.h"
 
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
@@ -48,7 +50,7 @@ volatile uint8_t received_response = 0;
 
 
 char code[1024];
-IAP     iap;
+
 
 /******* time definitions *******/
 nrk_time_t timeend, timeout, timestart;
@@ -57,12 +59,10 @@ void copy_code_ram();
 uint32_t anotherScore = 0;
 
 
-struct Jump_Table_Function 		table_function  __attribute__((at(0x10005000))); 
-
 int main(void)
 
 {
-		table_function.nrk_led_toggle = &nrk_led_toggle;
+		
     printf("simple_function address is 0x%X\n\r", &simple_function);
     copy_code_ram();
     print_function((char *)&simple_function, 100);
@@ -78,21 +78,22 @@ int main(void)
 }
 
 int simple_function(){
-	int a=1,b=2;
-	struct JUMP_TABLE *table;
+	int a = 1, b = 2;
+	uint32_t addrh, addrl;
 	
-
-	uint16_t addrh, addrl;
-	addrh = 0x1000;
-	addrl = 0x5000;
+	void *(*get_function_handle)(const char *, int);
+	int8_t (*led_toggle)(int);
+		
+	addrh = GET_HANDLE_ADDRESS_H;
+	addrl = GET_HANDLE_ADDRESS_L;
 	
+	get_function_handle = (void *(*)(const char *, int)) ((addrh << 16) | addrl);
+	led_toggle = (int8_t (*)(int)) get_function_handle("toggle", 7);
 	
-	struct Jump_Table_Function *fnTable;
+	led_toggle(ORANGE_LED);
 	
-	fnTable = (struct Jump_Table_Function *)((addrh << 16) | addrl);
-	fnTable->nrk_led_toggle(ORANGE_LED);
+	return (a + b);
 	
-	return (a+b);
 }
 
 /** Copying code to ram from flash**/

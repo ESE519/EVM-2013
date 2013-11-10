@@ -6,12 +6,8 @@
 #include "mbed.h"
 #include <inttypes.h>
 
-IAP iap;
 
-unsigned int current_sector;
-uint32_t  current_address;
 
-uint32_t  start_address, end_address;
 
 
 
@@ -21,6 +17,6 @@ uint32_t get_start_address();
 int set_end_address(uint32_t address);
 uint32_t get_end_address();
 
-int copy_code_flash(char *array, unsigned int size);
+char * copy_code_flash(char *array, unsigned int size, int *errno);
 
 #endif
