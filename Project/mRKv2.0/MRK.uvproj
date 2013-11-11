@@ -535,9 +535,19 @@
               <FilePath>.\IAP.h</FilePath>
             </File>
             <File>
-              <FileName>receiverNode.cpp</FileName>
+              <FileName>memory_manager.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\receiverNode.cpp</FilePath>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>senderNode.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\senderNode.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -1074,9 +1084,19 @@
               <FilePath>.\IAP.h</FilePath>
             </File>
             <File>
-              <FileName>receiverNode.cpp</FileName>
+              <FileName>memory_manager.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\receiverNode.cpp</FilePath>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>senderNode.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\senderNode.cpp</FilePath>
             </File>
           </Files>
         </Group>
