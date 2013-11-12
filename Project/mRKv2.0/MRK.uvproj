@@ -30,7 +30,6 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile></SFDFile>
-          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -98,7 +97,6 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
-          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARMCM3.DLL</SimDllName>
@@ -171,10 +169,6 @@
           <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3>"MBed_Flash.bat" (@L.bin E:\)</Flash3>
           <Flash4></Flash4>
-          <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
-          <pFcArmRoot></pFcArmRoot>
-          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -535,9 +529,19 @@
               <FilePath>.\IAP.h</FilePath>
             </File>
             <File>
-              <FileName>receiverNode.cpp</FileName>
+              <FileName>memory_manager.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\receiverNode.cpp</FilePath>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>receiverNode2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\receiverNode2.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -567,7 +571,6 @@
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
           <SFDFile></SFDFile>
-          <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
           <IncludePath></IncludePath>
@@ -635,7 +638,6 @@
           <StopOnExitCode>3</StopOnExitCode>
           <CustomArgument></CustomArgument>
           <IncludeLibraryModules></IncludeLibraryModules>
-          <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
           <SimDllName>SARM.DLL</SimDllName>
@@ -708,10 +710,6 @@
           <Flash2>BIN\UL2ARM.DLL</Flash2>
           <Flash3>"MBed_Flash.bat" (@L.bin E:\)</Flash3>
           <Flash4></Flash4>
-          <pFcarmOut></pFcarmOut>
-          <pFcarmGrp></pFcarmGrp>
-          <pFcArmRoot></pFcArmRoot>
-          <FcArmLst>0</FcArmLst>
         </Utilities>
         <TargetArmAds>
           <ArmAdsMisc>
@@ -1074,9 +1072,19 @@
               <FilePath>.\IAP.h</FilePath>
             </File>
             <File>
-              <FileName>receiverNode.cpp</FileName>
+              <FileName>memory_manager.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\receiverNode.cpp</FilePath>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>receiverNode2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\receiverNode2.cpp</FilePath>
             </File>
           </Files>
         </Group>
