@@ -45,8 +45,8 @@ void * get_function_handle(const char *name, int namelen) {
 			
 			
 			
-void function_manager_init(char *address) {
-	address_of_get_handle = (uint32_t)address;
+void function_manager_init() {
+	address_of_get_handle = (uint32_t)&get_function_handle;
 }
 			
 

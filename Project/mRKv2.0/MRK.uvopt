@@ -199,7 +199,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -1878,10 +1878,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>16</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>75</TopLine>
-      <CurrentLine>87</CurrentLine>
+      <TopLine>95</TopLine>
+      <CurrentLine>133</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\memory_manager.cpp</PathWithFileName>
       <FilenameWithoutPath>memory_manager.cpp</FilenameWithoutPath>
@@ -1894,10 +1894,10 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>33</ColumnNumber>
+      <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>22</TopLine>
-      <CurrentLine>31</CurrentLine>
+      <TopLine>4</TopLine>
+      <CurrentLine>23</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\function_manager.cpp</PathWithFileName>
       <FilenameWithoutPath>function_manager.cpp</FilenameWithoutPath>
@@ -1910,13 +1910,13 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>74</TopLine>
-      <CurrentLine>95</CurrentLine>
+      <TopLine>60</TopLine>
+      <CurrentLine>101</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\senderNode.cpp</PathWithFileName>
-      <FilenameWithoutPath>senderNode.cpp</FilenameWithoutPath>
+      <PathWithFileName>.\receiverNode2.cpp</PathWithFileName>
+      <FilenameWithoutPath>receiverNode2.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

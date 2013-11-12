@@ -16,7 +16,7 @@ struct function_info {
 
 
 
-void function_manager_init(char *);
+void function_manager_init();
 
 int function_register(const char *name, int namelen, char *address);
 

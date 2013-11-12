@@ -51,10 +51,10 @@ char tx_buf[RF_MAX_PAYLOAD_SIZE];
 char rx_buf[102];
 
 
-uint8_t functionSize;
+uint32_t functionSize;
 uint8_t functionRecieved;
 uint8_t startAddress;
-char code[4096];
+uint32_t code_aligned[1024];
 void get_functionCode(char *cptr);
 typedef int (*function) ();
 function copied_function;
@@ -65,14 +65,20 @@ int main(void)
 
 {
 	int r;
-	function_register("led_toggle", strlen("led_toggle") + 1, (char *)&nrk_led_toggle);
-    nrk_setup_ports();
+	uint32_t a;
+		function_manager_init();
+	  a = *((uint32_t *)0x10006000);
+	  printf("address of get handle is %X\n\r", a);
+		function_register("toggle", strlen("toggle") + 1, (char *)&nrk_led_toggle);
+    function_register("print", strlen("print") + 1, (char *)&printf);
+		nrk_setup_ports();
     nrk_init();
     bmac_task_config();
     nrk_create_taskset();
     bmac_init (MY_CHANNEL);
     bmac_auto_ack_disable();
     
+		
     r = set_start_address(0xE000);
     
     if(r) 
@@ -95,7 +101,9 @@ void rx_task ()
     bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
     bmac_rx_pkt_set_buffer (rx_buf,102);
     //cleaning up the target sector in the flash
-    
+    char *code;
+	  code = (char *) code_aligned;
+	
     while(!bmac_started());
     printf("Receiver node Bmac initialised\n");
   
@@ -122,7 +130,7 @@ void rx_task ()
 							code[i] = local_rx_buf[i+2];
             }
             //getting function size
-            functionSize=256;
+            functionSize = 256;
            
            fn_address = copy_code_flash(code, functionSize, &r);
            
@@ -132,6 +140,7 @@ void rx_task ()
 					if(fn_address) {	
 						copied_function=(function) ((uint32_t)fn_address | 1);    
 						printf("successfully copied\n\r");
+						printf("Copied function address: %x\n\r", fn_address);
 					}
 					
 					else {
@@ -168,6 +177,7 @@ void tx_task ()
 							tx_buf[1] = 100;
 							length = 2;
 							val=bmac_tx_pkt(tx_buf, length);
+							printf("calling funtion\r\n");
 							r = copied_function();
 							printf("Value returned from copied function is %d\n",r);
             }
