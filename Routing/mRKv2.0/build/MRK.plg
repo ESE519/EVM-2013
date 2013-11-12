@@ -1,0 +1,723 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+S:\MRK-master\MRK-master\mRKv2.0\MRK.uvproj
+Project File Date:  11/10/2013
+
+<h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(79): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(87): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(126): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(127): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(130): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(131): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(186): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30502 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axfBuild target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=39446 RO-data=2970 RW-data=428 ZI-data=52824  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Rebuild target 'mbed NXP LPC1768'
+compiling nrk_cpu.cpp...
+compiling nrk_status.cpp...
+compiling nrk_timer.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_watchdog.cpp...
+compiling nrk.cpp...
+compiling nrk_error.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
+compiling nrk_events.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
+compiling nrk_idle_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
+compiling nrk_reserve.cpp...
+compiling nrk_scheduler.cpp...
+compiling nrk_stack_Build target 'mbed NXP LPC1768'
+compiling nrk_cpu.cpp...
+compiling nrk_status.cpp...
+compiling nrk_timer.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_watchdog.cpp...
+compiling nrk.cpp...
+compiling nrk_error.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
+compiling nrk_events.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
+compiling nrk_idle_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
+compiling nrk_reserve.cpp...
+compiling nrk_scheduler.cpp...
+compiling nrk_stack_check.cpp...
+compiling nrk_stats.cpp...
+compiling nrk_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_time.cpp...
+compiling ulib.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
+compiling adc_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
+compiling ff_basic_sensor.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
+compiling nrk_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(462): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(503): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(556): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(804): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+compiling basic_rf.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
+compiling MRF24J40.cpp...
+compiling newReceiver.cpp...
+newReceiver.cpp(79): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(87): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(126): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(127): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(130): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(131): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(186): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30502 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 45 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30502 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(79): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(87): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(126): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(127): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(127): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(130): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(131): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(186): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30322 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(79): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(87): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(87): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(88): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(126): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(127): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(127): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(130): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(131): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(186): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30322 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30322 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(309): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30798 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 11 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(235): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(305): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30786 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(235): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30798 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(235): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30822 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(235): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30826 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(235): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(306): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30826 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30826 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newReceiver.cpp...
+newReceiver.cpp(134): warning:  #177-D: variable "mole" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "from" was declared but never referenced
+newReceiver.cpp(134): warning:  #177-D: variable "received_round" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(135): warning:  #177-D: variable "fromMole" was declared but never referenced
+newReceiver.cpp(194): warning:  #177-D: variable "r" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "length" was declared but never referenced
+newReceiver.cpp(195): warning:  #177-D: variable "val" was declared but never referenced
+newReceiver.cpp(198): warning:  #177-D: variable "ret" was declared but never referenced
+newReceiver.cpp(199): warning:  #177-D: variable "r_period" was declared but never referenced
+newReceiver.cpp(239): warning:  #550-D: variable "val" was set but never used
+newReceiver.cpp(310): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30854 RO-data=1550 RW-data=348 ZI-data=52904  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(258): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30662 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(260): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30654 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(261): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(260): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(261): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(261): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30194 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(261): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30494 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(261): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30654 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(262): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Rebuild target 'mbed NXP LPC1768'
+compiling nrk_cpu.cpp...
+compiling nrk_status.cpp...
+compiling nrk_timer.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_watchdog.cpp...
+compiling nrk.cpp...
+compiling nrk_error.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
+compiling nrk_events.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
+compiling nrk_idle_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
+compiling nrk_reserve.cpp...
+compiling nrk_scheduler.cpp...
+compiling nrk_stack_check.cpp...
+compiling nrk_stats.cpp...
+compiling nrk_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_time.cpp...
+compiling hal_wait.cpp...
+compiling ulib.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
+assembling my_asm.s...
+mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
+compiling adc_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
+compiling ff_basic_sensor.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
+compiling nrk_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(462): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(503): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(556): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(804): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+compiling basic_rf.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
+compiling MRF24J40.cpp...
+compiling IAP.cpp...
+compiling newSender.cpp...
+newSender.cpp(114): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(172): warning:  #111-D: statement is unreachable
+newSender.cpp(135): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(137): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(195): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(182): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(182): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(183): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(262): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 45 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30666 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(176): warning:  #111-D: statement is unreachable
+newSender.cpp(139): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(141): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(141): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(199): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(186): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(186): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(187): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(266): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30678 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(176): warning:  #111-D: statement is unreachable
+newSender.cpp(139): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(141): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(141): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(199): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(186): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(186): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(187): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(266): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30682 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(176): warning:  #111-D: statement is unreachable
+newSender.cpp(139): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(141): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(141): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(199): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(186): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(186): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(187): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(266): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30682 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(463): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(504): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(556): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(557): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(805): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+linking...
+Program Size: Code=30682 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(464): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(505): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(557): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(558): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(806): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+linking...
+Program Size: Code=30702 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(464): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(505): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(557): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(558): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(806): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+compiling newSender.cpp...
+newSender.cpp(176): warning:  #111-D: statement is unreachable
+newSender.cpp(139): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(141): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(141): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(199): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(186): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(186): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(187): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(266): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30678 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 16 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30678 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(176): warning:  #111-D: statement is unreachable
+newSender.cpp(139): warning:  #550-D: variable "local_rx_buf" was set but never used
+newSender.cpp(141): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(141): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(199): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(186): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(186): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(187): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(266): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=30678 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(165): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(165): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(165): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(234): warning:  #69-D: integer conversion resulted in truncation
+newSender.cpp(221): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(221): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(222): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(299): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(253): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=30866 RO-data=1550 RW-data=344 ZI-data=52908  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 11 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(165): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(165): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(165): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(221): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(221): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(222): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(302): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(256): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=30822 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=30822 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(165): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(165): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(165): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(166): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(221): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(221): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(222): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(302): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(256): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=30822 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(169): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(169): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(169): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(170): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(170): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(225): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(225): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(226): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(306): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(260): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=30858 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(173): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(173): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(173): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(174): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(174): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(229): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(229): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+newSender.cpp(230): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(310): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(264): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=30890 RO-data=1550 RW-data=340 ZI-data=52912  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 10 Warning(s).
