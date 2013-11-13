@@ -88,8 +88,8 @@ char * copy_code_flash(char *code, unsigned int size, int *errno) {
 	}
 		
 	if( (size % 256) != 0) {
-		rem = size % 256;
-		size = size + rem;
+		rem = size >> 8;
+		size = (rem + 1) << 8;
 	}
 	
 	if((current_address + size) > end_address) {
@@ -111,7 +111,9 @@ char * copy_code_flash(char *code, unsigned int size, int *errno) {
 	
 	}
 	
+	iap.prepare(14, 14);
 	r = iap.write(code, (char *) current_address, size);
+	
 	
 	if(r == 0) {
 		current_address = current_address + size;

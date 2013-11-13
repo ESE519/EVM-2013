@@ -62,7 +62,10 @@ uint32_t anotherScore = 0;
 int main(void)
 
 {
-		
+		uint32_t a;
+		function_manager_init();
+	  a = *((uint32_t *)0x10006000);
+	  printf("address of get handle is %X\n\r", a);
     printf("simple_function address is 0x%X\n\r", &simple_function);
     copy_code_ram();
     print_function((char *)&simple_function, 100);
@@ -79,19 +82,31 @@ int main(void)
 
 int simple_function(){
 	int a = 1, b = 2;
-	uint32_t addrh, addrl;
+	uint16_t addrh, addrl;
+	uint32_t address_to_get_handle;
 	
 	void *(*get_function_handle)(const char *, int);
 	int8_t (*led_toggle)(int);
-		
+	int (*print)(const char *, ...);	
+	
 	addrh = GET_HANDLE_ADDRESS_H;
 	addrl = GET_HANDLE_ADDRESS_L;
+	address_to_get_handle = *((uint32_t *)((addrh << 16) | addrl));
 	
-	get_function_handle = (void *(*)(const char *, int)) ((addrh << 16) | addrl);
+	
+	get_function_handle = (void *(*)(const char *, int)) address_to_get_handle;
 	led_toggle = (int8_t (*)(int)) get_function_handle("toggle", 7);
 	
-	led_toggle(ORANGE_LED);
+	if(led_toggle == NULL)
+		return 0;
 	
+	print = (int (*)(const char *, ...)) get_function_handle("print", 7);
+	
+	if(print == NULL)
+		return 1;
+	
+	led_toggle(RED_LED);
+	print("hahahaha\n\r");
 	return (a + b);
 	
 }
