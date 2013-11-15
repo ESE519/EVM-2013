@@ -164,10 +164,10 @@ ARM Macro Assembler    Page 3
               00 00 E000ED22 
               E000ED04 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=.\build\
-my_asm.d -o.\build\my_asm.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\PACK\ARM\CMSIS
-\3.20.3\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1"
- --list=.\build\my_asm.lst mrk_uvision_lpc1768\mrk\my_asm.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\build\my_asm.d -o.\build\my_asm.o -IC:\Keil\ARM\RV31\INC -IC:\Ke
+il\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\NXP\LPC17xx --list=.\build\my_asm.lst mr
+k_uvision_lpc1768\mrk\my_asm.s
 
 
 
@@ -364,4 +364,4 @@ Symbol: task_addr
       None
 Comment: task_addr unused
 4 symbols
-353 symbols in table
+352 symbols in table

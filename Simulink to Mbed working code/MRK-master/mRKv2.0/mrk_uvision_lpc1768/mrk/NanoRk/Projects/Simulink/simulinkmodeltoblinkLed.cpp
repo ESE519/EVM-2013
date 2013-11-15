@@ -16,7 +16,9 @@
 #include "simulinkmodeltoblinkLed.h"
 #include "simulinkmodeltoblinkLed_private.h"
 #include "mbed.h"
+#include "Servo.h"
 #include "nrk.h"
+
 /* Block states (auto storage) */
 DW_simulinkmodeltoblinkLed_T simulinkmodeltoblinkLed_DW;
 
@@ -28,17 +30,39 @@ RT_MODEL_simulinkmodeltoblink_T simulinkmodeltoblinkLed_M_;
 RT_MODEL_simulinkmodeltoblink_T *const simulinkmodeltoblinkLed_M =
   &simulinkmodeltoblinkLed_M_;
 
+
+
+DigitalOut led(LED1);
+DigitalIn  enable(p21);
+AnalogIn ain(p20);
+PwmOut servo(p21); 
+Servo myservo(p21);
+float duty=0;
 /* Model step function */
 void simulinkmodeltoblinkLed_step(void)
-{
+{      
   /* Outport: '<Root>/Out1' incorporates:
    *  DiscretePulseGenerator: '<Root>/Pulse Generator'
    */
-  simulinkmodeltoblinkLed_Y.Out1 = (simulinkmodeltoblinkLed_DW.clockTickCounter <
+    simulinkmodeltoblinkLed_Y.Out1 = (simulinkmodeltoblinkLed_DW.clockTickCounter <
     simulinkmodeltoblinkLed_P.PulseGenerator_Duty) &&
     (simulinkmodeltoblinkLed_DW.clockTickCounter >= 0) ?
     simulinkmodeltoblinkLed_P.PulseGenerator_Amp : 0.0;
-		
+       
+	 printf("%d\r\n",ain.read_u16());
+	 duty+=0.1;
+	 if(duty>1)
+		 duty=0;
+	 myservo.write(duty);
+	 wait(1);
+
+	if(ain.read_u16()  > 48000){
+			led=1;
+		}
+		else{ 
+			led=0;
+		}
+	/*
 		if(simulinkmodeltoblinkLed_Y.Out1 ==1)
 			{
 				nrk_led_set (ORANGE_LED);
@@ -48,7 +72,7 @@ void simulinkmodeltoblinkLed_step(void)
 			nrk_led_clr (ORANGE_LED);
 			}
 				
-	
+	*/
 
   /* DiscretePulseGenerator: '<Root>/Pulse Generator' */
   if (simulinkmodeltoblinkLed_DW.clockTickCounter >=

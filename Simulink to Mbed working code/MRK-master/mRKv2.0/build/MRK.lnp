@@ -25,6 +25,7 @@
 ".\build\main.o"
 ".\build\simulinkmodeltoblinkled.o"
 ".\build\simulinkmodeltoblinkled_data.o"
+".\build\servo.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o
