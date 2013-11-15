@@ -26,12 +26,12 @@
 // Change this to your group channel
 #define MY_CHANNEL 2
 
-#define MAX_MOLES  2
+#define MAX_MOLES  3
 #define TARGET_SECTOR       14
 //#define THRESHOLD    3750
 
 // Gateway has ID = 1, the slaves/moles have ID 2,3 onwards...
-#define MY_ID 2
+#define MY_ID 3
 
 //Defines the maximum slaves 
 #define MAX_SLAVES 4

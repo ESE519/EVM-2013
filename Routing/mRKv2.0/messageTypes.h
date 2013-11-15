@@ -5,6 +5,6 @@
 
 enum Message{
  SLAVE_DISCOVERY=1,
- SLAVE_RESPONSE=2
+ NEIGHBOR_MSG=2
 };
 
