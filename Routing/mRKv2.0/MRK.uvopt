@@ -1878,13 +1878,13 @@
       <FileType>8</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>112</TopLine>
-      <CurrentLine>2</CurrentLine>
+      <TopLine>94</TopLine>
+      <CurrentLine>115</CurrentLine>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\newSender.cpp</PathWithFileName>
-      <FilenameWithoutPath>newSender.cpp</FilenameWithoutPath>
+      <PathWithFileName>.\gateway.cpp</PathWithFileName>
+      <FilenameWithoutPath>gateway.cpp</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

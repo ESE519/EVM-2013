@@ -3,444 +3,297 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-S:\MRK-master\MRK-master\mRKv2.0\MRK.uvproj
-Project File Date:  11/12/2013
+S:\ese 519\GIT\EVM-2013\Routing\mRKv2.0\MRK.uvproj
+Project File Date:  11/14/2013
 
 <h2>Output:</h2>
 Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(391): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(462): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(523): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(631): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(686): warning:  #550-D: variable "status" was set but never used
+compiling gateway.cpp...
+gateway.cpp(150): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(210): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(262): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "nextHop" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "cost" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "destID" was declared but never referenced
+gateway.cpp(296): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(321): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(363): warning:  #177-D: variable "mole" was declared but never referenced
+gateway.cpp(363): warning:  #550-D: variable "from" was set but never used
+gateway.cpp(363): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(364): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(364): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(367): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(421): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(421): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+gateway.cpp(422): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(445): warning:  #550-D: variable "status" was set but never used
 linking...
-Program Size: Code=31050 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
 After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
+".\build\MRK.axf" - 0 Errors, 18 Warning(s).
 Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(391): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(462): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(523): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(631): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(686): warning:  #550-D: variable "status" was set but never used
+compiling gateway.cpp...
+gateway.cpp(150): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(210): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(262): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "nextHop" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "cost" was declared but never referenced
+gateway.cpp(286): warning:  #177-D: variable "destID" was declared but never referenced
+gateway.cpp(296): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(321): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(363): warning:  #177-D: variable "mole" was declared but never referenced
+gateway.cpp(363): warning:  #550-D: variable "from" was set but never used
+gateway.cpp(363): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(364): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(364): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(367): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(421): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(421): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+gateway.cpp(422): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(445): warning:  #550-D: variable "status" was set but never used
 linking...
-Program Size: Code=31050 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(391): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(462): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(523): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(523): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(525): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(629): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(631): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(686): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31054 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Errors, 18 Warning(s).
 Build target 'mbed NXP LPC1768'
 linking...
-Program Size: Code=31054 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+s\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
+compiling ff_basic_sensor.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
+compiling nrk_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(464): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(505): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(557): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(558): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(806): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+compiling basic_rf.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
+compiling MRF24J40.cpp...
+compiling IAP.cpp...
+compiling newSender.cpp...
+newSender.cpp(142): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(204): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(256): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(279): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(279): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(279): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(284): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(321): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(321): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(321): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(322): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(322): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(325): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(381): error:  #20: identifier "SENSOR_DATA" is undefined
+newSender.cpp(371): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(372): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(399): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(461): warning:  #550-D: variable "val" was set but never used
+".\build\MRK.axf" - 1 Errors, 51 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+linking...
+Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
 After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'H:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Errors, 21 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+linking...
+Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Errors, 21 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
 ".\build\MRK.axf" - 0 Errors, 0 Warning(s).
 Build target 'mbed NXP LPC1768'
 compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(459): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(520): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(528): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(628): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(683): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
 linking...
-Program Size: Code=31082 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
 After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
+".\build\MRK.axf" - 0 Errors, 21 Warning(s).
 Build target 'mbed NXP LPC1768'
 compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(459): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(520): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(528): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(628): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(683): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31082 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
+newSender.cpp(144): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(206): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(251): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(274): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(274): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(274): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(279): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(356): error:  #167: argument of type "std::uint8_t *" is incompatible with parameter of type "char *"
+newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(375): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(409): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(471): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(494): warning:  #1-D: last line of file ends without a newline
+".\build\MRK.axf" - 1 Errors, 18 Warning(s).
+Target not created
 Build target 'mbed NXP LPC1768'
 compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(459): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(520): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(528): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(628): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(683): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(145): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(207): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(252): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(280): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(356): error:  #167: argument of type "std::uint8_t *" is incompatible with parameter of type "char *"
+newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(377): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(412): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(473): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(485): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(514): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(505): warning:  #550-D: variable "val" was set but never used
+".\build\MRK.axf" - 1 Errors, 20 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling newSender.cpp...
+newSender.cpp(145): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(207): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(252): warning:  #177-D: variable "i" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "nextHop" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "cost" was declared but never referenced
+newSender.cpp(275): warning:  #177-D: variable "destID" was declared but never referenced
+newSender.cpp(280): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
+newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
+newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
+newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
+newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
+newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(377): warning:  #177-D: variable "r_period" was declared but never referenced
+newSender.cpp(412): warning:  #550-D: variable "status" was set but never used
+newSender.cpp(473): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(485): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(514): warning:  #1-D: last line of file ends without a newline
+newSender.cpp(505): warning:  #550-D: variable "val" was set but never used
+newSender.cpp(373): warning: C4017W: sequenceNumber may be used before being set
+newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
 linking...
-Program Size: Code=31086 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(303): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(459): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(520): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(520): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(522): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(528): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(626): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(628): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(683): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31086 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(467): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(529): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(537): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(637): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(692): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31182 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(467): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(529): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(537): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(637): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(692): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31186 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(467): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(529): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(537): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(637): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(692): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31186 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(467): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(529): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(529): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(531): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(537): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(635): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(637): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(692): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31286 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 14 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31274 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31126 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31126 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31130 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31130 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31134 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31134 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=31134 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
 ".\build\MRK.axf" - 0 Errors, 0 Warning(s).
 Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
 linking...
-Program Size: Code=31138 RO-data=1546 RW-data=344 ZI-data=37132  
+Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
 Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(215): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(311): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(396): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(436): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(453): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(515): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(515): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(523): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(621): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-newSender.cpp(623): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(678): warning:  #550-D: variable "status" was set but never used
 linking...
-Program Size: Code=31138 RO-data=1546 RW-data=344 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 17 Warning(s).
+Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).

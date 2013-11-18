@@ -23,7 +23,7 @@
 ".\build\basic_rf.o"
 ".\build\mrf24j40.o"
 ".\build\iap.o"
-".\build\newsender.o"
+".\build\gateway.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o
