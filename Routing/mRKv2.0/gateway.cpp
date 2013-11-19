@@ -46,13 +46,13 @@ struct Message_Structure {
 #define MAX_TTL								5
 // Gateway has ID = 1, the slaves/moles have ID 2,3 onwards...
 
-#define MY_ID 1
+#define MY_ID 3
 #define BROADCAST_ID 255
 #define GATEWAY_ID	1
 
 #define MAX_SLAVES 4
 
-#define RSSI_THRESHOLD    200
+#define RSSI_THRESHOLD    230
 
 /*********************************Task declarations***************/
 
@@ -109,17 +109,28 @@ int read_temp_sensor();
 int route_to_Gateway(struct Message_Structure *);
 void send_ack(uint8_t node_id);
 
-int sensor_data_ack_received = 1;
+
 int task_count = 10;
 int send_ack_flag = 0;
-uint8_t dest_send_ack;
 
 struct RoutingTableEntry 		routing_table[10];
 
+struct Message_Structure global_msg;
 
 void updateRSSI(int id, uint8_t rssi) {
 	routing_table[id].rssi = rssi;
 }
+
+
+void copy_to_global_struct(struct Message_Structure *msg) {
+	global_msg.source_id = msg->source_id;
+	global_msg.dest_id = msg->dest_id;
+	global_msg.next_hop = msg->next_hop;
+	global_msg.seq_no = msg->seq_no;
+	global_msg.msg_type = msg->msg_type;
+	memcpy(global_msg.data, msg->data, 50);
+}
+
 
 
 void serialize(char *out_array, struct Message_Structure *msg){
@@ -196,6 +207,7 @@ int main(void)
 
 void print_on_console(struct Message_Structure *rx_msg)
 {
+	struct Message_Structure msg;
 	uint16_t light_data, temp_data;
 	char data[128];
 	int i, count;
@@ -204,21 +216,25 @@ void print_on_console(struct Message_Structure *rx_msg)
 	printf("from %d\n\r", rx_msg->source_id);
 	printf("Light: %d\tTemp:%d\n\r", light_data, temp_data);
 	
-	printf("N: ");
+	printf("Neighbors: ");
 	count = 4;
 	
 	for(i = 1; i < MAX_SLAVES + 1; i++) {
 		if(rx_msg->data[count++] != 0)
-			printf("%d\t%d\n\r", i, rx_msg->data[count+MAX_SLAVES-1]);
+			printf("%d\t RSSI %d\n\r", i, rx_msg->data[count+MAX_SLAVES-1]);
 	}
 	
-	dest_send_ack = rx_msg->source_id;
+	msg.source_id = MY_ID;
+	msg.dest_id = rx_msg->source_id;
+	msg.msg_type = SENSOR_DATA_ACK;
+	copy_to_global_struct(&msg);
+
 	send_ack_flag = 1;
 }
 
 
 void sendACK_task() {
-	struct Message_Structure txMessage;
+	
 	
 	uint8_t val;
 	nrk_sig_t sd_done_signal; // Signal registering to get transmission done
@@ -229,25 +245,15 @@ void sendACK_task() {
 	sd_done_signal = bmac_get_tx_done_signal ();
 	nrk_signal_register (sd_done_signal);
 
-
-
-
-	
 		
-		txMessage.source_id = MY_ID;
-		txMessage.dest_id = 0;
-		txMessage.next_hop = 0;
-		txMessage.seq_no = sequenceNumber++;
-		txMessage.msg_type = SENSOR_DATA_ACK;
+	while(1) {
+		nrk_wait_until_next_period();
+		if(!send_ack_flag)
+			continue;
 		
-		while(1) {
-			nrk_wait_until_next_period();
-			if(!send_ack_flag)
-				continue;
-			txMessage.dest_id = dest_send_ack;
-			send_ack_flag = 0;
-			route_to_Gateway(&txMessage);         // transmitting the packet
-		}
+		send_ack_flag = 0;
+		route_to_Gateway(&global_msg);         // transmitting the packet
+	}
 	
 }
 
@@ -412,15 +418,16 @@ void sendNeighborMsg(){
 	nMessage.seq_no = sequenceNumber++;
 	nMessage.msg_type = NEIGHBOR_MSG;
 	char nv_buf[60];
+	
 	for(i = 1; i < MAX_SLAVES +1; i++) {
-		if(routing_table[i].cost < 7 && routing_table[i].cost > 0)
+		if((routing_table[i].cost < 7) && (routing_table[i].cost > 0))
 			nMessage.data[count++] = (uint8_t)routing_table[i].cost;
 		else
 			nMessage.data[count++] = 100;
 		
 		
 	}
-	
+	printf("\n\r");
 	serialize(nv_buf, &nMessage);			
 	val=bmac_tx_pkt(nv_buf,60);//Transmit the routing table to each neighbor.
 }
@@ -436,6 +443,7 @@ void sendNeighborMsg_task(){
         //dump_neighbors();
 			  printf("\n");
         sendNeighborMsg();
+			  checkIfReceivedResponse();
         //dump_Routes();
         nrk_wait_until_next_period();
 
@@ -461,19 +469,25 @@ void processNeighborMsg(struct Message_Structure *msg){
 		if(i == MY_ID)
 			continue;
 		
-		if(i == receivedFrom)
-			continue;
-		
-		if(routing_table[i].next_hop == receivedFrom) {
-			routing_table[i].cost = receivedCost + 1;
+		if(i == receivedFrom) {
+			routing_table[i].cost = 1;
+			routing_table[i].next_hop = receivedFrom;
 			routing_table[i].ttl = MAX_TTL;
+			//printf("neigh %d\n\r", i);
 		}
 		
-		if(routing_table[i].cost == -1) {
+		else if(routing_table[i].next_hop == receivedFrom) {
+			routing_table[i].cost = receivedCost + 1;
+			routing_table[i].ttl = MAX_TTL;
+			//printf("inc %d\n\r", i);
+		}
+		
+		else if(routing_table[i].cost == -1) {
 				if(receivedCost < 7) {
 					routing_table[i].cost = 1 + receivedCost;
 					routing_table[i].next_hop = receivedFrom;
 					routing_table[i].ttl = MAX_TTL;
+					//printf("added %d\n\r", i);
 				}		
 		}
 		
@@ -482,7 +496,7 @@ void processNeighborMsg(struct Message_Structure *msg){
 			routing_table[i].next_hop = receivedFrom;
 			routing_table[i].cost = 1 + receivedCost;
 			routing_table[i].ttl = MAX_TTL;
-			
+			//printf("changed %d\n\r", i);
 		}
 		
 		
@@ -507,7 +521,7 @@ void rx_task ()
     while(!bmac_started());
     printf("Receiver node Bmac initialised\n");
     while(1) {
-        nrk_wait_until_next_period();
+        //nrk_wait_until_next_period();
 			
         if( !bmac_rx_pkt_ready())
             continue;
@@ -524,7 +538,7 @@ void rx_task ()
 					if(rxMessage.source_id != MY_ID) {
 						updateRSSI(rxMessage.source_id, rssi);
 						
-								printf("%d: %d  %d\n\r", rxMessage.source_id, rssi,rxMessage.msg_type);
+								//printf("%d: %d  %d\n\r", rxMessage.source_id, rssi,rxMessage.msg_type);
 						switch(rxMessage.msg_type)
 						{
 							
@@ -546,13 +560,17 @@ void rx_task ()
 						case SENSOR_DATA:
 							if(rssi > RSSI_THRESHOLD)
 							{
-								printf("Sensor Data Received\r\n");
-								if(rxMessage.dest_id == MY_ID)
+								
+								if(rxMessage.dest_id == MY_ID) {
 									print_on_console(&rxMessage);
+									printf("Sensor Data Received\r\n");
+								}
 								
-								else if(rxMessage.next_hop == MY_ID)
-									route_to_Gateway(&rxMessage);
-								
+								else if(rxMessage.next_hop == MY_ID) {
+									copy_to_global_struct(&rxMessage);
+									send_ack_flag = 1;
+									//set some flag;
+								}
 							}
 							break;
 							
@@ -560,14 +578,16 @@ void rx_task ()
 							if(rssi > RSSI_THRESHOLD)
 							{
 								if(rxMessage.dest_id == MY_ID) {
-									sensor_data_ack_received = 1;
-									task_count = 10;
+									
+									task_count += 10;
 									printf("received ack\n\r");
+									
 								}
 								
-								else if(rxMessage.next_hop == MY_ID)
-									route_to_Gateway(&rxMessage);
-								
+								else if(rxMessage.next_hop == MY_ID){
+									copy_to_global_struct(&rxMessage);
+									send_ack_flag = 1;
+								}
 							}
 							break;
 							
@@ -609,8 +629,8 @@ void tx_task ()
 			
 			 if(task_count != 0)
 				task_count--;
-			 if(task_count == 0 || (sensor_data_ack_received == 0)) {
-			
+			 if(task_count == 0) {
+			 //printf("s\n\r");
 			 light_Value=read_light_sensor();
 			 
 			 temp_Value=read_temp_sensor();
@@ -633,11 +653,11 @@ void tx_task ()
 				 else
 					 txMessage.data[count++] = 0;
 			 }
-//			 for(i = 1; i < MAX_SLAVES + 1; i++)
-//					txMessage.data[count++] = routing_table[i].rssi;
+			 for(i = 1; i < MAX_SLAVES + 1; i++)
+					txMessage.data[count++] = routing_table[i].rssi;
 			 
 			 r = route_to_Gateway(&txMessage);
-			 sensor_data_ack_received = 0;
+			 task_count = 3;
 			 if(r != 0) {
 				 printf("No route to gateway\n\r");
 			 }
@@ -695,7 +715,7 @@ int route_to_Gateway(struct Message_Structure *msg){
 		msg->next_hop = routing_table[destinationNode].next_hop;
 		serialize(tx_buf, msg);
 		val=bmac_tx_pkt((char*)tx_buf, 60);
-	  printf("From %d to %d\r\n", msg->source_id, msg->dest_id);
+	  printf("From %d to %d to %d\r\n", tx_buf[0], tx_buf[2], tx_buf[1]);
 		return 0;
 	}
 	
@@ -725,7 +745,7 @@ void nrk_create_taskset ()
 
     TX_TASK.task = tx_task;
     nrk_task_set_stk( &TX_TASK, tx_task_stack, NRK_APP_STACKSIZE);
-    TX_TASK.prio = 1;
+    TX_TASK.prio = 2;
     TX_TASK.FirstActivation = TRUE;
     TX_TASK.Type = BASIC_TASK;
     TX_TASK.SchType = PREEMPTIVE;
@@ -737,19 +757,19 @@ void nrk_create_taskset ()
     TX_TASK.offset.nano_secs = 0;
     nrk_activate_task (&TX_TASK);
 
-    SD_TASK.task = slaveDiscovery_task;
-    nrk_task_set_stk( &SD_TASK, sd_task_stack, NRK_APP_STACKSIZE);
-    SD_TASK.prio = 3;
-    SD_TASK.FirstActivation = TRUE;
-    SD_TASK.Type = BASIC_TASK;
-    SD_TASK.SchType = PREEMPTIVE;
-    SD_TASK.period.secs = 3;
-    SD_TASK.period.nano_secs = 0;
-    SD_TASK.cpu_reserve.secs = 0;
-    SD_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
-    SD_TASK.offset.secs = 0;
-    SD_TASK.offset.nano_secs = 0;
-    nrk_activate_task (&SD_TASK);
+//    SD_TASK.task = slaveDiscovery_task;
+//    nrk_task_set_stk( &SD_TASK, sd_task_stack, NRK_APP_STACKSIZE);
+//    SD_TASK.prio = 3;
+//    SD_TASK.FirstActivation = TRUE;
+//    SD_TASK.Type = BASIC_TASK;
+//    SD_TASK.SchType = PREEMPTIVE;
+//    SD_TASK.period.secs = 3;
+//    SD_TASK.period.nano_secs = 0;
+//    SD_TASK.cpu_reserve.secs = 0;
+//    SD_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
+//    SD_TASK.offset.secs = 0;
+//    SD_TASK.offset.nano_secs = 0;
+//    nrk_activate_task (&SD_TASK);
 
     NM_TASK.task = sendNeighborMsg_task;
     nrk_task_set_stk(&NM_TASK, nm_task_stack, NRK_APP_STACKSIZE);
@@ -767,10 +787,10 @@ void nrk_create_taskset ()
 		
 		SEND_ACK_TASK.task = sendACK_task;
     nrk_task_set_stk(&SEND_ACK_TASK, send_ack_task_stack, NRK_APP_STACKSIZE);
-    SEND_ACK_TASK.prio = 2;
+    SEND_ACK_TASK.prio = 10;
     SEND_ACK_TASK.FirstActivation = TRUE;
     SEND_ACK_TASK.Type = BASIC_TASK;
-    SEND_ACK_TASK.SchType = PREEMPTIVE;
+    SEND_ACK_TASK.SchType = NONPREEMPTIVE;
     SEND_ACK_TASK.period.secs = 0;
     SEND_ACK_TASK.period.nano_secs = 700 * NANOS_PER_MS;
     SEND_ACK_TASK.cpu_reserve.secs = 0;
