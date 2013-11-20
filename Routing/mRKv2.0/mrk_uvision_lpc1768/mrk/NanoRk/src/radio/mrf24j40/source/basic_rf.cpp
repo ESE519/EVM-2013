@@ -92,15 +92,14 @@ void rf_security_disable(void)
     // TODO: Paul Gurniak
 }
 
-void rf_set_channel(uint8_t channel)
-{
-   // mrf_write_long(RFCON0, (channel & 0x0F) | 0x03);   // Set channel, leave RFOPT bits at recommended
-		mrf_write_long(RFCON0, (0xC0 | 0x03));   // Set channel, leave RFOPT bits at recommended
-    MRF_FSM_RESET();
+void rf_set_channel(uint8_t channel){   
+	mrf_write_long(RFCON0, ((channel & 0x0F)<<4) | 0x03);   // Set channel, leave RFOPT bits at recommended		
+	//mrf_write_long(RFCON0, (0xC0 | 0x03));   // Set channel, leave RFOPT bits at recommended   
+	MRF_FSM_RESET();
 }
 
 
-void rf_addr_decode_enable(void)
+void rf_addr_decode_disable(void)
 {
 	 uint8_t rxmcr = mrf_read_short(RXMCR);
     mrf_write_short(RXMCR, rxmcr & ~(1 << 0));    // Set to use address field
@@ -108,7 +107,7 @@ void rf_addr_decode_enable(void)
 }
 
 
-void rf_addr_decode_disable(void)
+void rf_addr_decode_enable(void)
 {
    uint8_t rxmcr = mrf_read_short(RXMCR);
    mrf_write_short(RXMCR, rxmcr | (1 << 0));   // Set to ignore address field

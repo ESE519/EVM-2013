@@ -4,296 +4,1756 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 S:\ese 519\GIT\EVM-2013\Routing\mRKv2.0\MRK.uvproj
-Project File Date:  11/14/2013
+Project File Date:  11/19/2013
 
 <h2>Output:</h2>
 Build target 'mbed NXP LPC1768'
-compiling gateway.cpp...
-gateway.cpp(150): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(210): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(262): warning:  #177-D: variable "i" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "nextHop" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "cost" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "destID" was declared but never referenced
-gateway.cpp(296): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(321): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(363): warning:  #177-D: variable "mole" was declared but never referenced
-gateway.cpp(363): warning:  #550-D: variable "from" was set but never used
-gateway.cpp(363): warning:  #177-D: variable "received_round" was declared but never referenced
-gateway.cpp(364): warning:  #177-D: variable "r" was declared but never referenced
-gateway.cpp(364): warning:  #177-D: variable "fromMole" was declared but never referenced
-gateway.cpp(367): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(421): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(421): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-gateway.cpp(422): warning:  #177-D: variable "r_period" was declared but never referenced
-gateway.cpp(445): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 18 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling gateway.cpp...
-gateway.cpp(150): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(210): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(262): warning:  #177-D: variable "i" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "nextHop" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "cost" was declared but never referenced
-gateway.cpp(286): warning:  #177-D: variable "destID" was declared but never referenced
-gateway.cpp(296): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(321): warning:  #550-D: variable "val" was set but never used
-gateway.cpp(363): warning:  #177-D: variable "mole" was declared but never referenced
-gateway.cpp(363): warning:  #550-D: variable "from" was set but never used
-gateway.cpp(363): warning:  #177-D: variable "received_round" was declared but never referenced
-gateway.cpp(364): warning:  #177-D: variable "r" was declared but never referenced
-gateway.cpp(364): warning:  #177-D: variable "fromMole" was declared but never referenced
-gateway.cpp(367): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(421): warning:  #177-D: variable "val" was declared but never referenced
-gateway.cpp(421): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
-gateway.cpp(422): warning:  #177-D: variable "r_period" was declared but never referenced
-gateway.cpp(445): warning:  #550-D: variable "status" was set but never used
-linking...
-Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
-Finished: 0 information, 0 warning and 1 error messages.
-".\build\MRK.axf" - 0 Errors, 18 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=31202 RO-data=1546 RW-data=360 ZI-data=37148  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-s\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(464): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(505): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(557): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(558): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(806): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
 compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling IAP.cpp...
-compiling newSender.cpp...
-newSender.cpp(142): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(204): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(256): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(279): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(279): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(279): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(284): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(321): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(321): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(321): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(322): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(322): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(325): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(381): error:  #20: identifier "SENSOR_DATA" is undefined
-newSender.cpp(371): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(372): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(399): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(461): warning:  #550-D: variable "val" was set but never used
-".\build\MRK.axf" - 1 Errors, 51 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #61-D: integer operation result is out of range
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #68-D: integer conversion resulted in a change of sign
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #111-D: statement is unreachable
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
 linking...
-Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
-Error: Q0108E: Could not create output file 'H:\MRK.bin': No such file or directory
-Finished: 0 information, 0 warning and 1 error messages.
-".\build\MRK.axf" - 0 Errors, 21 Warning(s).
+Program Size: Code=32584 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 26 Warning(s).
 Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(597): warning: C4017W: sequenceNumber may be used before being set
 linking...
-Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
+Program Size: Code=33072 RO-data=1576 RW-data=376 ZI-data=36936  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
 Finished: 0 information, 0 warning and 1 error messages.
-".\build\MRK.axf" - 0 Errors, 21 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
-Finished: 0 information, 0 warning and 1 error messages.
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(143): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(205): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(250): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(273): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(278): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(315): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(315): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(316): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(319): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(365): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(367): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(401): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(463): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(365): warning: C4017W: sequenceNumber may be used before being set
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(391): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-linking...
-Program Size: Code=32308 RO-data=1576 RW-data=368 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 21 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(144): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(206): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(251): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(274): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(274): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(274): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(279): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(356): error:  #167: argument of type "std::uint8_t *" is incompatible with parameter of type "char *"
-newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(375): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(409): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(471): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(494): warning:  #1-D: last line of file ends without a newline
-".\build\MRK.axf" - 1 Errors, 18 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(145): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(207): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(252): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(280): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(356): error:  #167: argument of type "std::uint8_t *" is incompatible with parameter of type "char *"
-newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(377): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(412): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(473): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(485): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(514): warning:  #1-D: last line of file ends without a newline
-newSender.cpp(505): warning:  #550-D: variable "val" was set but never used
-".\build\MRK.axf" - 1 Errors, 20 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling newSender.cpp...
-newSender.cpp(145): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(207): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(252): warning:  #177-D: variable "i" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "nextHop" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "cost" was declared but never referenced
-newSender.cpp(275): warning:  #177-D: variable "destID" was declared but never referenced
-newSender.cpp(280): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(316): warning:  #177-D: variable "mole" was declared but never referenced
-newSender.cpp(316): warning:  #550-D: variable "from" was set but never used
-newSender.cpp(316): warning:  #177-D: variable "received_round" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "r" was declared but never referenced
-newSender.cpp(317): warning:  #177-D: variable "fromMole" was declared but never referenced
-newSender.cpp(320): warning:  #177-D: variable "val" was declared but never referenced
-newSender.cpp(373): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(377): warning:  #177-D: variable "r_period" was declared but never referenced
-newSender.cpp(412): warning:  #550-D: variable "status" was set but never used
-newSender.cpp(473): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(485): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(514): warning:  #1-D: last line of file ends without a newline
-newSender.cpp(505): warning:  #550-D: variable "val" was set but never used
-newSender.cpp(373): warning: C4017W: sequenceNumber may be used before being set
-newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-newSender.cpp(402): warning: C4487E: read from variable 'light_Value' with offset out of bounds
-linking...
-Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 24 Warning(s).
 Build target 'mbed NXP LPC1768'
 linking...
-Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-Error: Q0108E: Could not create output file 'F:\MRK.bin': No such file or directory
-Finished: 0 information, 0 warning and 1 error messages.
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
+Program Size: Code=33072 RO-data=1576 RW-data=376 ZI-data=36936  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 0 Warning(s).
 Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(597): warning: C4017W: sequenceNumber may be used before being set
 linking...
-Program Size: Code=32732 RO-data=1576 RW-data=368 ZI-data=37132  
+Program Size: Code=33068 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(597): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33068 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(597): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33072 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(586): warning:  #111-D: statement is unreachable
+gateway.cpp(506): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(506): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(507): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #111-D: statement is unreachable
+gateway.cpp(597): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(599): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(658): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(690): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(690): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(714): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32584 RO-data=1576 RW-data=376 ZI-data=36936  
 After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(589): warning:  #111-D: statement is unreachable
+gateway.cpp(509): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(509): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(513): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(600): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(661): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(693): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(693): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(717): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(600): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33164 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(452): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(589): warning:  #111-D: statement is unreachable
+gateway.cpp(509): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(509): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(513): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(600): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(661): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(693): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(693): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(717): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(600): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33188 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(590): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(601): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(603): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(662): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(694): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(694): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(718): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(601): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33240 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(598): error:  #65: expected a ";"
+gateway.cpp(620): warning:  #12-D: parsing restarts here after previous syntax error
+gateway.cpp(621): warning:  #111-D: statement is unreachable
+gateway.cpp(623): error:  #20: identifier "light_Value" is undefined
+gateway.cpp(625): error:  #20: identifier "temp_Value" is undefined
+gateway.cpp(627): error:  #20: identifier "txMessage" is undefined
+gateway.cpp(635): error:  #20: identifier "count" is undefined
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(658): error:  #169: expected a declaration
+gateway.cpp(739): warning:  #12-D: parsing restarts here after previous syntax error
+gateway.cpp(740): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(740): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(740): error:  #65: expected a ";"
+gateway.cpp(741): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(741): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(741): error:  #65: expected a ";"
+gateway.cpp(742): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(742): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(742): error:  #65: expected a ";"
+gateway.cpp(743): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(743): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(743): error:  #65: expected a ";"
+gateway.cpp(744): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(744): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(744): error:  #65: expected a ";"
+gateway.cpp(745): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(745): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(745): error:  #65: expected a ";"
+gateway.cpp(746): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(746): error:  #247: variable "TX_TASK" has already been defined
+gateway.cpp(746): error:  #65: expected a ";"
+gateway.cpp(747): error:  #77-D: this declaration has no storage class or type specifier
+gateway.cpp(747): error:  #147: declaration is incompatible with "nrk_status_t nrk_activate_task(nrk_task_type *)" (declared at line 123 of ".\mbed\nrk_task.h")
+gateway.cpp(747): error:  #144: a value of type "nrk_task_type *" cannot be used to initialize an entity of type "int"
+".\build\MRK.axf" - 30 Errors, 16 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33240 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33240 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(619): warning:  #111-D: statement is unreachable
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32756 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33252 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33252 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33256 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(126): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(153): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(200): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(223): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(280): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(388): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(390): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(407): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(453): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(591): warning:  #111-D: statement is unreachable
+gateway.cpp(510): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(510): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(511): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(514): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(602): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(604): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(663): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(675): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(695): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(695): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(719): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(602): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33256 RO-data=1576 RW-data=376 ZI-data=36936  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(598): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(626): warning:  #111-D: statement is unreachable
+gateway.cpp(609): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(611): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(682): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(702): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(702): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(726): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32812 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(598): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(609): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(611): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(682): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(702): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(702): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(726): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(609): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33300 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(598): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(609): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(611): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(670): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(682): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(702): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(702): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(726): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(609): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33300 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(610): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33292 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(627): warning:  #111-D: statement is unreachable
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32804 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(610): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33292 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(610): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33292 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(610): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33252 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(610): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33256 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(627): warning:  #111-D: statement is unreachable
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32764 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(599): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(627): warning:  #111-D: statement is unreachable
+gateway.cpp(610): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(671): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(683): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(703): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(703): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(727): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32752 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(629): warning:  #111-D: statement is unreachable
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32748 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33240 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33236 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33240 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33252 RO-data=1576 RW-data=372 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33256 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33256 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(629): warning:  #111-D: statement is unreachable
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32612 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33152 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33152 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=33152 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33152 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33140 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33144 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(629): warning:  #111-D: statement is unreachable
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32612 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33136 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33132 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33136 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=33136 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(601): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(612): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(614): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(673): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(685): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(705): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(705): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(729): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(612): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33140 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33140 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33136 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33132 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33136 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33124 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33120 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(630): warning:  #111-D: statement is unreachable
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32600 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(630): warning:  #111-D: statement is unreachable
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32612 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(630): warning:  #111-D: statement is unreachable
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+linking...
+Program Size: Code=32612 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33144 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling gateway.cpp...
+gateway.cpp(137): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(164): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(212): warning:  #177-D: variable "data" was declared but never referenced
+gateway.cpp(239): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(286): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(394): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(396): warning:  #177-D: variable "recSequence" was declared but never referenced
+gateway.cpp(413): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(459): warning:  #177-D: variable "node_id" was declared but never referenced
+gateway.cpp(602): warning:  #111-D: statement is unreachable
+gateway.cpp(516): warning:  #177-D: variable "from" was declared but never referenced
+gateway.cpp(516): warning:  #177-D: variable "received_round" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "r" was declared but never referenced
+gateway.cpp(517): warning:  #177-D: variable "fromMole" was declared but never referenced
+gateway.cpp(520): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(613): warning:  #177-D: variable "val" was declared but never referenced
+gateway.cpp(615): warning:  #177-D: variable "r_period" was declared but never referenced
+gateway.cpp(674): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(686): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(706): warning:  #177-D: variable "i" was declared but never referenced
+gateway.cpp(706): warning:  #550-D: variable "val" was set but never used
+gateway.cpp(730): warning:  #550-D: variable "status" was set but never used
+gateway.cpp(613): warning: C4017W: sequenceNumber may be used before being set
+linking...
+Program Size: Code=33140 RO-data=1576 RW-data=368 ZI-data=36996  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 24 Warning(s).
