@@ -1,0 +1,126 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\MRK.uvproj
+Project File Date:  11/18/2013
+
+<h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp(11): error:  #5: cannot open source input file "messageTypes.h": No such file or directory
+  #include "messageTypes.h"
+mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp: 0 warnings, 1 error
+".\build\MRK.axf" - 1 Error(s), 0 Warning(s).
+Target not created
+  #1-D: last line of file ends without a newline
+  uint8_t calculateNumberPackets(int packetSize);
+packetHandler.cpp(48): warning:  #940-D: missing return statement at end of non-void function "createPacket"
+  }
+packetHandler.cpp: 2 warnings, 0 errors
+".\build\MRK.axf" - 1 Error(s), 2 Warning(s).
+Target not created
+308 ZI-data=2916  
+After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Error(s), 3 Warning(s).
+80 RW-data=308 ZI-data=2916  
+After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Error(s), 4 Warning(s).
+\Projects\basic_tasks\main.cpp(85): warning:  #177-D: variable "c" was declared but never referenced
+        char c[128];
+mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp: 6 warnings, 0 errors
+linking...
+Program Size: Code=28920 RO-data=1880 RW-data=300 ZI-data=2916  
+After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Error(s), 6 Warning(s).
+NanoRk\src\kernel\source\nrk_idle_task.cpp: 1 warning, 0 errors
+compiling nrk_reserve.cpp...
+compiling nrk_scheduler.cpp...
+compiling nrk_stack_check.cpp...
+compiling nrk_stats.cpp...
+compiling nrk_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
+      uint8_t rtype;
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
+      while ((volatile uint8_t) nrk_cur_task_TCB->suspend_flag == 1); // pdiener: make shure that was the right interrupt
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp: 2 warnings, 0 errors
+compiling nrk_time.cpp...
+compiling ulib.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
+   //**
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
+      return 1;
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
+  }
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
+    uint32_t uClk;
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp: 4 warnings, 0 errors
+compiling adc_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR; 
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR; 
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
+              return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
+              return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp: 5 warnings, 0 errors
+compiling ff_basic_sensor.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
+              if(is_open==1) return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
+                  return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
+              return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
+                          return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
+              return NRK_ERROR;
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
+  */
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp: 8 warnings, 0 errors
+compiling nrk_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
+      if(dev_fd<0 || dev_fd>_nrk_driver_count)
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp: 1 warning, 0 errors
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
+        int8_t result;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
+        uint8_t v,result, backoff, backoff_count;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
+        int8_t e;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
+        uint8_t backoff;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
+  */
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+  static uint8_t g_chan;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+  static int8_t tx_reserve;
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp: 7 warnings, 0 errors
+compiling basic_rf.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #61-D: integer operation result is out of range
+                LPC_GPIO1->FIOPIN ^= 1<<31;
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #68-D: integer conversion resulted in a change of sign
+                LPC_GPIO1->FIOPIN ^= 1<<31;
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp: 2 warnings, 0 errors
+compiling MRF24J40.cpp...
+compiling main.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp(39): warning:  #177-D: variable "i" was declared but never referenced
+                        int i;
+mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp: 1 warning, 0 errors
+linking...
+Program Size: Code=28836 RO-data=1880 RW-data=308 ZI-data=2916  
+After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Error(s), 35 Warning(s).
+964  
+After Build - User command #1: fromelf --bin -o H:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Error(s), 36 Warning(s).
