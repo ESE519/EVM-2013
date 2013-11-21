@@ -1,37 +1,85 @@
 import os
-fileptr = open("mRKv2.0/build/MRK.map","rb")
-flag=0
-for line in fileptr:
-	tokens=line.split()
-	if(flag==1):
-		end=int(tokens[4])
-		print tokens[4]
-		flag=0
-	if(len(tokens)> 1 and tokens[0]=='simple_function()'):
-		flag=1
-		start=int(tokens[4])
-		print tokens[4]
-fileptr.close()
-functionsize = end-start
-print functionsize
+functions = []
+functionSizes = []
+#get the list of functions from the header file
+def get_functions():
+	count=0
+	fileptr = open("funcs.h",'rb+')
+	for func in fileptr:
+        	if(count==1):
+			functions = func.split();
+		        #print functions
+		if(count>2):
+			break
+		else:
+			count=count+1
+	fileptr.close()
+	return functions
+
+	
+# reading the function sizes from the map file
+def get_functionsize(function):
+	flag=0
+	end=0
+	start=0
+	fileptr = open("mRKv2.0/build/MRK.map","rb")
+	for line in fileptr:
+		tokens=line.split()
+		if(flag==1):
+			end=int(tokens[4])
+			#print tokens[4]
+			flag=0
+		if(len(tokens)> 1 and tokens[0]== function):
+			flag=1
+			start=int(tokens[4])
+			#print tokens[4]
+	fileptr.close()
+	functionsize = end-start
+	return functionsize
+
+#writing the function size to the header file
+def write_functionSizes():
+	fin = open("funcs.h","rb+")
+	fout = open("b.h", "wt")
+        index=0
+	flagstart=0
+	flagend=0
+	print functions
+	for line in fin:
+		tokens=line.split()
+		
+		if(flagstart==1 and flagend==0 and index<len(functionSizes)):
+			token0=str(tokens[0])
+			token1=str(functionSizes[index])
+			print token1
+			if(index==len(functions)-1):
+				line= token0+" "+token1+"\n"	
+  			else:				
+				line= token0+" "+token1+",\n"
+			fout.write(line)
+			#print functions[index]
+			index=index+1
+		else :
+			fout.write(line)
+		if(len(tokens)>0 and tokens[0]=="//start"):
+			flagstart=1
+		if(len(tokens)>0 and tokens[0]=="//end"):
+			flagend=1
+	fin.close()
+	fout.close()
+	os.remove("funcs.h")
+	os.rename("b.h","funcs.h")
 
 
-fin = open("senderNode.cpp","rb+")
-fout = open("b.cpp", "wt")
-for line in fin:
-	tokens=line.split()
-	if(len(tokens)>1 and tokens[1]=='functionSize'):
-		token0=str(tokens[0])
-		token1=str(tokens[1])
-		token2=str(tokens[2])
-		token3=str(functionsize)
-		token4=str(tokens[4])
-		line="\t"+"\t"+token0+" "+token1+" "+token2+" "+token3+" "+token4+"\n"
-		fout.write(line)
-	else :
-		fout.write(line)
-	#fout.write(line.replace('foo', 'bar') )
-fin.close()
-fout.close()
-os.remove("senderNode.cpp")
-os.rename("b.cpp","senderNode.cpp")
+functions=get_functions()
+for function in functions:
+	functionSizes.append(get_functionsize(function))
+write_functionSizes()
+
+
+
+
+
+	
+	
+
