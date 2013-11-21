@@ -59,3 +59,4 @@
 .\build\packethandler.o: .\mbed\ulib.h
 .\build\packethandler.o: .\mbed\nrk_platform_time.h
 .\build\packethandler.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\build\packethandler.o: messageTypes.h

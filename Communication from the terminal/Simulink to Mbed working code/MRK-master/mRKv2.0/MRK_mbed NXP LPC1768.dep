@@ -1361,11 +1361,14 @@ I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C86004)
 F (.\mrk_uvision_lpc1768\mrk\NanoRk\Projects\Simulink\MW_target_hardware_resources.h)(0x527D92DD)()
 F (.\mrk_uvision_lpc1768\mrk\NanoRk\Projects\Simulink\rtwtypes.h)(0x528035B5)()
-F (.\mrk_uvision_lpc1768\mrk\NanoRk\Projects\basic_tasks\main.cpp)(0x528C212E)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I.\mbed -I.\mbed\LPC1768-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DTARGET_LPC1768 -o .\build\main.o --omf_browse .\build\main.crf --depend .\build\main.d)
+F (.\packetHandler.cpp)(0x528DAD42)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I.\mbed -I.\mbed\LPC1768-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DTARGET_LPC1768 -o .\build\packethandler.o --omf_browse .\build\packethandler.crf --depend .\build\packethandler.d)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\packetHandler.h)(0x528DAD10)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\include.h)(0x528035B5)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C86004)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C86004)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\mbed.h)(0x50946D3E)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
-I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C86004)
 I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C86004)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\error.h)(0x50946D3E)
@@ -1375,7 +1378,6 @@ I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\cmsis.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\LPC17xx.h)(0x528035B5)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\core_cm3.h)(0x528035B5)
-I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C86004)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\system_LPC17xx.h)(0x528035B5)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\cmsis_nvic.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\PeripheralNames.h)(0x50946D3E)
@@ -1410,11 +1412,68 @@ I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\InterruptIn.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\wait_api.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\rtc_time.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\hal.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\hal_mbed.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\ulib.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_pin_define.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_events.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_time.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_platform_time.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\messageTypes.h)(0x528DAD28)
+F (.\main.cpp)(0x528DAE0B)(--cpp -c --cpu Cortex-M3 -D__EVAL -g -O3 --apcs=interwork --split_sections -I.\mbed -I.\mbed\LPC1768-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-DTARGET_LPC1768 -o .\build\main.o --omf_browse .\build\main.crf --depend .\build\main.d)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk.h)(0x528035B5)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_cpu.h)(0x50946D3E)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C86004)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_cfg.h)(0x528C6051)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_time.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\include.h)(0x528035B5)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C86004)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\mbed.h)(0x50946D3E)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C86004)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C86004)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C86004)
+I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C86004)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\error.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\DigitalIn.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\platform.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\PinNames.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\cmsis.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\LPC17xx.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\core_cm3.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LPC1768\system_LPC17xx.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\cmsis_nvic.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\PeripheralNames.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Base.h)(0x50946D3E)
+I (C:\Keil\ARM\ARMCC\include\cstdlib)(0x51C86004)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\DirHandle.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\FileHandle.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\DigitalOut.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\DigitalInOut.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\BusIn.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\BusOut.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\BusInOut.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\AnalogIn.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\AnalogOut.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\PwmOut.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Serial.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Stream.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\FileLike.h)(0x528035B5)
+I (C:\Keil\ARM\ARMCC\include\cstdio)(0x51C86004)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\FunctionPointer.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\SPI.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\I2C.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Ethernet.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\CAN.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\can_helper.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Timer.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Ticker.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\TimerEvent.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\Timeout.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\LocalFileSystem.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\FileSystemLike.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\InterruptIn.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\wait_api.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\rtc_time.h)(0x528035B5)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\hal.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\hal_mbed.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\ulib.h)(0x528035B5)
@@ -1427,4 +1486,11 @@ I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_timer.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_stack_check.h)(0x50946D3E)
 I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_stats.h)(0x50946D3E)
-F (.\packetHandler.cpp)(0x528C2205)()
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\basic_rf.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\MRF24J40.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\bmac.h)(0x528035B5)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\ff_basic_sensor.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_driver_list.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\mbed\nrk_driver.h)(0x50946D3E)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\messageTypes.h)(0x528DAD28)
+I (D:\EVM-2013\Communication from the terminal\Simulink to Mbed working code\MRK-master\mRKv2.0\packetHandler.h)(0x528DAD10)

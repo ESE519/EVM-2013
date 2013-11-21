@@ -21,12 +21,8 @@ Header file to handle packet transmission and reception from one node to another
 #include <stdio.h>
 
 
-
-
 #define MAX_PACKET_SIZE 100  //Defines the maximum size of the packet 
-
-int packetHeaderVal;
-
+#define HEADER_SIZE 5
 
 enum packetType{
 	FIRST_PACKET=1,
@@ -34,8 +30,20 @@ enum packetType{
 	LAST_PACKET=3
 };
 
-
+enum transmissionStates{
+	START=1,
+	WAIT_ACK =2,
+	IN_PROGRESS = 3,
+  LAST_PACKET_ACK =4,
+	END=5
+};	
+enum receiverStates{
+    SEND_ACK=1,
+    STOP=2
+};
 
 
 
 uint8_t calculateNumberPackets(int packetSize);
+int createNextTaskPacket(char *txBuffer,uint8_t *data,int dataSize);
+void extractPacket(uint8_t *rxBuffer,uint8_t *data,int packetSize);

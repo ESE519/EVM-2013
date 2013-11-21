@@ -22,6 +22,7 @@
 ".\build\bmac.o"
 ".\build\basic_rf.o"
 ".\build\mrf24j40.o"
+".\build\packethandler.o"
 ".\build\main.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
