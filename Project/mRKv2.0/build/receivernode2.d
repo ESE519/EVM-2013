@@ -78,3 +78,4 @@
 .\build\receivernode2.o: IAP.h
 .\build\receivernode2.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
 .\build\receivernode2.o: function_manager.h
+.\build\receivernode2.o: messagetypes.h

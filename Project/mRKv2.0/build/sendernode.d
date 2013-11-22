@@ -73,3 +73,4 @@
 .\build\sendernode.o: .\mbed\bmac.h
 .\build\sendernode.o: function_manager.h
 .\build\sendernode.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\sendernode.o: messagetypes.h

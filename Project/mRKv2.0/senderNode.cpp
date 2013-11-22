@@ -16,7 +16,7 @@
 //#include "jumptable.h"
 
 #include "function_manager.h"
-
+#include "messagetypes.h"
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
 
@@ -39,9 +39,14 @@ nrk_task_type TX_TASK;
 NRK_STK tx_task_stack[NRK_APP_STACKSIZE];
 void tx_task (void);
 
+nrk_task_type SR_TASK;
+NRK_STK sr_task_stack[NRK_APP_STACKSIZE];
+void serial_task (void);
+
+
 void nrk_create_taskset ();
 
-char tx_buf[102];
+char tx_buf[107];
 char rx_buf[RF_MAX_PAYLOAD_SIZE];
 void print_function(char *ptr, int num);
 
@@ -54,9 +59,17 @@ char code[1024];
 
 /******* time definitions *******/
 nrk_time_t timeend, timeout, timestart;
-int simple_function();
+void simple_function();
 void copy_code_ram();
 uint32_t anotherScore = 0;
+
+
+
+/******************************************/
+uint8_t taskTxNode=3,taskPeriod=10,taskExecution=100,ledNumber=0; //Reading these values from the user 
+char enableFnTx=1;
+
+
 
 
 int main(void)
@@ -68,7 +81,7 @@ int main(void)
 	  printf("address of get handle is %X\n\r", a);
     printf("simple_function address is 0x%X\n\r", &simple_function);
     copy_code_ram();
-    print_function((char *)&simple_function, 100);
+    //print_function((char *)&simple_function, 100);
     nrk_setup_ports();
     nrk_init();
     bmac_task_config();
@@ -79,8 +92,36 @@ int main(void)
     return 0;
 
 }
-
-int simple_function(){
+void serial_task()
+{
+	
+	while(1)
+	{
+		
+		/*
+		printf("Enter the node to which the task has to be transmitted\r\n");
+		scanf("%d \n",&taskTxNode);
+		printf("Enter the period for the task");
+		scanf("%d \n",&taskPeriod);
+		printf("Enter the execution time");
+		scanf("%d \n",&taskExecution);
+		printf("Enter led number(0-3)");
+		scanf("%d \n",&ledNumber);
+		//Transmit 
+		if(taskTxNode != MY_ID && taskTxNode>1 && taskTxNode<=3)
+			enableFnTx=1;
+		*/
+		
+		nrk_wait_until_next_period ();
+	}
+	
+	
+	
+	
+	
+	
+}	
+void simple_function(){
 	int a = 1, b = 2;
 	uint16_t addrh, addrl;
 	uint32_t address_to_get_handle;
@@ -97,17 +138,17 @@ int simple_function(){
 	get_function_handle = (void *(*)(const char *, int)) address_to_get_handle;
 	led_toggle = (int8_t (*)(int)) get_function_handle("toggle", 7);
 	
-	if(led_toggle == NULL)
-		return 0;
+	//if(led_toggle == NULL)
+		//return 0;
 	
 	print = (int (*)(const char *, ...)) get_function_handle("print", 7);
 	
-	if(print == NULL)
-		return 1;
+	//if(print == NULL)
+		//return 1;
 	
-	led_toggle(RED_LED);
+	led_toggle(ORANGE_LED);
 	print("hahahaha\n\r");
-	return (a + b);
+	//return (a + b);
 	
 }
 
@@ -147,14 +188,27 @@ void rx_task ()
 				
 				if(len == 0)
 					continue;
-        received_response=1; // an ack recieved
         local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
         if(len != 0) {
-            //printing out the contents recieved from the sender node
-            for(i = 0; i < len; i++)
-                printf("%d ", local_rx_buf[i]);
-            printf("\n\r");
-         }     
+            if(local_rx_buf[0]!=MY_ID)
+						{
+						switch(local_rx_buf[1])
+						{
+						case TASKACK: 
+							received_response=1;
+							printf("Received ACK \n");
+							break;
+						case TASKNACK:
+							received_response=1;
+							printf("Received NACK \n");
+							break;
+						default:
+							break;
+						}
+					}
+					
+					
+      }     
     }
 		bmac_rx_pkt_release ();
 		
@@ -175,27 +229,34 @@ void tx_task ()
         tx_done_signal = bmac_get_tx_done_signal ();
          nrk_signal_register (tx_done_signal);
       while(1) {
-        if(!received_response){
+          if(enableFnTx)
+					{
             tx_buf[0] = MY_ID; 
-            tx_buf[1] = 256; //function Size
-						//tx_buf[2]= 100;  
-            					
+            tx_buf[1] = TASKTX;
+						tx_buf[2] = taskTxNode;
+						tx_buf[3] = taskPeriod;
+						tx_buf[4] = taskExecution;
+						tx_buf[5] = 256; //function Size
+											
             for (int k=0; k<100;k++){
-							tx_buf[k+2]=code[k];
+							tx_buf[k+6]=code[k];
             }
-            /*
-            for (int k=0; k<2;k++){
-                    printf("%d\r\n",tx_buf[k]);
-            }
-           */
             nrk_led_toggle(ORANGE_LED);
-            val=bmac_tx_pkt(tx_buf, 102);
-            //printf("Transmitted packet");   
-            nrk_wait_until_next_period ();
+            val=bmac_tx_pkt(tx_buf, 106);
+            printf("Transmitted packet");   
+						enableFnTx=0;
+					}
+					else if (!received_response)
+					{
+						val=bmac_tx_pkt(tx_buf, 106);
+            printf("Transmitted packet");   
+					}
+						
+					nrk_wait_until_next_period ();
         }
-			}
+}
        
-    }       
+       
    
    
  
@@ -204,11 +265,25 @@ void tx_task ()
 
 void nrk_create_taskset ()
 {
-
-
+    /*
+		SR_TASK.task = serial_task;
+    nrk_task_set_stk( &SR_TASK, sr_task_stack, NRK_APP_STACKSIZE);
+    SR_TASK.prio = 3;
+    SR_TASK.FirstActivation = TRUE;
+    SR_TASK.Type = BASIC_TASK;
+    SR_TASK.SchType = NONPREEMPTIVE;
+    SR_TASK.period.secs = 100;
+    SR_TASK.period.nano_secs = 100* NANOS_PER_MS;
+    SR_TASK.cpu_reserve.secs = 10;
+    SR_TASK.cpu_reserve.nano_secs = 10 * NANOS_PER_MS;
+    SR_TASK.offset.secs = 0;
+    SR_TASK.offset.nano_secs = 0;
+    nrk_activate_task (&SR_TASK);
+		*/
+	
     RX_TASK.task = rx_task;
     nrk_task_set_stk( &RX_TASK, rx_task_stack, NRK_APP_STACKSIZE);
-    RX_TASK.prio = 2;
+    RX_TASK.prio = 1;
     RX_TASK.FirstActivation = TRUE;
     RX_TASK.Type = BASIC_TASK;
     RX_TASK.SchType = PREEMPTIVE;
@@ -222,17 +297,21 @@ void nrk_create_taskset ()
 
     TX_TASK.task = tx_task;
     nrk_task_set_stk( &TX_TASK, tx_task_stack, NRK_APP_STACKSIZE);
-    TX_TASK.prio = 1;
+    TX_TASK.prio = 2;
     TX_TASK.FirstActivation = TRUE;
     TX_TASK.Type = BASIC_TASK;
     TX_TASK.SchType = PREEMPTIVE;
-    TX_TASK.period.secs = 3;
+    TX_TASK.period.secs = 5;
     TX_TASK.period.nano_secs = 0;
     TX_TASK.cpu_reserve.secs = 0;
     TX_TASK.cpu_reserve.nano_secs = 900 * NANOS_PER_MS;
     TX_TASK.offset.secs = 0;
     TX_TASK.offset.nano_secs = 0;
     nrk_activate_task (&TX_TASK);
+		
+		
+		
+
 
     printf ("Create done\r\n");
 }
