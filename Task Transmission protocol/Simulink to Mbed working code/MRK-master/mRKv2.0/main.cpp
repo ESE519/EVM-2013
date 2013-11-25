@@ -89,14 +89,20 @@ int packetSize=1024;														//Max packet size
 char sendAckFlag=0;															//Flag to tell send the ACK 						
 char receiveComplete =1 ;												//Flag to inform receiveComplete
 int receivedPacketSize=0;												//Keeps an account of number bytes received 
-
+int gindex=0;
 
 
 
 int main(void)
 
-{  
-		
+{  printf("started\r\n");
+	char code[10];
+	for(int i=0;i<10;i++)
+		code[i]=61;
+	char funcname[20]="Simple_function\0";
+    set_FuncCode(receiveData,1,20,code);
+	printf("Reached\r\n");	
+	/*
 	   int r;
     
     
@@ -115,7 +121,7 @@ int main(void)
 		
 		nrk_start();
     return 0;
-    
+    */
 }
 
 void rx_task ()
@@ -330,7 +336,9 @@ void rx_task2 (void) {
 
 /** Ping slaves task*/
 void nm_task(){
+	
 	while(1){
+		//printf("nm task scheduled \r\n");
 		if(!ReadyToSendData())
 			continue;
 	startDataTransmission(MASTER_ID,1);
@@ -611,8 +619,8 @@ void nrk_create_taskset ()
     TX_TASK.FirstActivation = TRUE;
     TX_TASK.Type = BASIC_TASK;
     TX_TASK.SchType = PREEMPTIVE;
-    TX_TASK.period.secs = 500;
-    TX_TASK.period.nano_secs = 0;
+    TX_TASK.period.secs = 0;
+    TX_TASK.period.nano_secs = 500 * NANOS_PER_MS;
     TX_TASK.cpu_reserve.secs = 0;
     TX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
     TX_TASK.offset.secs = 0;
@@ -681,6 +689,7 @@ void nrk_create_taskset ()
 		nrk_activate_task (&TX_TASK);
 		nrk_activate_task (&RE_TX_TASK);
 		nrk_activate_task (&ACK_TX_TASK);
+		nrk_activate_task (&NM_TASK);
 		//nrk_activate_task (&SERIAL_READ_TASK);
 		
 		
