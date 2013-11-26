@@ -1,0 +1,13 @@
+
+typedef enum TOP_LEVEL_STATE {
+	START,
+	ASSIGN_TASKS,
+	STEADY_STATE
+};
+
+
+typedef enum TOP_LEVEL_SIGNAL {
+	FOUND_NEIGHBORS,
+	NODE_DIED,
+	NO_SIGNAL
+};
