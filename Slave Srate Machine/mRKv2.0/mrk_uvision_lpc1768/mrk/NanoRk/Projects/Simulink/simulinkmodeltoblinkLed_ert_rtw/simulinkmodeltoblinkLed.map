@@ -1,0 +1,257 @@
+Archive member included because of file (symbol)
+
+c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                              simulinkmodeltoblinkLed.o (__aeabi_dsub)
+c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                              simulinkmodeltoblinkLed.o (__aeabi_dcmplt)
+c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                              simulinkmodeltoblinkLed.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+simulinkmodeltoblinkLed_M_
+                    0x4               simulinkmodeltoblinkLed.o
+simulinkmodeltoblinkLed_DW
+                    0x4               simulinkmodeltoblinkLed.o
+simulinkmodeltoblinkLed_Y
+                    0x8               simulinkmodeltoblinkLed.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 simulinkmodeltoblinkLed.o
+ .data          0x00000000        0x0 simulinkmodeltoblinkLed.o
+ .bss           0x00000000        0x0 simulinkmodeltoblinkLed.o
+ .text          0x00000000        0x0 simulinkmodeltoblinkLed_data.o
+ .data          0x00000000        0x0 simulinkmodeltoblinkLed_data.o
+ .bss           0x00000000        0x0 simulinkmodeltoblinkLed_data.o
+ .text          0x00000000        0x0 startup_gcc.o
+ .data          0x00000000        0x0 startup_gcc.o
+ .bss           0x00000000        0x0 startup_gcc.o
+ .text          0x00000000        0x0 system_LM3S.o
+ .data          0x00000000        0x0 system_LM3S.o
+ .bss           0x00000000        0x0 system_LM3S.o
+ .text.SystemInit
+                0x00000000        0xc system_LM3S.o
+ .text          0x00000000        0x0 syscalls.o
+ .data          0x00000000        0x0 syscalls.o
+ .bss           0x00000000        0x0 syscalls.o
+ .text._close   0x00000000       0x18 syscalls.o
+ .text._fstat   0x00000000       0x24 syscalls.o
+ .text._isatty  0x00000000       0x18 syscalls.o
+ .text._lseek   0x00000000       0x1c syscalls.o
+ .text._open    0x00000000       0x1c syscalls.o
+ .text._read    0x00000000       0x1c syscalls.o
+ .text._exit    0x00000000       0x14 syscalls.o
+ .text._fini    0x00000000       0x10 syscalls.o
+ .bss.heap_end  0x00000000        0x4 syscalls.o
+ .text._sbrk    0x00000000       0x7c syscalls.o
+ .text._write   0x00000000       0x1c syscalls.o
+ .comment       0x00000000       0x71 syscalls.o
+ .ARM.attributes
+                0x00000000       0x33 syscalls.o
+ .text          0x00000000        0x0 ert_main.o
+ .data          0x00000000        0x0 ert_main.o
+ .bss           0x00000000        0x0 ert_main.o
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .text          0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00040000         xr
+SRAM             0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD simulinkmodeltoblinkLed.o
+LOAD simulinkmodeltoblinkLed_data.o
+LOAD startup_gcc.o
+LOAD system_LM3S.o
+LOAD syscalls.o
+LOAD ert_main.o
+LOAD C:/Keil/ARM/Pack/ARM/CMSIS/3.20.3/CMSIS/Lib/GCC/libarm_cortexM3l_math.a
+LOAD c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libm.a
+LOAD c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libm.a
+START GROUP
+LOAD c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a
+LOAD c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a
+END GROUP
+                0x20020000                _eram = 0x20020000
+
+.text           0x00000000      0xc54
+ *(.isr_vector .isr_vector.*)
+ .isr_vector    0x00000000       0xb8 startup_gcc.o
+                0x00000000                g_pfnVectors
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text.simulinkmodeltoblinkLed_step
+                0x000000b8       0xcc simulinkmodeltoblinkLed.o
+                0x000000b8                simulinkmodeltoblinkLed_step
+ .text.simulinkmodeltoblinkLed_initialize
+                0x00000184       0x4c simulinkmodeltoblinkLed.o
+                0x00000184                simulinkmodeltoblinkLed_initialize
+ .text.simulinkmodeltoblinkLed_terminate
+                0x000001d0        0xc simulinkmodeltoblinkLed.o
+                0x000001d0                simulinkmodeltoblinkLed_terminate
+ .text.ResetISR
+                0x000001dc       0x6c startup_gcc.o
+                0x000001dc                ResetISR
+ .text.NmiSR    0x00000248        0x8 startup_gcc.o
+ .text.FaultISR
+                0x00000250        0x8 startup_gcc.o
+ .text.IntDefaultHandler
+                0x00000258        0x8 startup_gcc.o
+ .text.getOscClk
+                0x00000260      0x1c8 system_LM3S.o
+ .text.SystemCoreClockUpdate
+                0x00000428      0x188 system_LM3S.o
+                0x00000428                SystemCoreClockUpdate
+ .text.rt_OneStep
+                0x000005b0       0x78 ert_main.o
+                0x000005b0                rt_OneStep
+ .text.main     0x00000628       0x7c ert_main.o
+                0x00000628                main
+ .text          0x000006a4      0x370 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x000006a4                __aeabi_drsub
+                0x000006ac                __aeabi_dsub
+                0x000006ac                __subdf3
+                0x000006b0                __aeabi_dadd
+                0x000006b0                __adddf3
+                0x00000928                __floatunsidf
+                0x00000928                __aeabi_ui2d
+                0x00000948                __floatsidf
+                0x00000948                __aeabi_i2d
+                0x0000096c                __aeabi_f2d
+                0x0000096c                __extendsfdf2
+                0x000009a8                __floatundidf
+                0x000009a8                __aeabi_ul2d
+                0x000009b8                __floatdidf
+                0x000009b8                __aeabi_l2d
+ .text          0x00000a14      0x110 c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                0x00000a14                __gtdf2
+                0x00000a14                __gedf2
+                0x00000a1c                __ltdf2
+                0x00000a1c                __ledf2
+                0x00000a24                __nedf2
+                0x00000a24                __eqdf2
+                0x00000a24                __cmpdf2
+                0x00000aa0                __aeabi_cdrcmple
+                0x00000ab0                __aeabi_cdcmpeq
+                0x00000ab0                __aeabi_cdcmple
+                0x00000ac0                __aeabi_dcmpeq
+                0x00000ad4                __aeabi_dcmplt
+                0x00000ae8                __aeabi_dcmple
+                0x00000afc                __aeabi_dcmpge
+                0x00000b10                __aeabi_dcmpgt
+ .text.memset   0x00000b24      0x12c c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+                0x00000b24                memset
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ .rodata.simulinkmodeltoblinkLed_M
+                0x00000c50        0x4 simulinkmodeltoblinkLed.o
+                0x00000c50                simulinkmodeltoblinkLed_M
+
+.vfp11_veneer   0x00000c54        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x00000c54        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x00000c54        0x0
+ .iplt          0x00000000        0x0 simulinkmodeltoblinkLed.o
+
+.rel.dyn        0x00000c54        0x0
+ .rel.iplt      0x00000000        0x0 simulinkmodeltoblinkLed.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000c54                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000c54                __exidx_end = .
+                0x00000c54                . = ALIGN (0x4)
+                0x00000c54                _etext = .
+                0x00000c54                _sidata = .
+
+.data           0x20000000       0x24 load address 0x00000c54
+                0x20000000                _sdata = .
+ *(.data .data.*)
+ .data.simulinkmodeltoblinkLed_P
+                0x20000000       0x20 simulinkmodeltoblinkLed_data.o
+                0x20000000                simulinkmodeltoblinkLed_P
+ .data.SystemCoreClock
+                0x20000020        0x4 system_LM3S.o
+                0x20000020                SystemCoreClock
+                0x20000024                . = ALIGN (0x4)
+                0x20000024                _edata = .
+
+.igot.plt       0x20000024        0x0 load address 0x00000c78
+ .igot.plt      0x00000000        0x0 simulinkmodeltoblinkLed.o
+
+.bss            0x20000028       0x18 load address 0x00000c80
+                0x20000028                _sbss = .
+ *(.bss .bss.*)
+ .bss.IsrOverrun
+                0x20000028        0x4 ert_main.o
+                0x20000028                IsrOverrun
+ .bss.OverrunFlag
+                0x2000002c        0x1 ert_main.o
+ *(COMMON)
+ *fill*         0x2000002d        0x3 00
+ COMMON         0x20000030       0x10 simulinkmodeltoblinkLed.o
+                0x20000030                simulinkmodeltoblinkLed_M_
+                0x20000034                simulinkmodeltoblinkLed_DW
+                0x20000038                simulinkmodeltoblinkLed_Y
+                0x20000040                . = ALIGN (0x4)
+                0x20000040                _ebss = .
+
+.co_stack       0x20000040      0x840 load address 0x00000c98
+                0x20000040                . = ALIGN (0x8)
+ *(.co_stack .co_stack.*)
+ .co_stack      0x20000040      0x840 startup_gcc.o
+                0x20000040                pulStack
+                0x20000880                . = ALIGN (0x8)
+                0x20000880                _end = .
+                0x20000888                PROVIDE (_sheap, (_end + 0x8))
+                0x2000fff8                PROVIDE (_eheap, ALIGN (((ORIGIN (SRAM) + 0x10000) - 0x8), 0x8))
+OUTPUT(../simulinkmodeltoblinkLed.elf elf32-littlearm)
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x70 simulinkmodeltoblinkLed.o
+                                 0x71 (size before relaxing)
+ .comment       0x00000000       0x71 simulinkmodeltoblinkLed_data.o
+ .comment       0x00000000       0x71 startup_gcc.o
+ .comment       0x00000000       0x71 system_LM3S.o
+ .comment       0x00000000       0x71 ert_main.o
+
+.ARM.attributes
+                0x00000000       0x33
+ .ARM.attributes
+                0x00000000       0x33 simulinkmodeltoblinkLed.o
+ .ARM.attributes
+                0x00000033       0x33 simulinkmodeltoblinkLed_data.o
+ .ARM.attributes
+                0x00000066       0x33 startup_gcc.o
+ .ARM.attributes
+                0x00000099       0x33 system_LM3S.o
+ .ARM.attributes
+                0x000000cc       0x33 ert_main.o
+ .ARM.attributes
+                0x000000ff       0x1d c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000011c       0x1d c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000139       0x2d c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)
+
+.debug_frame    0x00000000       0x2c
+ .debug_frame   0x00000000       0x2c c:/matlab/supportpackages/r2013b/gnu tools arm embedded/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc.a(lib_a-memset.o)

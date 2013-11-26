@@ -1,0 +1,236 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+S:\ese 519\GIT\EVM-2013\slave\mRKv2.0\MRK.uvproj
+Project File Date:  11/21/2013
+
+<h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(122): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(123): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(124): warning:  #177-D: variable "p" was declared but never referenced
+receiverNode2.cpp(161): error:  #20: identifier "code_aligned" is undefined
+receiverNode2.cpp(197): error:  #20: identifier "functionSize" is undefined
+receiverNode2.cpp(204): error:  #20: identifier "functionRecieved" is undefined
+receiverNode2.cpp(208): error:  #20: identifier "numberDummyTasks" is undefined
+receiverNode2.cpp(211): error:  #20: identifier "dummyFunction" is undefined
+receiverNode2.cpp(211): error:  #20: identifier "functionTask" is undefined
+receiverNode2.cpp(216): error:  #20: identifier "DUMMY_TASK" is undefined
+receiverNode2.cpp(226): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(235): error:  #20: identifier "dummy1Function" is undefined
+receiverNode2.cpp(238): error:  #20: identifier "DUMMY_TASK1" is undefined
+receiverNode2.cpp(248): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(256): error:  #20: identifier "dummy2Function" is undefined
+receiverNode2.cpp(259): error:  #20: identifier "DUMMY_TASK2" is undefined
+receiverNode2.cpp(269): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(154): warning:  #177-D: variable "mole" was declared but never referenced
+receiverNode2.cpp(154): warning:  #177-D: variable "from" was declared but never referenced
+receiverNode2.cpp(154): warning:  #177-D: variable "received_round" was declared but never referenced
+receiverNode2.cpp(320): error:  #20: identifier "functionRecieved" is undefined
+receiverNode2.cpp(327): warning:  #225-D: the format string ends before this argument
+receiverNode2.cpp(307): warning:  #550-D: variable "val" was set but never used
+receiverNode2.cpp(310): warning:  #177-D: variable "ret" was declared but never referenced
+receiverNode2.cpp(311): warning:  #177-D: variable "r_period" was declared but never referenced
+".\build\MRK.axf" - 15 Errors, 14 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(123): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(124): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(125): warning:  #177-D: variable "p" was declared but never referenced
+receiverNode2.cpp(198): error:  #20: identifier "functionSize" is undefined
+receiverNode2.cpp(205): error:  #20: identifier "functionRecieved" is undefined
+receiverNode2.cpp(209): error:  #20: identifier "numberDummyTasks" is undefined
+receiverNode2.cpp(212): error:  #20: identifier "dummyFunction" is undefined
+receiverNode2.cpp(212): error:  #20: identifier "functionTask" is undefined
+receiverNode2.cpp(217): error:  #20: identifier "DUMMY_TASK" is undefined
+receiverNode2.cpp(227): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(236): error:  #20: identifier "dummy1Function" is undefined
+receiverNode2.cpp(239): error:  #20: identifier "DUMMY_TASK1" is undefined
+receiverNode2.cpp(249): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(257): error:  #20: identifier "dummy2Function" is undefined
+receiverNode2.cpp(260): error:  #20: identifier "DUMMY_TASK2" is undefined
+receiverNode2.cpp(270): error:  #20: identifier "enableTask" is undefined
+receiverNode2.cpp(155): warning:  #177-D: variable "mole" was declared but never referenced
+receiverNode2.cpp(155): warning:  #177-D: variable "from" was declared but never referenced
+receiverNode2.cpp(155): warning:  #177-D: variable "received_round" was declared but never referenced
+receiverNode2.cpp(321): error:  #20: identifier "functionRecieved" is undefined
+receiverNode2.cpp(328): warning:  #225-D: the format string ends before this argument
+receiverNode2.cpp(308): warning:  #550-D: variable "val" was set but never used
+receiverNode2.cpp(311): warning:  #177-D: variable "ret" was declared but never referenced
+receiverNode2.cpp(312): warning:  #177-D: variable "r_period" was declared but never referenced
+".\build\MRK.axf" - 14 Errors, 14 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(123): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(124): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(125): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+.\build\MRK.axf: Error: L6218E: Undefined symbol virtual_task_0() (referred from receivernode2.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol virtual_task_1() (referred from receivernode2.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol virtual_task_2() (referred from receivernode2.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol rx_task() (referred from receivernode2.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol tx_task() (referred from receivernode2.o).
+".\build\MRK.axf" - 5 Errors, 7 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(144): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(145): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+.\build\MRK.axf: Error: L6218E: Undefined symbol rx_task() (referred from receivernode2.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol tx_task() (referred from receivernode2.o).
+".\build\MRK.axf" - 2 Errors, 7 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(144): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(145): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31422 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(127): error:  #65: expected a ";"
+receiverNode2.cpp(133): warning:  #12-D: parsing restarts here after previous syntax error
+receiverNode2.cpp(123): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(145): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "p" was declared but never referenced
+".\build\MRK.axf" - 1 Errors, 9 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(145): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31458 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(145): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31474 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(145): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(146): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31474 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(148): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31474 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(148): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31474 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(148): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31486 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(148): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31626 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling receiverNode2.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(11): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+receiverNode2.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+receiverNode2.cpp(147): warning:  #177-D: variable "a" was declared but never referenced
+receiverNode2.cpp(148): warning:  #177-D: variable "p" was declared but never referenced
+linking...
+Program Size: Code=31626 RO-data=1550 RW-data=476 ZI-data=56872  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
