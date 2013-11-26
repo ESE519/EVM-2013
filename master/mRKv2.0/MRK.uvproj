@@ -554,9 +554,19 @@
               <FilePath>.\senderNode.cpp</FilePath>
             </File>
             <File>
-              <FileName>state_machine_fns.cpp</FileName>
+              <FileName>middle_level_state.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\state_machine_fns.cpp</FilePath>
+              <FilePath>.\middle_level_state.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>low_level_state.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\low_level_state.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UtsavAPI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\UtsavAPI.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -1112,9 +1122,19 @@
               <FilePath>.\senderNode.cpp</FilePath>
             </File>
             <File>
-              <FileName>state_machine_fns.cpp</FileName>
+              <FileName>middle_level_state.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\state_machine_fns.cpp</FilePath>
+              <FilePath>.\middle_level_state.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>low_level_state.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\low_level_state.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UtsavAPI.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\UtsavAPI.cpp</FilePath>
             </File>
           </Files>
         </Group>

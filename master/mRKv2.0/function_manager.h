@@ -25,6 +25,8 @@ struct task_function_info {
 	char fun_references[10][MAX_NAME_LENGTH];
 	int num_references;
 	uint32_t states[MAX_NUM_STATES];
+	uint16_t periods, periodms;
+	uint16_t wcets, wcetms;
 };
 
 
@@ -45,8 +47,9 @@ int task_function_register(	const char *name,
 
 int register_reference(const char *task_name, const char *fun_name, int fn_namelen);
 
+int set_scheduling_parameters(const char *task_name, uint16_t ps, uint16_t pms, uint16_t es, uint16_t ems);
 
 int find_unassigned_tasks();
-
+int find_first_unassigned_task();
 
 #endif

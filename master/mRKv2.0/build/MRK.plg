@@ -7,3 +7,121 @@ S:\ese 519\GIT\EVM-2013\master\mRKv2.0\MRK.uvproj
 Project File Date:  11/24/2013
 
 <h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling nrk_cpu.cpp...
+compiling nrk_status.cpp...
+compiling nrk_timer.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_watchdog.cpp...
+compiling nrk.cpp...
+compiling nrk_error.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
+compiling nrk_events.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
+compiling nrk_idle_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
+compiling nrk_reserve.cpp...
+compiling nrk_scheduler.cpp...
+compiling nrk_stack_check.cpp...
+compiling nrk_stats.cpp...
+compiling nrk_task.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
+compiling nrk_time.cpp...
+compiling hal_wait.cpp...
+compiling ulib.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
+mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
+assembling my_asm.s...
+mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
+compiling adc_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
+compiling ff_basic_sensor.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
+mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
+compiling nrk_driver.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling bmac.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(462): warning:  #550-D: variable "result" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(503): warning:  #177-D: variable "result" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #550-D: variable "e" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(556): warning:  #177-D: variable "backoff" was declared but never referenced
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(804): warning:  #1-D: last line of file ends without a newline
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
+mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
+compiling basic_rf.cpp...
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #61-D: integer operation result is out of range
+mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(337): warning:  #68-D: integer conversion resulted in a change of sign
+compiling MRF24J40.cpp...
+compiling function_manager.cpp...
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+function_manager.h(55): warning:  #1-D: last line of file ends without a newline
+function_manager.cpp(98): warning:  #940-D: missing return statement at end of non-void function "task_function_register"
+function_manager.cpp(79): warning:  #177-D: variable "i" was declared but never referenced
+function_manager.cpp(128): warning:  #940-D: missing return statement at end of non-void function "regsiter_reference"
+function_manager.cpp(105): warning:  #177-D: variable "ret_val" was declared but never referenced
+compiling fn_task_map.cpp...
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+function_manager.h(55): warning:  #1-D: last line of file ends without a newline
+compiling senderNode.cpp...
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+function_manager.h(55): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(26): warning:  #1-D: last line of file ends without a newline
+states.h(44): error:  #40: expected an identifier
+states.h(45): error:  #40: expected an identifier
+states.h(56): warning:  #1-D: last line of file ends without a newline
+senderNode.cpp(117): warning:  #177-D: variable "a" was declared but never referenced
+senderNode.cpp(268): error:  #20: identifier "TASKACK" is undefined
+senderNode.cpp(272): error:  #20: identifier "TASKNACK" is undefined
+senderNode.cpp(284): warning:  #111-D: statement is unreachable
+senderNode.cpp(252): warning:  #177-D: variable "i" was declared but never referenced
+senderNode.cpp(306): error:  #20: identifier "TASKTX" is undefined
+senderNode.cpp(310): warning:  #69-D: integer conversion resulted in truncation
+senderNode.cpp(293): warning:  #550-D: variable "val" was set but never used
+senderNode.cpp(293): warning:  #177-D: variable "sequenceNumber" was declared but never referenced
+senderNode.cpp(294): warning:  #177-D: variable "r_period" was declared but never referenced
+compiling middle_level_state.cpp...
+states.h(56): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+function_manager.h(55): warning:  #1-D: last line of file ends without a newline
+messageTypes.h(26): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
+middle_level_state.cpp(85): warning:  #1-D: last line of file ends without a newline
+compiling low_level_state.cpp...
+states.h(56): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+function_manager.h(55): warning:  #1-D: last line of file ends without a newline
+messageTypes.h(26): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(10): warning:  #1-D: last line of file ends without a newline
+low_level_state.cpp(140): warning:  #177-D: variable "ret_val" was declared but never referenced
+low_level_state.cpp(162): warning:  #177-D: variable "ret_val" was declared but never referenced
+low_level_state.cpp(184): warning:  #177-D: variable "ret_val" was declared but never referenced
+low_level_state.cpp(184): warning:  #177-D: variable "i" was declared but never referenced
+low_level_state.cpp(214): warning:  #177-D: variable "ret_val" was declared but never referenced
+low_level_state.cpp(214): warning:  #177-D: variable "i" was declared but never referenced
+low_level_state.cpp(242): warning:  #177-D: variable "ret_val" was declared but never referenced
+low_level_state.cpp(242): warning:  #177-D: variable "i" was declared but never referenced
+low_level_state.cpp(242): warning:  #177-D: variable "length" was declared but never referenced
+low_level_state.cpp(244): warning:  #177-D: variable "fun_name" was declared but never referenced
+low_level_state.cpp(245): warning:  #177-D: variable "fn_ptr" was declared but never referenced
+compiling UtsavAPI.cpp...
+messageTypes.h(26): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
+packethandler.h(57): warning:  #1-D: last line of file ends without a newline
+".\build\MRK.axf" - 5 Errors, 81 Warning(s).
+Target not created

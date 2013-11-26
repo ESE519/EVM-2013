@@ -106,6 +106,10 @@ int simple_function_setup() {
 	if(!ret_val)
 		return ret_val;
 	
+	ret_val = set_scheduling_parameters("simple_function", 1, 0, 0, 100);
+	if(!ret_val)
+		return ret_val;
+	
 	return 0;
 }
 
@@ -372,6 +376,10 @@ void top_level_sm_task () {
 				}
 			break;
 		}
+		
+		
+		middle_level_take_action();
+		low_level_take_action();
 	}
 }
 				

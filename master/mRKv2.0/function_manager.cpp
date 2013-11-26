@@ -126,7 +126,30 @@ int regsiter_reference(const char *task_name, const char *fun_name, int fn_namel
 	strncpy(task_function_table[i].fun_references[index], fun_name, fn_namelen);
 	(task_function_table[i].num_references)++;
 }
+
+
+
+int set_scheduling_parameters(const char *task_name, uint16_t ps, uint16_t pms, uint16_t es, uint16_t ems) {
+	int i, flag = 0;
+	for( i = 0; i < current_num_task_functions; i++) {
+		if( strcmp(task_function_table[i].name, task_name) == 0) {
+			flag = 1;
+			break;
+		}
+	}
 	
+	if(!flag)
+		return -1;
+	
+	task_function_table[i].periods = ps;
+	task_function_table[i].periodms = pms;
+	task_function_table[i].wcets = es;
+	task_function_table[i].wcetms = ems;
+	
+	return 0;
+}
+	
+
 	
 	
 int find_unassigned_tasks() {
@@ -134,6 +157,17 @@ int find_unassigned_tasks() {
 	for(i = 0; i < current_num_task_functions; i++) {
 		if(task_function_table[i].assigned_node_id == 0) return 1;
 			
+	}
+	
+	return 0;
+}
+
+
+
+int find_first_unassigned_task() {
+	int i;
+	for(i = 0; i < current_num_task_functions; i++) {
+		if(task_function_table[i].assigned_node_id == 0) return i;
 	}
 	
 	return 0;
