@@ -4,1562 +4,186 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 S:\ESE519_git\EVM-2013\transmit protocol\MRK-master\mRKv2.0\MRK.uvproj
-Project File Date:  11/20/2013
+Project File Date:  11/25/2013
 
 <h2>Output:</h2>
 Build target 'mbed NXP LPC1768'
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
 compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(309): warning:  #550-D: variable "val" was set but never used
+main.cpp(400): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning:  #550-D: variable "val" was set but never used
+main.cpp(452): warning: C4017W: tx_done_signal may be used before being set
 linking...
-Program Size: Code=33716 RO-data=1880 RW-data=376 ZI-data=6560  
+Program Size: Code=33296 RO-data=1880 RW-data=368 ZI-data=8868  
 After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 16 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=33712 RO-data=1880 RW-data=376 ZI-data=6560  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 38 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-linking...
-Program Size: Code=33712 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(220): warning: C4017W: val may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 40 Warning(s).
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=33708 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 39 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=33672 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33756 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33756 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(181): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33756 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(183): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33768 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(183): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33764 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(183): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33768 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(183): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-linking...
-Program Size: Code=33768 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 3 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32808 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32796 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32800 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32812 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32804 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32800 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(394): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32804 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(394): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32808 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(394): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32804 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(357): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(394): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32808 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32832 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32832 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32824 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32832 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32824 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32860 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 1 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(358): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(395): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32868 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(396): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32876 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32924 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32916 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32888 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32896 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32904 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32904 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32900 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32892 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 40 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32900 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32900 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(359): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(398): warning:  #177-D: variable "readVal" was declared but never referenced
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32892 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 40 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32952 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32956 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(367): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(406): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32964 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(367): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(406): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32964 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(368): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(407): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32964 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(368): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(407): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32972 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(368): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(407): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32972 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32992 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(370): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32996 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(370): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(466): error:  #20: identifier "N0NPREEMPTIVE" is undefined
-".\build\MRK.axf" - 1 Errors, 4 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(370): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32996 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(370): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32988 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(363): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32972 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32964 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(409): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32968 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32980 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32968 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32972 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32968 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32972 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32988 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32984 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32992 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32988 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32988 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32988 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32992 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(190): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(366): warning:  #550-D: variable "val" was set but never used
-main.cpp(408): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32964 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32932 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32928 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Load "S:\\ESE519_git\\EVM-2013\\transmit protocol\\MRK-master\\mRKv2.0\\build\\MRK.axf" 
-
-Cannot load driver 'C:\Keil\ARM\BIN\AGDIRDI.DLL'.
-
-Possible Reasons:
- - Driver DLL could not be found in the specified path
- - Driver DLL requires additional DLL's which are not installed
- - Required Hardware Drivers are not installed
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(333): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32932 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 40 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32936 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32932 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(361): warning:  #550-D: variable "val" was set but never used
-main.cpp(403): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32936 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32952 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32956 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32952 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32952 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32948 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32952 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(362): warning:  #550-D: variable "val" was set but never used
-main.cpp(405): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32948 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(363): warning:  #550-D: variable "val" was set but never used
-main.cpp(406): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32900 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(363): warning:  #550-D: variable "val" was set but never used
-main.cpp(406): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32904 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(185): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(363): warning:  #550-D: variable "val" was set but never used
-main.cpp(406): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=32900 RO-data=1880 RW-data=376 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(201): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(379): warning:  #550-D: variable "val" was set but never used
-main.cpp(422): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=33180 RO-data=1880 RW-data=376 ZI-data=6940  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(201): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(379): warning:  #550-D: variable "val" was set but never used
-main.cpp(422): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=33184 RO-data=1880 RW-data=376 ZI-data=6940  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(201): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
-main.cpp(379): warning:  #550-D: variable "val" was set but never used
-main.cpp(422): warning:  #177-D: variable "readVal" was declared but never referenced
-linking...
-Program Size: Code=33180 RO-data=1880 RW-data=376 ZI-data=6940  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 4 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(368): warning: C4017W: tx_done_signal may be used before being set
-main.cpp(236): warning: C4017W: tx_done_signal may be used before being set
-main.cpp(325): warning: C4017W: tx_done_signal may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32564 RO-data=1880 RW-data=372 ZI-data=5784  
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(309): warning:  #550-D: variable "val" was set but never used
+main.cpp(400): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning:  #550-D: variable "val" was set but never used
+main.cpp(452): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33316 RO-data=1880 RW-data=368 ZI-data=8868  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 8 Warning(s).
 Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(309): warning:  #550-D: variable "val" was set but never used
+main.cpp(400): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning:  #550-D: variable "val" was set but never used
+main.cpp(452): warning: C4017W: tx_done_signal may be used before being set
 linking...
-Program Size: Code=32564 RO-data=1880 RW-data=372 ZI-data=5784  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Program Size: Code=33324 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
 Build target 'mbed NXP LPC1768'
 compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(368): warning: C4017W: tx_done_signal may be used before being set
-main.cpp(236): warning: C4017W: tx_done_signal may be used before being set
-main.cpp(325): warning: C4017W: tx_done_signal may be used before being set
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(307): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(399): warning:  #550-D: variable "val" was set but never used
+main.cpp(450): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning: C4017W: tx_done_signal may be used before being set
 linking...
-Program Size: Code=32556 RO-data=1880 RW-data=372 ZI-data=5784  
+Program Size: Code=33308 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(307): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(399): warning:  #550-D: variable "val" was set but never used
+main.cpp(450): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33308 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(307): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(399): warning:  #550-D: variable "val" was set but never used
+main.cpp(450): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33288 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(307): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(399): warning:  #550-D: variable "val" was set but never used
+main.cpp(450): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33308 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(307): warning:  #177-D: variable "j" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(399): warning:  #550-D: variable "val" was set but never used
+main.cpp(450): warning:  #550-D: variable "val" was set but never used
+main.cpp(451): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33316 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(403): warning:  #550-D: variable "val" was set but never used
+main.cpp(454): warning:  #550-D: variable "val" was set but never used
+main.cpp(455): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33372 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(403): warning:  #550-D: variable "val" was set but never used
+main.cpp(454): warning:  #550-D: variable "val" was set but never used
+main.cpp(455): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33344 RO-data=1880 RW-data=368 ZI-data=8868  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(403): warning:  #550-D: variable "val" was set but never used
+main.cpp(454): warning:  #550-D: variable "val" was set but never used
+main.cpp(455): warning: C4017W: tx_done_signal may be used before being set
+compiling packetHandler.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+packetHandler.cpp(120): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=33364 RO-data=1880 RW-data=364 ZI-data=8888  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(403): warning:  #550-D: variable "val" was set but never used
+main.cpp(454): warning:  #550-D: variable "val" was set but never used
+main.cpp(455): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33392 RO-data=1880 RW-data=364 ZI-data=8888  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 7 Warning(s).
 Build target 'mbed NXP LPC1768'
 compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(368): warning: C4017W: tx_done_signal may be used before being set
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+main.cpp(109): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(166): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(308): warning:  #550-D: variable "val" was set but never used
+main.cpp(403): warning:  #550-D: variable "val" was set but never used
+main.cpp(454): warning:  #550-D: variable "val" was set but never used
+main.cpp(455): warning: C4017W: tx_done_signal may be used before being set
 linking...
-Program Size: Code=32764 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=32764 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(367): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(368): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32756 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(368): warning:  #550-D: variable "val" was set but never used
-main.cpp(412): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(369): warning: C4017W: tx_done_signal may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32824 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 6 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(413): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(370): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32816 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(413): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(370): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32816 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(413): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(370): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32824 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32864 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 1 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(118): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(369): warning:  #550-D: variable "val" was set but never used
-main.cpp(413): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(370): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32864 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(116): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(371): warning:  #550-D: variable "val" was set but never used
-main.cpp(420): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(372): warning: C4017W: tx_done_signal may be used before being set
-compiling packetHandler.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=32836 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 6 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(116): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(371): warning:  #550-D: variable "val" was set but never used
-main.cpp(420): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(372): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32824 RO-data=1880 RW-data=372 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32920 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32912 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32912 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32916 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32908 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(270): error:  #20: identifier "RECEIVER_NODE" is undefined
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-".\build\MRK.axf" - 1 Errors, 4 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(305): error:  #20: identifier "RECEIVER_NODE" is undefined
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-".\build\MRK.axf" - 1 Errors, 4 Warning(s).
-Target not created
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32912 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-main.cpp(120): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(386): warning:  #550-D: variable "val" was set but never used
-main.cpp(435): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(387): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=32920 RO-data=1880 RW-data=376 ZI-data=6340  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 5 Warning(s).
+Program Size: Code=33384 RO-data=1880 RW-data=364 ZI-data=8888  
+After Build - User command #1: fromelf --bin -o G:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 7 Warning(s).
