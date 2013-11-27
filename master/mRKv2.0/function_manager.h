@@ -1,10 +1,11 @@
 #ifndef FUNCTION_MANAGER_H
 #define	FUNCTION_MANAGER_H
 
-#include "mbed.h"
 #include <inttypes.h>
 #include "state_manager.h"
-
+#include <include.h>
+#include <ulib.h>
+#include <stdio.h>
 #define GET_HANDLE_ADDRESS				0x10006000
 #define GET_HANDLE_ADDRESS_H			0x1000
 #define GET_HANDLE_ADDRESS_L			0x6000
@@ -45,7 +46,7 @@ int task_function_register(	const char *name,
 														int namelen, 
 														char *address);
 
-int register_reference(const char *task_name, const char *fun_name, int fn_namelen);
+int register_reference(const char *task_name,const char *fun_name, int fn_namelen);
 
 int set_scheduling_parameters(const char *task_name, uint16_t ps, uint16_t pms, uint16_t es, uint16_t ems);
 

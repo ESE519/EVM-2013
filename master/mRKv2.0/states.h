@@ -1,6 +1,6 @@
 
 typedef enum  {
-	START,
+	STATE_START,
 	ASSIGN_TASKS,
 	STEADY_STATE
 }TOP_LEVEL_STATE;

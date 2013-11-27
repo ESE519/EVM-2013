@@ -1,3 +1,7 @@
+#ifndef PACKET_HANDLER_H
+#define PACKET_HANDLER_H
+
+
 /*********************************************************
 *
 *
@@ -77,3 +81,7 @@ Initializes the packet handler
 return: 
 ************************************************************/
 void initPacketHandler();
+
+
+
+#endif

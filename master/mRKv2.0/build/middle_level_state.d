@@ -1,6 +1,9 @@
 .\build\middle_level_state.o: middle_level_state.cpp
 .\build\middle_level_state.o: states.h
 .\build\middle_level_state.o: function_manager.h
+.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\build\middle_level_state.o: state_manager.h
 .\build\middle_level_state.o: .\mbed\mbed.h
 .\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
@@ -14,7 +17,6 @@
 .\build\middle_level_state.o: .\mbed\cmsis.h
 .\build\middle_level_state.o: .\mbed\LPC1768\LPC17xx.h
 .\build\middle_level_state.o: .\mbed\LPC1768\core_cm3.h
-.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\build\middle_level_state.o: .\mbed\LPC1768\system_LPC17xx.h
 .\build\middle_level_state.o: .\mbed\cmsis_nvic.h
 .\build\middle_level_state.o: .\mbed\cmsis.h
@@ -50,13 +52,6 @@
 .\build\middle_level_state.o: .\mbed\InterruptIn.h
 .\build\middle_level_state.o: .\mbed\wait_api.h
 .\build\middle_level_state.o: .\mbed\rtc_time.h
-.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
-.\build\middle_level_state.o: state_manager.h
-.\build\middle_level_state.o: UtsavAPI.h
-.\build\middle_level_state.o: .\mbed\nrk.h
-.\build\middle_level_state.o: .\mbed\nrk_cpu.h
-.\build\middle_level_state.o: .\mbed\nrk_cfg.h
-.\build\middle_level_state.o: .\mbed\nrk_time.h
 .\build\middle_level_state.o: .\mbed\include.h
 .\build\middle_level_state.o: .\mbed\hal.h
 .\build\middle_level_state.o: .\mbed\hal_mbed.h
@@ -64,8 +59,13 @@
 .\build\middle_level_state.o: .\mbed\nrk_pin_define.h
 .\build\middle_level_state.o: .\mbed\nrk_events.h
 .\build\middle_level_state.o: .\mbed\nrk_time.h
-.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\build\middle_level_state.o: .\mbed\ulib.h
 .\build\middle_level_state.o: .\mbed\nrk_platform_time.h
+.\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\build\middle_level_state.o: UtsavAPI.h
+.\build\middle_level_state.o: .\mbed\nrk.h
+.\build\middle_level_state.o: .\mbed\nrk_cpu.h
+.\build\middle_level_state.o: .\mbed\nrk_cfg.h
 .\build\middle_level_state.o: .\mbed\nrk_task.h
 .\build\middle_level_state.o: .\mbed\nrk.h
 .\build\middle_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h

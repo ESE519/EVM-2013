@@ -8,7 +8,7 @@
 LOW_LEVEL_STATE low_state = IDLE_LOW;
 LOW_LEVEL_SIGNAL low_sig = NO_SIGNAL_LOW;
 extern int node_to_send;   //the node to send the data to
-extern uint8_t *data;      //sumukh's array to write the tx packet to.
+extern uint8_t data[512*MAX_MOLES];      //sumukh's array to write the tx packet to.
 extern struct task_function_info task_function_table[MAX_NUM_TASKS_IN_NETWORK];
 
 /************* private function definitions *************/
@@ -33,6 +33,7 @@ void low_level_take_action () {
 	
 	switch(low_state) {
 		case IDLE:
+		printf("idle low level\n\r");
 		switch(low_sig) {
 			case SEND_TASK_LOW:
 			send_task_params();                 //done
@@ -48,6 +49,7 @@ void low_level_take_action () {
 		
 		
 		case TASK_PARAMS:
+		printf("Task params\n\r");
 		switch(low_sig) {
 			case ACK:
 			send_function_names();
@@ -69,6 +71,7 @@ void low_level_take_action () {
 		
 		
 		case FUNC_NAMES:
+		printf("Func names\n\r");
     if(low_sig == ACK) {
 			num_functions_sent = 0;
 			send_task_function_code();
@@ -82,6 +85,7 @@ void low_level_take_action () {
 		
 		
 		case FUNC_CODE:
+		printf("Func code\n\r");
 		if(low_sig == ACK) {
 			//if all functions code sent... then
 			//send init state.
@@ -100,6 +104,7 @@ void low_level_take_action () {
 		break;
 		
 		case INIT_STATE:
+		printf("init state\n\r");
 		if(low_sig == ACK) {
 			//send deactivate signal to the current node with the task.
 			low_state = DEACTIVATE;
@@ -111,6 +116,7 @@ void low_level_take_action () {
 		
 		
 		case DEACTIVATE:
+		printf("Deactivate\n\r");
 		if(low_sig == ACK) {
 			//send activate signal to the node.
 			low_state = ACTIVATE;
@@ -121,6 +127,7 @@ void low_level_take_action () {
 		
 		
 		case ACTIVATE:
+		printf("Activate\n\r");
 		if(low_sig == ACK) {
 			//done transferring the current task.
 			send_middle_level_signal(SENDING_DONE);
@@ -141,19 +148,25 @@ void low_level_take_action () {
 void send_task_params() {
 	int task_num, ret_val;
 	struct task_function_info *task_ptr;
+	
 	task_num = find_first_unassigned_task();
-	task_ptr = &task_function_table[task_num];
+	
+	task_ptr = &(task_function_table[task_num]);
+	printf("task name %s\n\r", task_ptr->name);
+	printf("task parameters %d %d %d %d \n\r", task_ptr->periods, task_ptr->periodms, task_ptr->wcets, task_ptr->wcetms);
 	set_MessageTypes(&data[DATA_LOCATION(node_to_send)], TYPE_TASK_PARAMS);
+	
 	set_TaskParams(&data[DATA_LOCATION(node_to_send)], 
 								 task_ptr->periods,
 	               task_ptr->periodms,
 	               task_ptr->wcets,
 	               task_ptr->wcetms);
-	
+	printf("done sending\n\r");
 	if(!ReadyToSendData(node_to_send))
 		printf("Error: Ready to send data returned 0\n\r");
 	
 	startDataTransmission(node_to_send, 25);     //acutal no of bytes is just 17
+	
 }
 	
 
@@ -191,6 +204,7 @@ void send_task_function_code() {
 	task_ptr = &task_function_table[task_num];
 	
 	fun_name = task_ptr->name;
+	printf("in sending code, name is %s\n\r", fun_name);
 	length = 256;         //To be done... put correct function size.
 	fn_ptr = (char *) get_function_handle(fun_name, MAX_NAME_LENGTH - 1);
 	fn_ptr = (char *)((uint32_t)fn_ptr & ~(1));
@@ -248,9 +262,13 @@ int any_functions_left() {
 	task_num = find_first_unassigned_task();
 	task_ptr = &task_function_table[task_num];
 	
-	if(num_functions_sent == task_ptr->num_references)
+	if(num_functions_sent == task_ptr->num_references) {
+		printf("no more functions left\n\r");
 		return 0;
+	}
 	
-	else 
+	else {
+		printf("Functions left is %d\n\r", task_ptr->num_references - num_functions_sent);
 		return 1;
+	}
 }

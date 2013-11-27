@@ -1,3 +1,6 @@
+#ifndef MESSAGE_TYPES_H
+#define MESSAGE_TYPES_H
+
 #include <include.h>
 #include <ulib.h>
 #include <stdio.h>
@@ -21,12 +24,17 @@
 	#define CHECKPOINT_STATES 8
 	#define TASK_ACTIVATE 9
 	#define TASK_DEACTIVATE 10
-	#define ACK 11
-	#define NACK 12
+	#define TYPE_ACK 11
+	#define TYPE_NACK 12
+
+	#define MAX_MOLES 	4
 	
-	#define MAX_MOLES  4
 	
 	enum messageTypes{
    DATA =1,
    DATA_PACKET_ACK = 2
 };
+
+
+
+#endif

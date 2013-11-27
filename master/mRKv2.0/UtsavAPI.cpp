@@ -20,9 +20,13 @@ char globalIndex=0;  //index of the send buffer array
 char slavesList[MAX_SLAVES];
 
 void set_MessageTypes(uint8_t* recdata,int messageName){
+	printf("setting message type\n\r");
 	globalIndex=0;
-	recdata[globalIndex]= messageName;
+	
+	recdata[globalIndex]= (uint8_t) messageName;
+	printf("returning\n\r");
 	globalIndex++;
+	
 }
 
 void resetIndex(){
@@ -41,10 +45,17 @@ void set_FuncCode(uint8_t* recdata,const char *name, uint16_t size, char *code){
 }
 
 void set_TaskParams(uint8_t* recdata,uint16_t psecs,uint16_t p_ms,uint16_t wsec,uint16_t wms){
-	recdata[globalIndex++] = psecs;
-	recdata[globalIndex++]= p_ms;
-	recdata[globalIndex++]= wsec;
-	recdata[globalIndex++]= wms;
+	memcpy(&recdata[globalIndex], &psecs, 2);
+	globalIndex += 2;
+	
+	memcpy(&recdata[globalIndex], &p_ms, 2);
+	globalIndex += 2;
+	
+	memcpy(&recdata[globalIndex], &wsec, 2);
+	globalIndex += 2;
+	
+	memcpy(&recdata[globalIndex], &wms, 2);
+	globalIndex += 2;
 	resetIndex();
 
 }

@@ -1,6 +1,9 @@
 .\build\low_level_state.o: low_level_state.cpp
 .\build\low_level_state.o: states.h
 .\build\low_level_state.o: function_manager.h
+.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\build\low_level_state.o: state_manager.h
 .\build\low_level_state.o: .\mbed\mbed.h
 .\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
@@ -14,7 +17,6 @@
 .\build\low_level_state.o: .\mbed\cmsis.h
 .\build\low_level_state.o: .\mbed\LPC1768\LPC17xx.h
 .\build\low_level_state.o: .\mbed\LPC1768\core_cm3.h
-.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\build\low_level_state.o: .\mbed\LPC1768\system_LPC17xx.h
 .\build\low_level_state.o: .\mbed\cmsis_nvic.h
 .\build\low_level_state.o: .\mbed\cmsis.h
@@ -50,13 +52,6 @@
 .\build\low_level_state.o: .\mbed\InterruptIn.h
 .\build\low_level_state.o: .\mbed\wait_api.h
 .\build\low_level_state.o: .\mbed\rtc_time.h
-.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
-.\build\low_level_state.o: state_manager.h
-.\build\low_level_state.o: UtsavAPI.h
-.\build\low_level_state.o: .\mbed\nrk.h
-.\build\low_level_state.o: .\mbed\nrk_cpu.h
-.\build\low_level_state.o: .\mbed\nrk_cfg.h
-.\build\low_level_state.o: .\mbed\nrk_time.h
 .\build\low_level_state.o: .\mbed\include.h
 .\build\low_level_state.o: .\mbed\hal.h
 .\build\low_level_state.o: .\mbed\hal_mbed.h
@@ -64,8 +59,13 @@
 .\build\low_level_state.o: .\mbed\nrk_pin_define.h
 .\build\low_level_state.o: .\mbed\nrk_events.h
 .\build\low_level_state.o: .\mbed\nrk_time.h
-.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\build\low_level_state.o: .\mbed\ulib.h
 .\build\low_level_state.o: .\mbed\nrk_platform_time.h
+.\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\build\low_level_state.o: UtsavAPI.h
+.\build\low_level_state.o: .\mbed\nrk.h
+.\build\low_level_state.o: .\mbed\nrk_cpu.h
+.\build\low_level_state.o: .\mbed\nrk_cfg.h
 .\build\low_level_state.o: .\mbed\nrk_task.h
 .\build\low_level_state.o: .\mbed\nrk.h
 .\build\low_level_state.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h

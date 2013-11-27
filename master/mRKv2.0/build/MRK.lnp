@@ -31,6 +31,7 @@
 ".\build\middle_level_state.o"
 ".\build\low_level_state.o"
 ".\build\utsavapi.o"
+".\build\packethandler.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o

@@ -78,3 +78,6 @@
 .\build\sendernode.o: memory_manager.h
 .\build\sendernode.o: IAP.h
 .\build\sendernode.o: states.h
+.\build\sendernode.o: packetHandler.h
+.\build\sendernode.o: transmitProtocol.h
+.\build\sendernode.o: UtsavAPI.h
