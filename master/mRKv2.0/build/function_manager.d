@@ -1,5 +1,8 @@
 .\build\function_manager.o: function_manager.cpp
 .\build\function_manager.o: function_manager.h
+.\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\build\function_manager.o: state_manager.h
 .\build\function_manager.o: .\mbed\mbed.h
 .\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
@@ -13,7 +16,6 @@
 .\build\function_manager.o: .\mbed\cmsis.h
 .\build\function_manager.o: .\mbed\LPC1768\LPC17xx.h
 .\build\function_manager.o: .\mbed\LPC1768\core_cm3.h
-.\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\build\function_manager.o: .\mbed\LPC1768\system_LPC17xx.h
 .\build\function_manager.o: .\mbed\cmsis_nvic.h
 .\build\function_manager.o: .\mbed\cmsis.h
@@ -49,5 +51,13 @@
 .\build\function_manager.o: .\mbed\InterruptIn.h
 .\build\function_manager.o: .\mbed\wait_api.h
 .\build\function_manager.o: .\mbed\rtc_time.h
-.\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
-.\build\function_manager.o: state_manager.h
+.\build\function_manager.o: .\mbed\include.h
+.\build\function_manager.o: .\mbed\hal.h
+.\build\function_manager.o: .\mbed\hal_mbed.h
+.\build\function_manager.o: .\mbed\ulib.h
+.\build\function_manager.o: .\mbed\nrk_pin_define.h
+.\build\function_manager.o: .\mbed\nrk_events.h
+.\build\function_manager.o: .\mbed\nrk_time.h
+.\build\function_manager.o: .\mbed\ulib.h
+.\build\function_manager.o: .\mbed\nrk_platform_time.h
+.\build\function_manager.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

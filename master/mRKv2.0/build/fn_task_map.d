@@ -52,3 +52,13 @@
 .\build\fn_task_map.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
 .\build\fn_task_map.o: function_manager.h
 .\build\fn_task_map.o: state_manager.h
+.\build\fn_task_map.o: .\mbed\include.h
+.\build\fn_task_map.o: .\mbed\hal.h
+.\build\fn_task_map.o: .\mbed\hal_mbed.h
+.\build\fn_task_map.o: .\mbed\ulib.h
+.\build\fn_task_map.o: .\mbed\nrk_pin_define.h
+.\build\fn_task_map.o: .\mbed\nrk_events.h
+.\build\fn_task_map.o: .\mbed\nrk_time.h
+.\build\fn_task_map.o: .\mbed\ulib.h
+.\build\fn_task_map.o: .\mbed\nrk_platform_time.h
+.\build\fn_task_map.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h

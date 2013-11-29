@@ -94,19 +94,53 @@ int task_function_register(	const char *name,
 	strncpy(task_function_table[current_num_task_functions].name, name, namelen);
 	task_function_table[current_num_task_functions].assigned_node_id = 0;
 	task_function_table[current_num_task_functions].num_references = 0;
+	current_num_task_functions++;
 	 
+	return 0;
 }
 
 
 
 
 
-int regsiter_reference(const char *task_name, const char *fun_name, int fn_namelen) {
+int register_reference(const char *task_name,const char *fun_name, int fn_namelen) {
 	int i, ret_val, flag = 0, index;
 	
-	if(fn_namelen > MAX_NAME_LENGTH)
+	if(fn_namelen > MAX_NAME_LENGTH) {
+		printf("name len greater\n\r");
 		return -1;
+	}
 	
+	for( i = 0; i < current_num_task_functions; i++) {
+		if( strcmp(task_function_table[i].name, task_name) == 0) {
+			flag = 1;
+			break;
+		}
+	}
+	
+	if(!flag) {
+		printf("did not find task\n\r");
+		return -1;
+	}
+	
+	
+	index = task_function_table[i].num_references;
+	if(index >= (MAX_REF_PER_TASK -1)) {
+		printf("max ref reached\n\r");
+		return -1;
+	}
+	
+	
+	strncpy(task_function_table[i].fun_references[index], fun_name, fn_namelen);
+	(task_function_table[i].num_references)++;
+	
+	return 0;
+}
+
+
+
+int set_scheduling_parameters(const char *task_name, uint16_t ps, uint16_t pms, uint16_t es, uint16_t ems) {
+	int i, flag = 0;
 	for( i = 0; i < current_num_task_functions; i++) {
 		if( strcmp(task_function_table[i].name, task_name) == 0) {
 			flag = 1;
@@ -118,15 +152,15 @@ int regsiter_reference(const char *task_name, const char *fun_name, int fn_namel
 		return -1;
 	
 	
-	index = task_function_table[i].num_references;
-	if(index >= (MAX_REF_PER_TASK -1))
-		return -1;
+	task_function_table[i].periods = ps;
+	task_function_table[i].periodms = pms;
+	task_function_table[i].wcets = es;
+	task_function_table[i].wcetms = ems;
 	
-	
-	strncpy(task_function_table[i].fun_references[index], fun_name, fn_namelen);
-	(task_function_table[i].num_references)++;
+	return 0;
 }
 	
+
 	
 	
 int find_unassigned_tasks() {
@@ -134,6 +168,17 @@ int find_unassigned_tasks() {
 	for(i = 0; i < current_num_task_functions; i++) {
 		if(task_function_table[i].assigned_node_id == 0) return 1;
 			
+	}
+	
+	return 0;
+}
+
+
+
+int find_first_unassigned_task() {
+	int i;
+	for(i = 0; i < current_num_task_functions; i++) {
+		if(task_function_table[i].assigned_node_id == 0) return i;
 	}
 	
 	return 0;
