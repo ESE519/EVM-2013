@@ -45,3 +45,10 @@ void startDataTransmission(int receiverNode,int numBytes);
  ****************************************/
 
 int checkReceivedDataReady(uint8_t node);
+
+
+
+
+int checkPacketRead(uint8_t node);
+
+void setPacketRead(uint8_t node);

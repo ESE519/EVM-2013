@@ -94,7 +94,7 @@ int packetSize[MAX_MOLES+1]={0};							 					//Max packet size
 char sendAckFlag[MAX_MOLES+1]={0};							 				//Flag to tell send the ACK
 char receiveComplete[MAX_MOLES+1];					 						//Flag to inform receiveComplete
 int receivedPacketSize[MAX_MOLES+1]={0};					 			//Keeps an account of number bytes received
-
+int lastPacketRead[MAX_MOLES+1]={0};
 
 
 
@@ -322,7 +322,9 @@ void rx_task ()
             switch(local_rx_buf[MESSAGE_TYPE_LOCATION])
             {
             case DATA:
-                if(receivedSeqNo>lastReceivedSequenceNo[senderNode])
+                if(lastPacketRead[senderNode]==0)
+								{
+								if(receivedSeqNo>lastReceivedSequenceNo[senderNode])
                 {
                     receiveComplete[senderNode] =0;
                     printf("received new packet\n\r");
@@ -352,7 +354,7 @@ void rx_task ()
                     if(local_rx_buf[PACKET_NUM_LOCATION]==LAST_PACKET)
                     {
                         receiveComplete[senderNode] =1;
-
+												lastPacketRead[senderNode] = 1;
                         for(int i=0;i<receivedPacketSize[senderNode];i++)
                         {
                             printf("%d \t",receiveData[i]);
@@ -375,7 +377,7 @@ void rx_task ()
 
                 }
                 //v=nrk_event_signal( signal_ack );
-
+							}
                 break;
             case DATA_PACKET_ACK:
 
@@ -679,16 +681,19 @@ void top_level_sm_task () {
 		middle_level_take_action();
 		low_level_take_action();
 		
-		if(checkReceivedDataReady(2)) {
-			switch(receiveData[DATA_LOCATION(2)]) {
-				case TYPE_ACK:
-				send_low_level_signal(ACK);
-				break;
-				
-				
-				case TYPE_NACK:
-				send_low_level_signal(NACK);
-				break;
+		if( checkPacketRead(2) ) {         //check if there is a new packet
+			if(checkReceivedDataReady(2)) {
+				setPacketRead(2);             //Mark the packet as read.
+				switch(receiveData[DATA_LOCATION(2)]) {
+					case TYPE_ACK:
+					send_low_level_signal(ACK);
+					break;
+					
+					
+					case TYPE_NACK:
+					send_low_level_signal(NACK);
+					break;
+				}
 			}
 		}
 	}
@@ -837,4 +842,18 @@ int checkReceivedDataReady(uint8_t node)
         return receivedPacketSize[node];
     }
     return 0;
+}
+//Check that you have to read a new packet 
+//new packet returns 1. Old packet - 0
+int checkPacketRead(uint8_t node)
+{
+ return lastPacketRead[node];
+		
+}
+//Set that you read the last packet 
+void setPacketRead(uint8_t node)
+{
+	
+	lastPacketRead[node] =0;
+	
 }
