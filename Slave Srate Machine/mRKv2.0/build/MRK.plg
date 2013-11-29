@@ -4,6 +4,31 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 S:\ese 519\GIT\EVM-2013\Slave Srate Machine\mRKv2.0\MRK.uvproj
-Project File Date:  11/23/2013
+Project File Date:  11/26/2013
 
 <h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling UtsavAPI.cpp...
+messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
+packethandler.h(79): warning:  #1-D: last line of file ends without a newline
+compiling main.cpp...
+messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
+main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(316): warning:  #550-D: variable "val" was set but never used
+main.cpp(411): warning:  #550-D: variable "val" was set but never used
+main.cpp(462): warning:  #550-D: variable "val" was set but never used
+main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=33936 RO-data=1880 RW-data=380 ZI-data=9444  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 13 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=33936 RO-data=1880 RW-data=380 ZI-data=9444  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).

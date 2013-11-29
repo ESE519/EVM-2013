@@ -1,3 +1,6 @@
+#ifndef MESSAGE_TYPES_H
+#define MESSAGE_TYPES_H
+
 #include <include.h>
 #include <ulib.h>
 #include <stdio.h>
@@ -12,51 +15,26 @@
 /*********************************************************************************************************************************************/
   #define DATA_TYPE 1
   #define TASK 1
-	#define TASK_PACKET_ACK 2
-	#define PING 3
-	#define TASK_PARAMS  4
-	#define FUNC_NAMES 5
-	#define FUNC_CODE 6
-	#define INIT_STATES 7
-	#define CHECKPOINT_STATES 8
-	#define TASK_ACTIVATE 9
-	#define TASK_DEACTIVATE 10
-	#define ACK 11
-	#define NACK 12
-/*
-enum messageTypes{
-	TASK =1,
-	TASK_PACKET_ACK = 2,
-	
-	PING=3,
-	TASK_PARAMS =4,
-	FUNC_NAMES=5,
-	FUNC_CODE=6,
-	INIT_STATES=7,
-	CHECKPOINT_STATES=8,
-	TASK_ACTIVATE=9,
-	TASK_DEACTIVATE=10,
-	ACK=11,
-	NACK=12
+    #define TASK_PACKET_ACK 2
+    #define PING 3
+    #define TYPE_TASK_PARAMS  4
+    #define TYPE_FUNC_NAMES 5
+    #define TYPE_FUNC_CODE 6
+    #define TYPE_INIT_STATES 7
+    #define CHECKPOINT_STATES 8
+    #define TASK_ACTIVATE 9
+    #define TASK_DEACTIVATE 10
+    #define TYPE_ACK 11
+    #define TYPE_NACK 12
+
+    #define MAX_MOLES     4
+   
+   
+    enum messageTypes{
+   DATA =1,
+   DATA_PACKET_ACK = 2
 };
 
 
-*/
 
-
-
-//Message format 
-
-/**********************************************
-Byte No 								DATA 
-1												Destination ID 
-2												Source ID 
-3												Sequence Number 
-4												Packet Type Eg. TASK , STACK etc 
-5 											Packet Number - 1st , 2nd ???????
-
-
-
-*************************************************/
-
-
+#endif

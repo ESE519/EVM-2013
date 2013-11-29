@@ -16,62 +16,77 @@
 #include <nrk_driver.h>
 #include "messageTypes.h"
 #include "packetHandler.h"
+#include "transmitProtocol.h"
+#include "slaveStates.h"
 #include "UtsavAPI.h"
 
-//#define MASTER 1
-//#define RECEIVER_NODE 2
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
+
+
+
 // Change this to your group channel
 #define MY_CHANNEL 2
 
-#define MAX_SLAVES 4
+//My ID 
 #define MY_ID 2
+
+//Reset the pointer to the correct buffers associated with the node number
+#define TX_LOCATION(ADD) ((ADD-1)*RF_MAX_PAYLOAD_SIZE)
+#define DATA_LOCATION(ADD) ((ADD-1)*512)
+#define MASTER_NODE 1
 
 Serial pc(USBTX,USBRX);
 
+
+
+
+
+//Receive task
 nrk_task_type RX_TASK;
 NRK_STK rx_task_stack[NRK_APP_STACKSIZE];
 void rx_task (void);
 
+//Transmit Task
 nrk_task_type TX_TASK;
 NRK_STK tx_task_stack[NRK_APP_STACKSIZE];
 void tx_task (void);
 
+//Retransmission Task
 nrk_task_type RE_TX_TASK;
 NRK_STK re_tx_task_stack[NRK_APP_STACKSIZE];
 void re_tx_task (void);
 
+//Acknowledgement Task
 nrk_task_type ACK_TX_TASK;
 NRK_STK ack_tx_task_stack[NRK_APP_STACKSIZE];
 void ack_tx_task (void);
 
-nrk_task_type SERIAL_READ_TASK;
-NRK_STK serial_rx_task_stack[NRK_APP_STACKSIZE];
-void serial_rx_task (void);
+//Slave task
+nrk_task_type SLAVE_TASK;
+NRK_STK slave_task_stack[NRK_APP_STACKSIZE];
+void slave_task (void);
 
-nrk_task_type RX_TASK2;
-NRK_STK rx_task2_stack[NRK_APP_STACKSIZE];
-void rx_task2 (void);
-
-
-nrk_task_type NM_TASK;
-NRK_STK nm_task_stack[NRK_APP_STACKSIZE];
-void nm_task (void);
-
+//Creates the task sets required 
 void nrk_create_taskset ();
-void startDataTransmission(int receiverNode,int numBytes);
-int checkReceivedDataReady();
-int ReadyToSendData();
-int getReceivedDataSize();
-int check_schedulability();
-void save_functionNames();
-void save_functionCode();
-void save_initial_states();
 
-char tx_buf[RF_MAX_PAYLOAD_SIZE];
+
+/*************** Private functions ****************/
+void send_ack_signal();
+void send_nack_signal();
+
+
+/***************************************************
+
+Transmit , receive and acknowledgement buffers
+
+
+****************************************************/
+char tx_buf[RF_MAX_PAYLOAD_SIZE*MAX_MOLES];
 char rx_buf[RF_MAX_PAYLOAD_SIZE];
-char ack_buf[5];
+char ack_buf[MAX_MOLES+1][5]={0};
+
+
 
 /*************************************************************
 
@@ -79,71 +94,87 @@ Global variables related to code transmission
 
 
 *************************************************************/
-uint8_t data[1024];                         //Buffer to store the data to be transmitted (Each node is given a buffer size of 512)
-uint8_t receiveData[1024];								//Buffer to store the received data 
-char sendNextPacket = END;											//Handles the state while sending
-char receiverNextPacket = STOP;									//Handles the state while receiving
-int sequenceNumber = 0;													//Sequence Number of the system
-int lastSentSequenceNo[MAX_SLAVES] ={0};					//Record of the last sent sequence number
-int lastReceivedSequenceNo[MAX_SLAVES]={0};			//Record of the last received sequence number
-int lastPacketTransmitted=0;													
-int transmittedPacketLength =0;									//Gives the length of the transmitted packet
-int packetSize=1024;														//Max packet size	
-char sendAckFlag=0;															//Flag to tell send the ACK 						
-char receiveComplete =1 ;												//Flag to inform receiveComplete
-int receivedPacketSize=0;												//Keeps an account of number bytes received 
-int gindex=0;
-char funcnames[20];
+uint8_t data[512*MAX_MOLES];                             //Buffer to store the data to be transmitted
+uint8_t receiveData[512*MAX_MOLES];						 					//Buffer to store the received data
+char sendNextPacket[MAX_MOLES+1] ;					 						//Handles the state while sending
+char receiverNextPacket[MAX_MOLES+1] ;			 						//Handles the state while receiving
+int sequenceNumber= 0;                                  //Sequence Number of the system
+int lastSentSequenceNo[MAX_MOLES+1] ={0};					 			//Record of the last sent sequence number
+int lastReceivedSequenceNo[MAX_MOLES+1]={0};			     	//Record of the last received sequence number
+int transmittedPacketLength[MAX_MOLES+1] ={0};				 	//Gives the length of the transmitted packet
+int packetSize[MAX_MOLES+1]={0};							 					//Max packet size
+char sendAckFlag[MAX_MOLES+1]={0};							 				//Flag to tell send the ACK
+char receiveComplete[MAX_MOLES+1];					 						//Flag to inform receiveComplete
+int receivedPacketSize[MAX_MOLES+1]={0};					 			//Keeps an account of number bytes received
 
-	enum modes{
-		STARTING,
-		CHECKING_SCHEDULE	,
-		READY_TO_EXECUTE,
-		SAVED_FUNC_NAMES,
-		SAVED_FUNC_CODE,
-		SAVED_INITIAL_STATES,
-		ACTIVATED_TASK,
-		DEACTIVATED_TASK
-	};
-modes mode;
+/*********************************************
+
+Intializes the global variables 
+
+***************************************************/
+void init ()
+{
+    int i=0;
+    memset(sendNextPacket,END,MAX_MOLES+1);					 		//Initialize transmit state machine
+
+    memset(receiverNextPacket,STOP,MAX_MOLES+1); 			 //Initialize the receive state machine
+
+    memset(receiveComplete,1,MAX_MOLES+1);					 	//Initiaze the receive complete state machine
+}
+
+
+
+
 int main(void)
 
-{  printf("started\r\n");
-	char code[10];
-	for(int i=0;i<10;i++)
-		code[i]=61;
-	char funcname[20]="Simple_function\0";
-    set_FuncCode(receiveData,1,20,code);
-	printf("Reached\r\n");	
-	/*
-	   int r;
+{
+    int r;
+    int i;
     
-    
-    for(r=0;r<1024;r++)
+    // Data to be transmitted
+    for(i=0;i<MAX_MOLES;i++)
     {
-        data[r] = r;
+        for(r=0;r<512;r++)
+        {
+            data[r+(512*i)] = r;
 
+        }
     }
-		startDataTransmission(1,256);
+    // Initialize the packet handlers
+    init();
+    initPacketHandler();
+
+    //Start transmission
+    startDataTransmission(2,10);
+    startDataTransmission(1,10);
+
     nrk_setup_ports();
     nrk_init();
     bmac_task_config();
     nrk_create_taskset();
     bmac_init (MY_CHANNEL);
     bmac_auto_ack_disable();
-		
-		nrk_start();
+    nrk_start();
+    
     return 0;
-    */
-}
 
+}
+/******************************************************************************************************
+ *
+ *
+ *Receive task execution
+ *
+ *
+ *
+ *
+ ******************************************************************************************************/
 void rx_task ()
 { 
-    
+
     uint8_t rssi,len,*local_rx_buf,v;
     int receivedSeqNo=0,senderNode = 0;
     
-		bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
+    bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
     bmac_rx_pkt_set_buffer (rx_buf,RF_MAX_PAYLOAD_SIZE);
     
     
@@ -154,11 +185,11 @@ void rx_task ()
         
 
         if( !bmac_rx_pkt_ready())
-        continue;
-        printf("received packet\n\r");
+            continue;
+        //printf("received packet\n\r");
         nrk_led_toggle(ORANGE_LED);
         
-				local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
+        local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
 
         //If my own packet then dont receive
         if(local_rx_buf[SOURCE_ADDRESS_LOCATION]==MY_ID)
@@ -169,301 +200,214 @@ void rx_task ()
         receivedSeqNo = local_rx_buf[SEQUENCE_NUM_LOCATION];
         senderNode = local_rx_buf[SOURCE_ADDRESS_LOCATION];
 
-
+        //Check if the message is intended for me
         if(len!=0 && local_rx_buf[DESTINATION_ADDRESS_LOCATION]==MY_ID)
         {
+            //Check the type of data
             switch(local_rx_buf[MESSAGE_TYPE_LOCATION])
             {
-            case TASK:
+            case DATA:
                 if(receivedSeqNo>lastReceivedSequenceNo[senderNode])
                 {
-                    receiveComplete =0;
-										printf("received new packet\n\r");
-										//Process and send the acknowledgement to the receiver
+                    receiveComplete[senderNode] =0;
+                    printf("received new packet\n\r");
+                    //Process and send the acknowledgement to the receiver
                     lastReceivedSequenceNo[senderNode]=receivedSeqNo;
-                    extractPacket(local_rx_buf,receiveData,len);
-										if(local_rx_buf[PACKET_NUM_LOCATION]==FIRST_PACKET)
-										{
-											receivedPacketSize=0;
-											receivedPacketSize +=(len-HEADER_SIZE); 
-											
-										}
-										else
-										{
-											
-											receivedPacketSize +=(len-HEADER_SIZE); 
-											
-										}
-										
-                    ack_buf[DESTINATION_ADDRESS_LOCATION]=senderNode;
-                    ack_buf[SOURCE_ADDRESS_LOCATION]= MY_ID;
-                    ack_buf[SEQUENCE_NUM_LOCATION] = receivedSeqNo;
-                    ack_buf[MESSAGE_TYPE_LOCATION] = TASK_PACKET_ACK;
-                    receiverNextPacket= SEND_ACK;
-                    
-										if(local_rx_buf[PACKET_NUM_LOCATION]==LAST_PACKET)
+                    extractPacket(local_rx_buf,&receiveData[DATA_LOCATION(senderNode)],len,senderNode);
+                    if(local_rx_buf[PACKET_NUM_LOCATION]==FIRST_PACKET)
                     {
-                        receiveComplete =1;
-												
-												for(int i=0;i<receivedPacketSize;i++)
+                        receivedPacketSize[senderNode]=0;
+                        receivedPacketSize[senderNode] +=(len-HEADER_SIZE);
+
+                    }
+                    else
+                    {
+
+                        receivedPacketSize[senderNode] +=(len-HEADER_SIZE);
+
+                    }
+
+                    //Send the acknowledgement
+                    ack_buf[senderNode][DESTINATION_ADDRESS_LOCATION]=senderNode;
+                    ack_buf[senderNode][SOURCE_ADDRESS_LOCATION]= MY_ID;
+                    ack_buf[senderNode][SEQUENCE_NUM_LOCATION] = receivedSeqNo;
+                    ack_buf[senderNode][MESSAGE_TYPE_LOCATION] = DATA_PACKET_ACK;
+                    receiverNextPacket[senderNode]= SEND_ACK;
+                    
+                    if(local_rx_buf[PACKET_NUM_LOCATION]==LAST_PACKET)
+                    {
+                        receiveComplete[senderNode] =1;
+
+                        for(int i=0;i<receivedPacketSize[senderNode];i++)
                         {
                             printf("%d \t",receiveData[i]);
 
                         }
-												
-										}
-										sendAckFlag=1;
+
+                    }
+                    sendAckFlag[senderNode]=1;
                 }
                 else
                 {
                     printf("received old packet\n\r");
-										ack_buf[DESTINATION_ADDRESS_LOCATION]=senderNode;
-                    ack_buf[SOURCE_ADDRESS_LOCATION]= MY_ID;
-                    ack_buf[SEQUENCE_NUM_LOCATION] = lastReceivedSequenceNo[senderNode];
-                    ack_buf[MESSAGE_TYPE_LOCATION] = TASK_PACKET_ACK;
+                    ack_buf[senderNode][DESTINATION_ADDRESS_LOCATION]=senderNode;
+                    ack_buf[senderNode][SOURCE_ADDRESS_LOCATION]= MY_ID;
+                    ack_buf[senderNode][SEQUENCE_NUM_LOCATION] = lastReceivedSequenceNo[senderNode];
+                    ack_buf[senderNode][MESSAGE_TYPE_LOCATION] = DATA_PACKET_ACK;
                     //Send the acknowledgement to the sender
-                    receiverNextPacket= SEND_ACK;
-										sendAckFlag=1;
+                    receiverNextPacket[senderNode]= SEND_ACK;
+                    sendAckFlag[senderNode]=1;
 
                 }
                 //v=nrk_event_signal( signal_ack );
-								
+
                 break;
-            case TASK_PACKET_ACK:
+            case DATA_PACKET_ACK:
 
                 //If it is a new ACK packet then accept it. Else dont bother
                 if(lastSentSequenceNo[senderNode]==receivedSeqNo)
                 {
-									printf("Received Ack\n");
-										switch(sendNextPacket)
+                    printf("Received Ack\n");
+                    switch(sendNextPacket[senderNode])
                     {
                     case WAIT_ACK:
-                        sendNextPacket= IN_PROGRESS;
-												printf("Sent IN_PROGRESS\n");
-												break;
-                    case LAST_PACKET_ACK:
-												printf("Sent end_PROGRESS\n");
-                        sendNextPacket = END;
+                        sendNextPacket[senderNode]= IN_PROGRESS;
+                        printf("Sent IN_PROGRESS\n");
                         break;
+                    case LAST_PACKET_ACK:
+                        printf("Sent end_PROGRESS\n");
+                        sendNextPacket[senderNode] = END;
+												break;
                     default:
                         printf("Error shouldn't have entered here");
                         break;
 
                     }
-									
-								}
+
+                }
 
 
                 break;
-								default:
-									break;
+            default:
+                break;
 
             }
         }
         bmac_rx_pkt_release ();
-				nrk_wait_until_next_period();
+        nrk_wait_until_next_period();
     }
     // pointing the function pointer to the copied code in the flash
 
 }
-
-void rx_task2 (void) {
-	 uint8_t rssi,len,*local_rx_buf,v;
-    int receivedSeqNo=0,senderNode = 0;
-		bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
-    bmac_rx_pkt_set_buffer (rx_buf,RF_MAX_PAYLOAD_SIZE);
-    
-    
-    while(!bmac_started());
-    printf("Receiver node Bmac initialised\n");
-
-    while(1) {
-        
-
-        if( !bmac_rx_pkt_ready())
-					continue;
-        mode = STARTING;
-				printf("received packet\n\r");
-        nrk_led_toggle(ORANGE_LED);
-				
-				if(checkReceivedDataReady())
-					continue;
-        
-				local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
-
-        //If my own packet then dont receive
-        if(local_rx_buf[SOURCE_ADDRESS_LOCATION]==MY_ID)
-        {
-            continue;
-        }
-        //Sample the data
-        receivedSeqNo = local_rx_buf[SEQUENCE_NUM_LOCATION];
-        senderNode = local_rx_buf[SOURCE_ADDRESS_LOCATION];
-        char* slaves;
-
-        if(len!=0 && local_rx_buf[DESTINATION_ADDRESS_LOCATION]==MY_ID )
-        {
-            switch(receiveData[DATA_TYPE])
-            {
-            case PING:
-              checkPings(senderNode);
-              break;
-            case FUNC_NAMES:
-                 if(mode == READY_TO_EXECUTE)
-									 save_functionNames();
-              break;
-						
-						case FUNC_CODE:
-								if(mode== SAVED_FUNC_NAMES)
-									save_functionCode();
-							break;
-						
-						case TASK_PARAMS:
-							mode = CHECKING_SCHEDULE;
-							if (check_schedulability())
-								mode = READY_TO_EXECUTE;
-							else 
-								mode=STARTING;
-							break;
-							
-						case INIT_STATES:
-							if(mode==SAVED_FUNC_CODE)
-								save_initial_states();
-							break;
-						case CHECKPOINT_STATES:
-							
-							break;
-						case TASK_ACTIVATE:
-							if(mode==SAVED_INITIAL_STATES)
-								activate_task();
-							break;
-						case TASK_DEACTIVATE:
-							
-							break;
-						case ACK:
-							 
-							break;
-						case NACK:
-							 
-							break;
-						
-						default:
-							break;
-
-            }
-        }
-        bmac_rx_pkt_release ();
-				nrk_wait_until_next_period();
-    }
-	
-}
-
-/** Ping slaves task*/
-void nm_task(){
-	
-	while(1){
-		//printf("nm task scheduled \r\n");
-		if(!ReadyToSendData())
-			continue;
-	startDataTransmission(MASTER_ID,1);
-	set_MessageTypes(receiveData,PING);
-		
-	nrk_wait_until_next_period();
-	}
-}
+/***************************************************************
+ *
+ *
+ *Transmit task
+ *
+ *
+ *
+ ***************************************************************/
 
 
 void tx_task ()
 {
     int r;
+    int i=0,j=0;
     uint8_t val;
-
     nrk_sig_t tx_done_signal;
     while (!bmac_started ())
         nrk_wait_until_next_period ();
 
     tx_done_signal = bmac_get_tx_done_signal ();
     nrk_signal_register (tx_done_signal);
-    tx_buf[SOURCE_ADDRESS_LOCATION] = MY_ID;
-    //tx_buf[DESTINATION_ADDRESS_LOCATION] = RECEIVER_NODE;
+    for(i=1;i<=MAX_MOLES;i++)
+    {
+        tx_buf[SOURCE_ADDRESS_LOCATION + TX_LOCATION(i)] = MY_ID;
+    }
     printf("Transmit Task\r\n");
-		while(1){
+    while(1){
 
-        switch(sendNextPacket)
+
+        for(i=1;i<=MAX_MOLES;i++)
         {
-        case START:
-            tx_buf[SEQUENCE_NUM_LOCATION] = ++sequenceNumber;
-						
-            lastSentSequenceNo[tx_buf[DESTINATION_ADDRESS_LOCATION]]= sequenceNumber;
-            r=createNextTaskPacket(tx_buf,data,packetSize);
-            transmittedPacketLength = r+HEADER_SIZE;
-            printf("%d\n",transmittedPacketLength);    
-						
-							
-								if(r == 100)
-                {  
-										nrk_led_toggle(RED_LED);
-										sendNextPacket = WAIT_ACK;
-								}
-                else
-                {
-                   	//printf("Transmitted  lower number of Packet\r\n");
-										sendNextPacket = LAST_PACKET_ACK;
-										nrk_led_toggle(BLUE_LED);
-								}
-								val=bmac_tx_pkt(tx_buf, transmittedPacketLength);
-								printf("Transmit Task\r\n");
-								if(val!=NRK_OK)
-								{
-								    printf("ERROR IN TRANSMISSION\r\n");
-								}
-            
-            
-            
-            break;
 
-        case IN_PROGRESS:
-            tx_buf[SEQUENCE_NUM_LOCATION] = ++sequenceNumber;
-						printf("Transmit Task\r\n");
-            r=createNextTaskPacket(tx_buf,data,packetSize);
-            lastSentSequenceNo[tx_buf[DESTINATION_ADDRESS_LOCATION]]= sequenceNumber;
-            transmittedPacketLength = r+HEADER_SIZE;
-                printf("%d\n",transmittedPacketLength);    
+            if(i==MY_ID)
+            {
+                continue;
+            }
+            //Check the state of the state machine
+            switch(sendNextPacket[i])
+            {
+            //Start the transmission
+            case START:
+                tx_buf[SEQUENCE_NUM_LOCATION+TX_LOCATION(i)] = ++sequenceNumber;
+
+                lastSentSequenceNo[i]= sequenceNumber;
+                //Create a new packet
+                r=createNextTaskPacket(&tx_buf[TX_LOCATION(i)],&data[DATA_LOCATION(i)],packetSize[i],i);
+                //Decide the packet length
+                transmittedPacketLength[i] = r+HEADER_SIZE;
+                
+								for(j=0;j<transmittedPacketLength[i];j++)
+								printf("%d \t",tx_buf[TX_LOCATION(i)+j]);
+								
 								if(r == 100)
                 {
-										nrk_led_toggle(RED_LED);
-										sendNextPacket = WAIT_ACK;
-                    								}
+                    sendNextPacket[i] = WAIT_ACK;
+                }
                 else
                 {
-                   nrk_led_toggle(BLUE_LED);
-										printf("last packet\n");
-										sendNextPacket = LAST_PACKET_ACK;
-								}
-								val=bmac_tx_pkt(tx_buf, transmittedPacketLength);
-								printf("Transmit Task\r\n");
-								if(val != NRK_OK)
-								{
-                printf("ERROR IN TRANSMISSION\r\n");
-								}
-            break;
-        case WAIT_ACK:
-        case END:
-        default:
-            break;
+                    sendNextPacket[i] = LAST_PACKET_ACK;
+                }
+                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
+                break;
+
+            case IN_PROGRESS:
+                tx_buf[SEQUENCE_NUM_LOCATION+TX_LOCATION(i)] = ++sequenceNumber;
+                lastSentSequenceNo[i]= sequenceNumber;
+                //Create a new packet
+                r=createNextTaskPacket(&tx_buf[TX_LOCATION(i)],&data[DATA_LOCATION(i)],packetSize[i],i);
+                //Decide the packet length
+                transmittedPacketLength[i] = r+HEADER_SIZE;
+
+                if(r == 100)
+                {
+                    sendNextPacket[i] = WAIT_ACK;
+                }
+                else
+                {
+                    printf("last packet\n");
+                    sendNextPacket[i] = LAST_PACKET_ACK;
+                }
+                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
+                break;
+            case WAIT_ACK:
+            case END:
+            default:
+                break;
 
 
 
+            }
         }
 
         nrk_wait_until_next_period();
     }
 
 }
-
+/***************************************************************************
+ *
+ *
+ *
+ *Retransmission Task
+ *
+ *
+ *
+ ****************************************************************************/
 void re_tx_task()
 {
 
+    int i=0;
     uint8_t val;
     nrk_sig_t tx_done_signal;
 
@@ -472,160 +416,165 @@ void re_tx_task()
 
     tx_done_signal = bmac_get_tx_done_signal ();
     nrk_signal_register (tx_done_signal);
-
+    //Retransmission
     while(1)
     {
-
-        switch(sendNextPacket)
+        for(i=1;i<=MAX_MOLES;i++)
         {
-        case LAST_PACKET_ACK:
-        case WAIT_ACK:
-            val=bmac_tx_pkt(tx_buf, transmittedPacketLength);
-            if(val == NRK_OK)
+
+            if(i==MY_ID)
             {
+                continue;
+            }
+            switch(sendNextPacket[i])
+            {
+            case LAST_PACKET_ACK:
+            case WAIT_ACK:
+                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
                 printf("Retransmitted\r\n");
-            }
-            else
-            {
-                printf("ERROR IN  RETRANSMISSION\r\n");
-
-            }
-            break;
-        default:
-            break;
-        }
-
-        nrk_wait_until_next_period();
-
-    }
-}
-void ack_tx_task()
-{
-
-    uint8_t val;
-    nrk_sig_t tx_done_signal;
-
-    while (!bmac_started ())
-        nrk_wait_until_next_period ();
-		//tx_done_signal = bmac_get_tx_done_signal ();
-    
-    
-    nrk_signal_register (tx_done_signal);
-    //printf("Ack task\n");
-		while(1)
-    {
-
-
-
-        
-        //printf("Signal Received\n");
-				if(sendAckFlag)
-        {
-					sendAckFlag=0;
-            switch(receiverNextPacket)
-            {
-            case SEND_ACK:
-                val=bmac_tx_pkt(ack_buf,5);
-								printf("Sent Ack\n");
-                receiverNextPacket = STOP;
                 break;
             default:
                 break;
             }
+
+
+
         }
         nrk_wait_until_next_period();
+
+
+
     }
-
 }
+/**********************************************************************************************
+ *
+ *
+ *
+ *Acknowledgement task
+ *
+ *
+ *
+ ***********************************************************************************************/
 
-
-void serial_rx_task()
+void ack_tx_task()
 {
-int readVal=0;
+    int i=0;
+    uint8_t val;
+    nrk_sig_t tx_done_signal;
+
+    while (!bmac_started ())
+        nrk_wait_until_next_period ();
+    //tx_done_signal = bmac_get_tx_done_signal ();
+    
+    
+    nrk_signal_register (tx_done_signal);
+    //printf("Ack task\n");
     while(1)
     {
-				/*
-        if(pc.readable())
-        {
-            scanf("%d",&readVal);
-            
-						nrk_led_toggle(RED_LED);
-						
-							if(sendNextPacket == END)
-							{
-								transmittedPacketLength=1024;	
-								sendNextPacket = START;
-							}
-						
-				}
-				*/
 
-			nrk_wait_until_next_period();
+
+        for(i=1;i<=MAX_MOLES;i++)
+        {
+
+            if(i==MY_ID)
+            {
+                continue;
+            }
+
+            //send Ack
+            if(sendAckFlag[i])
+            {
+                sendAckFlag[i]=0;
+                switch(receiverNextPacket[i])
+                {
+                case SEND_ACK:
+                    val=bmac_tx_pkt(&(ack_buf[i][0]),5);
+                    printf("Sent Ack\n");
+                    receiverNextPacket[i] = STOP;
+                    break;
+                default:
+                    break;
+
+                }
+
+
+            }
+        }
+        nrk_wait_until_next_period();
+
+
+
     }
 
+
 }
 
-
-int check_schedulability(){
+void slave_task(){
+	Signals slaveSignal;
+	while(1){
+		if(!ReadyToSendData(MASTER_NODE))
+			continue;
+	  slaveSignal = slave_sm(receiveData[DATA_LOCATION(MASTER_NODE)]);
+	  switch(slaveSignal) {
+			case ACK_SIGNAL:
+			send_ack_signal();
+			break;
+			
+			case NACK_SIGNAL:
+			send_nack_signal();
+			break;
+			
+			default:
+			break;
+		}
 	
-	return 1;
-}
-
-void save_functionnames(){
-	//To do save function codes
-	mode= SAVED_FUNC_NAMES;
-}
-
-void save_functionCode(){
-	//To do save function codes
-	mode = SAVED_FUNC_CODE;
-}
-void save_initial_states(){
-	
-	mode = SAVED_INITIAL_STATES;
-}
-
-void activate_tasks(){
-	mode= ACTIVATED_TASK;
+	}
 }
 /******************************************************************
 
+
+
+
 API for receiving and sending data 
 
+
+
 ******************************************************************/
-int ReadyToSendData()
+int ReadyToSendData(uint8_t node)
 {
-	
-	if(sendNextPacket==END)
-	{
-		//Returns 1 if it is ready to transmit 
-		return 1;
-	}
-	else
-	{
-		//Return 0 if it is not ready to transmit
-		return 0;
-	}
+
+    if(sendNextPacket[node]==END)
+    {
+        //Returns 1 if it is ready to transmit
+        return 1;
+    }
+    else
+    {
+        //Return 0 if it is not ready to transmit
+        return 0;
+    }
+
 }
 
 //Initiates the task transmission
 void startDataTransmission(int receiverNode,int numBytes)
 {
-	tx_buf[DESTINATION_ADDRESS_LOCATION]= receiverNode;
-	packetSize=numBytes;
-	sendNextPacket =START;
+
+    tx_buf[DESTINATION_ADDRESS_LOCATION+TX_LOCATION(receiverNode)]= receiverNode;
+    packetSize[receiverNode] = numBytes;
+    sendNextPacket[receiverNode] =START;
 }
 //Checks if the data is received . If complete returns the size of the data else returns 0
-int checkReceivedDataReady()
+
+int checkReceivedDataReady(uint8_t node )
 {
-			if(receiveComplete)
-			{
-				return receivedPacketSize;
-			}	
-		return 0;
+    if(receiveComplete[node])
+    {
+        return receivedPacketSize[node];
+    }
+    return 0;
 }
-
-
+//Create all the tasks
 void nrk_create_taskset ()
 {
 
@@ -636,35 +585,22 @@ void nrk_create_taskset ()
     RX_TASK.FirstActivation = TRUE;
     RX_TASK.Type = BASIC_TASK;
     RX_TASK.SchType = PREEMPTIVE;
-    RX_TASK.period.secs = 500;
-    RX_TASK.period.nano_secs = 0;
+    RX_TASK.period.secs = 1;
+    RX_TASK.period.nano_secs =0;
     RX_TASK.cpu_reserve.secs = 0;
     RX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
     RX_TASK.offset.secs = 0;
     RX_TASK.offset.nano_secs = 0;
     
 
-    RX_TASK2.task = rx_task2;
-    nrk_task_set_stk( &RX_TASK2, rx_task2_stack, NRK_APP_STACKSIZE);
-    RX_TASK2.prio = 10;
-    RX_TASK2.FirstActivation = TRUE;
-    RX_TASK2.Type = BASIC_TASK;
-    RX_TASK2.SchType = PREEMPTIVE;
-    RX_TASK2.period.secs = 5;
-    RX_TASK2.period.nano_secs = 0;
-    RX_TASK2.cpu_reserve.secs = 0;
-    RX_TASK2.cpu_reserve.nano_secs = 300 * NANOS_PER_MS;
-    RX_TASK2.offset.secs = 0;
-    RX_TASK2.offset.nano_secs = 0;
-    
-		TX_TASK.task = tx_task;
+    TX_TASK.task = tx_task;
     nrk_task_set_stk( &TX_TASK, tx_task_stack, NRK_APP_STACKSIZE);
     TX_TASK.prio = 10;
     TX_TASK.FirstActivation = TRUE;
     TX_TASK.Type = BASIC_TASK;
     TX_TASK.SchType = PREEMPTIVE;
-    TX_TASK.period.secs = 0;
-    TX_TASK.period.nano_secs = 500 * NANOS_PER_MS;
+    TX_TASK.period.secs = 1;
+    TX_TASK.period.nano_secs = 0;
     TX_TASK.cpu_reserve.secs = 0;
     TX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
     TX_TASK.offset.secs = 0;
@@ -677,7 +613,7 @@ void nrk_create_taskset ()
     RE_TX_TASK.FirstActivation = TRUE;
     RE_TX_TASK.Type = BASIC_TASK;
     RE_TX_TASK.SchType = PREEMPTIVE;
-    RE_TX_TASK.period.secs = 1;
+    RE_TX_TASK.period.secs = 2;
     RE_TX_TASK.period.nano_secs = 0;
     RE_TX_TASK.cpu_reserve.secs = 0;
     RE_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
@@ -698,44 +634,55 @@ void nrk_create_taskset ()
     ACK_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
     ACK_TX_TASK.offset.secs = 0;
     ACK_TX_TASK.offset.nano_secs = 0;
-		
-	  
-		NM_TASK.task = nm_task;
-    nrk_task_set_stk( &NM_TASK, nm_task_stack, NRK_APP_STACKSIZE);
-    NM_TASK.prio = 1;
-    NM_TASK.FirstActivation = TRUE;
-    NM_TASK.Type = BASIC_TASK;
-    NM_TASK.SchType = PREEMPTIVE;
-    NM_TASK.period.secs = 1;
-    NM_TASK.period.nano_secs = 0;
-    NM_TASK.cpu_reserve.secs = 0;
-    NM_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
-    NM_TASK.offset.secs = 0;
-    NM_TASK.offset.nano_secs = 0;
-  
 
-/*
-    SERIAL_READ_TASK.task = serial_rx_task;
-    nrk_task_set_stk( &SERIAL_READ_TASK, serial_rx_task_stack, NRK_APP_STACKSIZE);
-    SERIAL_READ_TASK.prio = 1;
-    SERIAL_READ_TASK.FirstActivation = TRUE;
-    SERIAL_READ_TASK.Type = BASIC_TASK;
-    SERIAL_READ_TASK.SchType = PREEMPTIVE;
-    SERIAL_READ_TASK.period.secs = 5;
-    SERIAL_READ_TASK.period.nano_secs = 0;
-    SERIAL_READ_TASK.cpu_reserve.secs = 0;
-    SERIAL_READ_TASK.cpu_reserve.nano_secs = 20 * NANOS_PER_MS;
-    SERIAL_READ_TASK.offset.secs = 0;
-    SERIAL_READ_TASK.offset.nano_secs = 0;
-*/    
+    
+		SLAVE_TASK.task = slave_task;
+    nrk_task_set_stk( &SLAVE_TASK, slave_task_stack, NRK_APP_STACKSIZE);
+    SLAVE_TASK.prio = 1;
+    SLAVE_TASK.FirstActivation = TRUE;
+    SLAVE_TASK.Type = BASIC_TASK;
+    SLAVE_TASK.SchType = PREEMPTIVE;
+    SLAVE_TASK.period.secs = 5;
+    SLAVE_TASK.period.nano_secs = 0;
+    SLAVE_TASK.cpu_reserve.secs = 0;
+    SLAVE_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
+    SLAVE_TASK.offset.secs = 0;
+    SLAVE_TASK.offset.nano_secs = 0;
+    
 		nrk_activate_task (&RX_TASK);
-		nrk_activate_task (&RX_TASK2);
-		nrk_activate_task (&TX_TASK);
-		nrk_activate_task (&RE_TX_TASK);
-		nrk_activate_task (&ACK_TX_TASK);
-		nrk_activate_task (&NM_TASK);
-		//nrk_activate_task (&SERIAL_READ_TASK);
-		
-		
+    nrk_activate_task (&TX_TASK);
+    nrk_activate_task (&RE_TX_TASK);
+    nrk_activate_task (&ACK_TX_TASK);
+    nrk_activate_task (&SLAVE_TASK);
+
+
     printf ("Create done\r\n");
+}
+
+
+
+
+
+void send_ack_signal() {
+	set_MessageTypes(&data[DATA_LOCATION(MASTER_NODE)], TYPE_ACK);
+	
+	if(!ReadyToSendData(MASTER_NODE))
+		printf("Error ready to send returned 0\n\r");
+	
+	startDataTransmission(MASTER_NODE, 10);
+	printf("ACK signal sent\r\n");
+}
+
+
+
+
+
+
+void send_nack_signal() {
+	set_MessageTypes(&data[DATA_LOCATION(MASTER_NODE)], TYPE_NACK);
+	
+	if(!ReadyToSendData(MASTER_NODE))
+		printf("Error ready to send returned 0\n\r");
+	
+	startDataTransmission(MASTER_NODE, 10);
 }

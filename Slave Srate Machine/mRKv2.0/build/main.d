@@ -76,5 +76,6 @@
 .\build\main.o: .\mbed\nrk_driver.h
 .\build\main.o: messageTypes.h
 .\build\main.o: packetHandler.h
+.\build\main.o: transmitProtocol.h
+.\build\main.o: slaveStates.h
 .\build\main.o: UtsavAPI.h
-.\build\main.o: messageTypes.h

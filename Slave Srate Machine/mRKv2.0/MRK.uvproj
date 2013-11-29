@@ -553,6 +553,16 @@
               <FileType>8</FileType>
               <FilePath>.\main.cpp</FilePath>
             </File>
+            <File>
+              <FileName>slaveStateManager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\slaveStateManager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>slaveStates.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\slaveStates.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -1105,6 +1115,16 @@
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\main.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>slaveStateManager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\slaveStateManager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>slaveStates.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\slaveStates.h</FilePath>
             </File>
           </Files>
         </Group>
