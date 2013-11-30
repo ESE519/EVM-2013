@@ -9,7 +9,7 @@ void find_next_node();
 
 MIDDLE_LEVEL_SIGNAL mid_sig = NO_SIGNAL_MIDDLE;
 MIDDLE_LEVEL_STATE mid_state = IDLE;
-int node_to_send = 0;
+int node_to_send = 2, slave_pos = 0;
 extern char slavesList[MAX_SLAVES];
 
 void send_middle_level_signal (MIDDLE_LEVEL_SIGNAL sig) {
@@ -70,10 +70,14 @@ void middle_level_take_action () {
 void find_next_node() {
 	int counter = 0;
 	while(1) {
-		if(node_to_send == 0) node_to_send = 2;    //the first number of slave id.
-		else node_to_send++;
+		if(slavesList[slave_pos] != 0) {
+			node_to_send = slave_pos + 2;   //0 is not present, 1 is the master
+			return;  //found the node to transmit to.
+		}
 		
-		if(slavesList[node_to_send] != 0) return;  //found the node to transmit to.
+		slave_pos++;
+		if(slave_pos > (MAX_SLAVES - 1))
+			slave_pos = 0;
 		
 		counter++;
 		
