@@ -79,3 +79,8 @@
 .\build\main.o: transmitProtocol.h
 .\build\main.o: slaveStates.h
 .\build\main.o: UtsavAPI.h
+.\build\main.o: function_manager.h
+.\build\main.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\main.o: memory_manager.h
+.\build\main.o: IAP.h
+.\build\main.o: state_manager.h

@@ -26,6 +26,7 @@
     #define TASK_DEACTIVATE 10
     #define TYPE_ACK 11
     #define TYPE_NACK 12
+		#define TYPE_ACK_NAMES	13
 
     #define MAX_MOLES     4
    

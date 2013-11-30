@@ -73,3 +73,5 @@
 .\build\slavestatemanager.o: .\mbed\bmac.h
 .\build\slavestatemanager.o: slaveStates.h
 .\build\slavestatemanager.o: messagetypes.h
+.\build\slavestatemanager.o: function_manager.h
+.\build\slavestatemanager.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h

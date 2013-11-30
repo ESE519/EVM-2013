@@ -26,6 +26,10 @@
 ".\build\utsavapi.o"
 ".\build\main.o"
 ".\build\slavestatemanager.o"
+".\build\function_manager.o"
+".\build\iap.o"
+".\build\memory_manager.o"
+".\build\state_manager.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o

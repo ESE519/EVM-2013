@@ -16,6 +16,7 @@ typedef enum states{
 typedef enum signals{
 	ACK_SIGNAL,
 	NACK_SIGNAL,
+	ACK_FUNC_NAMES,
 	NO_SIGNAL
 }Signals;
 

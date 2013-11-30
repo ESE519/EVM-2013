@@ -16,9 +16,11 @@
 #include "UtsavAPI.h"
 #include "packethandler.h"
 
-char globalIndex=0;  //index of the send buffer array  
+int globalIndex=0;  //index of the send buffer array  
 char slavesList[MAX_SLAVES];
 uint16_t pinsecs,pinms,winsec,winms;
+
+
 void set_MessageTypes(uint8_t* recdata,int messageName){
 	globalIndex=0;
 	recdata[globalIndex]= messageName;
@@ -36,7 +38,7 @@ void set_FuncCode(uint8_t* recdata,const char *name, uint16_t size, char *code){
 	globalIndex += strlen(name) + 1;
 	
 	for (int i=0;i<size;i++)
-		recdata[globalIndex] = code[i];
+		recdata[globalIndex++] = code[i];
 	resetIndex();
 }
 
@@ -80,6 +82,13 @@ void set_deactivate(uint8_t* recdata,const char *taskName){
 	resetIndex();
 }
 
+
+void set_FuncReply(uint8_t* recdata, uint16_t data) {
+	memcpy(&recdata[globalIndex], &data, 2);
+	resetIndex();
+}
+
+
 void checkPings(int recFrom){
 	slavesList[SOURCE_ADDRESS_LOCATION]=10;
 	for(int k=1;k<MAX_SLAVES;k++){
@@ -87,6 +96,9 @@ void checkPings(int recFrom){
 				slavesList[recFrom]--;
 	}
 }
+
+
+
 
 void getTaskParams(uint8_t* recdata){
 	pinsecs=recdata[1];
@@ -125,3 +137,5 @@ void getInitiialStates(uint8_t* recdata){
 void sendCheckPointStates(uint8_t* recdata){
 	
 }
+
+
