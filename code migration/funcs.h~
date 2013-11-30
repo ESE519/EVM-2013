@@ -1,0 +1,11 @@
+/**
+simple_function() 
+
+**/
+
+enum functionSizes{
+//start 
+SIMPLE_FUNC = 20
+
+//end
+};

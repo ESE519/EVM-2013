@@ -79,4 +79,6 @@ void set_activate(uint8_t* recdata,uint8_t* taskName);
 **/
 void set_deactivate(uint8_t* recdata,uint8_t* taskName);
 
+void set_FuncReply(uint8_t* recdata, uint16_t data);
+
 void checkPings(int recFrom);

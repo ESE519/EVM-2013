@@ -1,0 +1,56 @@
+/****************************************Utsav API**************************************************/
+
+/** sets the type of message sent
+    param : messageName - message type 
+**/ 
+void set_MessageTypes(char messageName);
+
+/**
+	sets up the message to send Function Code
+	params: name- function name,
+			size- function Size
+			code- char array containing function code
+**/
+void set_FuncCode(char *name, uint16_t size, char* code);
+
+/**
+	sets up the TASK PARAM messagte 
+	params: psecs- Period (in secs)
+			p_ms- period (in ms)
+			wsec- WCET (in secs)
+			wms-  WCET (in ms)
+
+**/
+void set_TaskParams(uint16_t psecs,uint16_t p_ms,uint16_t wsec,uint16_t wms);
+
+/**
+   sets no of functions to be sent
+   params: number- number of functions sent
+**/
+void set_number_of_functions(uint8_t number);
+
+/**
+	sets the names of function in functionNames message
+	params: number- number of functions sent
+			function names - Name of the functions
+**/
+void set_functionNames(char *functionName,int number);
+
+/**
+	sets number of states
+	params: number - number of states
+**/
+void set_numofStates(uint8_t number);
+
+/**
+	sets the state bits in the state variable
+	state : 32 bit state variable
+	number : number of states		
+**/
+void set_States(uint32_t state,int number);
+
+/**
+	sends the activate signal for a task 
+	params: taskName- name of task to be activated
+**/
+void set_activate(char* taskName);
