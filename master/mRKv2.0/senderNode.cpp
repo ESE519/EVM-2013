@@ -105,8 +105,9 @@ int lastPacketRead[MAX_MOLES+1]={0};
 
 
 
-/************* SIGNALS ******************/
+/************* Variables for SM ******************/
 TOP_LEVEL_SIGNAL my_signal = NO_SIGNAL_TOP;
+uint16_t func_reply;
 /****************************************/
 
 /********** Task function ***********/
@@ -168,6 +169,10 @@ int simple_function_setup() {
 	if(ret_val)
 		return 3;*/
 	
+	ret_val = register_reference("simple_function", "test_ref", strlen("test_ref") + 1);
+	if(ret_val)
+		return 3;
+	
 	ret_val = set_scheduling_parameters("simple_function", 1, 0, 0, 100);
 	if(ret_val)
 		return 4;
@@ -177,6 +182,13 @@ int simple_function_setup() {
 
 
 
+int test_ref() {
+	int a, b;
+	a = 1;
+	b = 3;
+	return a+b;
+}
+
 int main(void)
 
 {
@@ -185,6 +197,8 @@ int main(void)
 		
 	  evm_init();
 	  r = simple_function_setup();
+	  function_register("test_ref", 10, (char *)&test_ref);
+	
 		if(r) printf("Error: return val is %d\n\r",r);
 	
 	  init();
@@ -355,11 +369,11 @@ void rx_task ()
                     {
                         receiveComplete[senderNode] =1;
 												lastPacketRead[senderNode] = 1;
-                        for(int i=0;i<receivedPacketSize[senderNode];i++)
+                        /*for(int i=0;i<receivedPacketSize[senderNode];i++)
                         {
                             printf("%d \t",receiveData[i]);
 
-                        }
+                        }*/
 
                     }
                     sendAckFlag[senderNode]=1;
@@ -465,8 +479,8 @@ void tx_task ()
                 //Decide the packet length
                 transmittedPacketLength[i] = r+HEADER_SIZE;
                 
-								for(j=0;j<transmittedPacketLength[i];j++)
-								printf("%d \t",tx_buf[TX_LOCATION(i)+j]);
+								/*for(j=0;j<transmittedPacketLength[i];j++)
+								printf("%d \t",tx_buf[TX_LOCATION(i)+j]);*/
 								
 								if(r == 100)
                 {
@@ -632,11 +646,44 @@ void ack_tx_task()
 void top_level_sm_task () {
 	TOP_LEVEL_STATE my_state = STATE_START;
 	my_signal = FOUND_NEIGHBORS;
-	slavesList[2] = 10;
+	slavesList[0] = 10;
 	
 	printf("in top level task\n\n\n\r\r\r");
 	while(1) {
 		nrk_wait_until_next_period();
+		
+		nrk_led_toggle(BLUE_LED);
+		if( checkReceivedDataReady(2)  ) {         //check if there is a new packet
+			printf("entered inside first if\n\r");
+			if(checkPacketRead(2)) {
+				printf("received new signal: ");
+				setPacketRead(2);             //Mark the packet as read.
+				switch(receiveData[DATA_LOCATION(2)]) {
+					case TYPE_ACK:
+					printf("ACK\n\r");
+					send_low_level_signal(ACK);
+					break;
+					
+					
+					case TYPE_NACK:
+					printf("NACK: \n\r");
+					send_low_level_signal(NACK);
+					break;
+					
+					case TYPE_ACK_NAMES:
+					memcpy(&func_reply, &receiveData[DATA_LOCATION(2) + 1], 2);
+					printf("ACK FUNCTION NAMES: 0x%X\n\r", func_reply);
+					send_low_level_signal(ACK);
+					break;
+					
+					
+					default:
+					printf("Received unknown packet \n\r");
+					break;
+				}
+			}
+		}
+		
 		
 		switch(my_state) {
 			case STATE_START:
@@ -681,21 +728,7 @@ void top_level_sm_task () {
 		middle_level_take_action();
 		low_level_take_action();
 		
-		if( checkPacketRead(2) ) {         //check if there is a new packet
-			if(checkReceivedDataReady(2)) {
-				setPacketRead(2);             //Mark the packet as read.
-				switch(receiveData[DATA_LOCATION(2)]) {
-					case TYPE_ACK:
-					send_low_level_signal(ACK);
-					break;
-					
-					
-					case TYPE_NACK:
-					send_low_level_signal(NACK);
-					break;
-				}
-			}
-		}
+		
 	}
 }
 				
@@ -746,13 +779,13 @@ void nrk_create_taskset ()
     RE_TX_TASK.FirstActivation = TRUE;
     RE_TX_TASK.Type = BASIC_TASK;
     RE_TX_TASK.SchType = PREEMPTIVE;
-    RE_TX_TASK.period.secs = 2;
+    RE_TX_TASK.period.secs = 3;
     RE_TX_TASK.period.nano_secs = 0;
     RE_TX_TASK.cpu_reserve.secs = 0;
     RE_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
     RE_TX_TASK.offset.secs = 0;
     RE_TX_TASK.offset.nano_secs = 0;
-    
+   
 
 
     ACK_TX_TASK.task = ack_tx_task;
@@ -770,14 +803,14 @@ void nrk_create_taskset ()
 		
 	  TOP_LEVEL_STATE_MACHINE_TASK.task = top_level_sm_task;
     nrk_task_set_stk( &TOP_LEVEL_STATE_MACHINE_TASK, top_level_sm_task_stack, NRK_APP_STACKSIZE);
-    TOP_LEVEL_STATE_MACHINE_TASK.prio = 2;
+    TOP_LEVEL_STATE_MACHINE_TASK.prio = 11;
     TOP_LEVEL_STATE_MACHINE_TASK.FirstActivation = TRUE;
     TOP_LEVEL_STATE_MACHINE_TASK.Type = BASIC_TASK;
     TOP_LEVEL_STATE_MACHINE_TASK.SchType = PREEMPTIVE;
-    TOP_LEVEL_STATE_MACHINE_TASK.period.secs = 5;
+    TOP_LEVEL_STATE_MACHINE_TASK.period.secs = 6;
     TOP_LEVEL_STATE_MACHINE_TASK.period.nano_secs = 0;
     TOP_LEVEL_STATE_MACHINE_TASK.cpu_reserve.secs = 0;
-    TOP_LEVEL_STATE_MACHINE_TASK.cpu_reserve.nano_secs = 900 * NANOS_PER_MS;
+    TOP_LEVEL_STATE_MACHINE_TASK.cpu_reserve.nano_secs = 500 * NANOS_PER_MS;
     TOP_LEVEL_STATE_MACHINE_TASK.offset.secs = 0;
     TOP_LEVEL_STATE_MACHINE_TASK.offset.nano_secs = 0;
     

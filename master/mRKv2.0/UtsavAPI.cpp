@@ -16,15 +16,13 @@
 #include "UtsavAPI.h"
 #include "packethandler.h"
 
-char globalIndex=0;  //index of the send buffer array  
+int globalIndex=0;  //index of the send buffer array  
 char slavesList[MAX_SLAVES];
 
 void set_MessageTypes(uint8_t* recdata,int messageName){
-	printf("setting message type\n\r");
-	globalIndex=0;
 	
+	globalIndex=0;
 	recdata[globalIndex]= (uint8_t) messageName;
-	printf("returning\n\r");
 	globalIndex++;
 	
 }
@@ -33,14 +31,18 @@ void resetIndex(){
 	globalIndex=0;
 }
 
-void set_FuncCode(uint8_t* recdata,const char *name, uint16_t size, char *code){
-	memcpy(recdata+1,&size,2);
-	globalIndex = globalIndex + 2;
-	strcpy((char *)recdata + globalIndex, name);
-	globalIndex += strlen(name) + 1;
+void set_FuncCode(uint8_t* recdata,const char *name, uint16_t sizel, char *code){
+	int i;
 	
-	for (int i=0;i<size;i++)
-		recdata[globalIndex] = code[i];
+	memcpy(&recdata[globalIndex],&sizel,2);
+	globalIndex = globalIndex + 2;
+
+	strcpy((char *)&(recdata[globalIndex]), name);
+	globalIndex += strlen(name) + 1;
+
+	for (i=0;i<sizel;i++)
+		recdata[globalIndex++] = code[i];
+	
 	resetIndex();
 }
 
