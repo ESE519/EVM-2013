@@ -75,7 +75,7 @@
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
-            <UserProg1Name>fromelf --bin -o E:\@L.bin !L</UserProg1Name>
+            <UserProg1Name>fromelf --bin -o F:\@L.bin !L</UserProg1Name>
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
@@ -562,6 +562,26 @@
               <FileName>slaveStates.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\slaveStates.h</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>state_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\state_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>memory_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IAP.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\IAP.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -1125,6 +1145,26 @@
               <FileName>slaveStates.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\slaveStates.h</FilePath>
+            </File>
+            <File>
+              <FileName>function_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\function_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>state_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\state_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>memory_manager.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\memory_manager.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>IAP.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\IAP.cpp</FilePath>
             </File>
           </Files>
         </Group>

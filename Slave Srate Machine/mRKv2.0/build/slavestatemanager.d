@@ -75,3 +75,6 @@
 .\build\slavestatemanager.o: messagetypes.h
 .\build\slavestatemanager.o: function_manager.h
 .\build\slavestatemanager.o: C:\Keil\ARM\ARMCC\bin\..\include\inttypes.h
+.\build\slavestatemanager.o: memory_manager.h
+.\build\slavestatemanager.o: IAP.h
+.\build\slavestatemanager.o: state_manager.h

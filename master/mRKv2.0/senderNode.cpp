@@ -17,6 +17,7 @@
 #include "messagetypes.h"
 #include "memory_manager.h"
 #include "state_manager.h"
+
 #include "states.h"
 
 #include "packetHandler.h"
@@ -156,7 +157,8 @@ void init ()
 
 
 int simple_function_setup() {
-	int ret_val;
+	int ret_val, i;
+	uint32_t init_states[10];
 	ret_val = task_function_register("simple_function", strlen("simple_function") + 1, (char *)&simple_function);
 	if(ret_val)
 		return 1;
@@ -169,13 +171,24 @@ int simple_function_setup() {
 	if(ret_val)
 		return 3;*/
 	
-	ret_val = register_reference("simple_function", "test_ref", strlen("test_ref") + 1);
+	/*ret_val = register_reference("simple_function", "test_ref", strlen("test_ref") + 1);
+	if(ret_val)
+		return 3;*/
+	
+	ret_val = register_reference("simple_function", "test_ref2", strlen("test_ref2") + 1);
 	if(ret_val)
 		return 3;
 	
 	ret_val = set_scheduling_parameters("simple_function", 1, 0, 0, 100);
 	if(ret_val)
 		return 4;
+	
+	for(i = 0; i < 10; i++)
+		init_states[i] = i + 100;
+	
+	ret_val = set_task_states("simple_function", init_states);
+	if(ret_val)
+		return 5;
 	
 	return 0;
 }
@@ -186,8 +199,28 @@ int test_ref() {
 	int a, b;
 	a = 1;
 	b = 3;
-	return a+b;
+	return a+b;	
 }
+
+
+int test_ref2() {
+
+	
+	int a, b, c;
+	a = 1;
+	b = 3;
+	c = a*b + b;
+	return c;
+}
+
+void print_function(char *ptr, int num) {
+	for(; num > 0; num--) {
+		printf("%x  ", *ptr);
+		ptr++;
+	}
+	printf("\n\r");
+}
+
 
 int main(void)
 
@@ -198,8 +231,10 @@ int main(void)
 	  evm_init();
 	  r = simple_function_setup();
 	  function_register("test_ref", 10, (char *)&test_ref);
-	
+		function_register("test_ref2", 14, (char *)&test_ref2);
 		if(r) printf("Error: return val is %d\n\r",r);
+	
+
 	
 	  init();
     initPacketHandler();
@@ -235,8 +270,9 @@ int simple_function(int task_num){
 	void *(*get_function_handle)(const char *, int);
 	int8_t (*led_toggle)(int);
 	int (*print)(const char *, ...);	
-	int (*get_state2)(const char *fun_name, uint8_t pos, uint32_t *ptr);
-	int (*checkpoint_state2)(const char *fun_name, uint8_t pos, uint32_t val);
+	int (*get_state2)(int, uint8_t pos, uint32_t *ptr);
+	int (*checkpoint_state2)(int, uint8_t pos, uint32_t val);
+	int (*test_ref2_fn)();
 	
 	addrh = GET_HANDLE_ADDRESS_H;
 	addrl = GET_HANDLE_ADDRESS_L;
@@ -256,34 +292,38 @@ int simple_function(int task_num){
 	if(print == NULL)
 		return 1;
 	
-	get_state2 = (int (*)(const char *, uint8_t, uint32_t *)) get_function_handle("get_state", 12);
+	get_state2 = (int (*)(int, uint8_t, uint32_t *)) get_function_handle("get_state", 12);
 	if(get_state == NULL)
 		return 2;
 	
-	checkpoint_state2 = (int (*)(const char *, uint8_t, uint32_t)) get_function_handle("checkpoint_state", 18);
+	checkpoint_state2 = (int (*)(int, uint8_t, uint32_t)) get_function_handle("checkpoint_state", 18);
 	if(checkpoint_state == NULL)
 		return 3;
+	
+	test_ref2_fn = (int (*)()) get_function_handle("test_ref2", 11);
+	if(test_ref2_fn == NULL)
+		return 4;
 	/*************************************************************************************/
 	
 	
 	//get the current state
-	ret_val = get_state2("simple_function", 0, &task_state);
+	ret_val = get_state2(task_num, 0, &task_state);
 	if(ret_val != 0)
 		return ret_val;
 	
 	
 		
 	led_toggle(RED_LED);
-	print("current state: %d\n\r", task_state);
+	print("current state: %d", task_state);
 	
 	task_state++;
 	//checkpoint the state
-	ret_val = checkpoint_state2("simple_function", 0, task_state);
+	ret_val = checkpoint_state2(task_num, 0, task_state);
 	if(ret_val != 0)
 		return ret_val;
 	
-	return (a + b);
-	
+	ret_val = test_ref2_fn();
+	return ret_val;
 }
 
 
@@ -779,7 +819,7 @@ void nrk_create_taskset ()
     RE_TX_TASK.FirstActivation = TRUE;
     RE_TX_TASK.Type = BASIC_TASK;
     RE_TX_TASK.SchType = PREEMPTIVE;
-    RE_TX_TASK.period.secs = 3;
+    RE_TX_TASK.period.secs = 4;
     RE_TX_TASK.period.nano_secs = 0;
     RE_TX_TASK.cpu_reserve.secs = 0;
     RE_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;

@@ -4,192 +4,262 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 S:\ese 519\GIT\EVM-2013\Slave Srate Machine\mRKv2.0\MRK.uvproj
-Project File Date:  11/29/2013
+Project File Date:  11/30/2013
 
 <h2>Output:</h2>
 Build target 'mbed NXP LPC1768'
 linking...
-Program Size: Code=33936 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=33936 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 0 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
-main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(316): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #550-D: variable "val" was set but never used
-main.cpp(462): warning:  #550-D: variable "val" was set but never used
-main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=33920 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 10 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
-main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(316): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #550-D: variable "val" was set but never used
-main.cpp(462): warning:  #550-D: variable "val" was set but never used
-main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=33944 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 10 Warning(s).
-Build target 'mbed NXP LPC1768'
-compiling main.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
-main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(316): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #550-D: variable "val" was set but never used
-main.cpp(462): warning:  #550-D: variable "val" was set but never used
-main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=33972 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 10 Warning(s).
-Build target 'mbed NXP LPC1768'
-linking...
-Program Size: Code=33972 RO-data=1880 RW-data=380 ZI-data=9444  
+Program Size: Code=35798 RO-data=1550 RW-data=544 ZI-data=56804  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
 ".\build\MRK.axf" - 0 Errors, 0 Warning(s).
 Build target 'mbed NXP LPC1768'
 compiling slaveStateManager.cpp...
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-messagetypes.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(179): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(180): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(246): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(288): warning:  #550-D: variable "ret" was set but never used
+slaveStateManager.cpp(298): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=33972 RO-data=1880 RW-data=380 ZI-data=9444  
+Program Size: Code=35806 RO-data=1550 RW-data=544 ZI-data=56804  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 2 Warning(s).
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
 Build target 'mbed NXP LPC1768'
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #68-D: integer conversion resulted in a change of sign
-linking...
-Program Size: Code=33972 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 2 Warning(s).
-Clean started: Project: 'MRK'
-   deleting intermediate output files for target 'mbed NXP LPC1768'
-   deleting intermediate output files for target 'mbed NXP LPC2368'
-Rebuild target 'mbed NXP LPC1768'
-compiling nrk_cpu.cpp...
-compiling nrk_status.cpp...
-compiling nrk_timer.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(177): warning:  #191-D: type qualifier is meaningless on cast type
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\hal\LPC1768\nrk_timer.cpp(298): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_watchdog.cpp...
-compiling nrk.cpp...
-compiling nrk_error.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_error.cpp(165): warning:  #177-D: variable "i" was declared but never referenced
-compiling nrk_events.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_events.cpp(279): warning:  #177-D: variable "task_ID" was declared but never referenced
-compiling nrk_idle_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_idle_task.cpp(39): warning:  #177-D: variable "stkc" was declared but never referenced
-compiling nrk_reserve.cpp...
-compiling nrk_scheduler.cpp...
-compiling nrk_stack_check.cpp...
-compiling nrk_stats.cpp...
-compiling nrk_task.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(230): warning:  #550-D: variable "rtype" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_task.cpp(524): warning:  #191-D: type qualifier is meaningless on cast type
-compiling nrk_time.cpp...
-compiling hal_wait.cpp...
-compiling ulib.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(338): warning:  #9-D: nested comment is not allowed
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(606): warning:  #111-D: statement is unreachable
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(657): warning:  #940-D: missing return statement at end of non-void function "nrk_get_button"
-mrk_uvision_lpc1768\mrk\NanoRk\src\platform\mbed\source\ulib.cpp(826): warning: C4017W: uClk may be used before being set
-assembling my_asm.s...
-mrk_uvision_lpc1768\mrk\my_asm.s(93): warning: A1581W: Added 2 bytes of padding at address 0x6a
-compiling adc_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(69): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(73): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(76): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(96): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\adc_driver.cpp(105): warning:  #68-D: integer conversion resulted in a change of sign
-compiling ff_basic_sensor.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(68): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(82): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(86): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(89): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(170): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(193): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(209): warning:  #68-D: integer conversion resulted in a change of sign
-mrk_uvision_lpc1768\mrk\NanoRk\src\drivers\platform\mbed\ff_basic_sensor.cpp(265): warning:  #1-D: last line of file ends without a newline
-compiling nrk_driver.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\kernel\source\nrk_driver.cpp(141): warning:  #186-D: pointless comparison of unsigned integer with zero
-compiling bmac.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(461): warning:  #550-D: variable "result" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(502): warning:  #177-D: variable "result" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(554): warning:  #550-D: variable "e" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(555): warning:  #177-D: variable "backoff" was declared but never referenced
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(803): warning:  #1-D: last line of file ends without a newline
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(66): warning:  #550-D: variable "g_chan" was set but never used
-mrk_uvision_lpc1768\mrk\NanoRk\src\net\bmac\bmac.cpp(72): warning:  #550-D: variable "tx_reserve" was set but never used
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(336): warning:  #68-D: integer conversion resulted in a change of sign
-compiling MRF24J40.cpp...
-compiling packetHandler.cpp...
-packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-packetHandler.cpp(120): warning:  #1-D: last line of file ends without a newline
-compiling UtsavAPI.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-packethandler.h(79): warning:  #1-D: last line of file ends without a newline
 compiling main.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
 packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
-main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(316): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #550-D: variable "val" was set but never used
-main.cpp(462): warning:  #550-D: variable "val" was set but never used
-main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(238): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(250): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(263): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(330): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(476): warning:  #550-D: variable "val" was set but never used
+main.cpp(571): warning:  #550-D: variable "val" was set but never used
+main.cpp(622): warning:  #550-D: variable "val" was set but never used
+main.cpp(623): warning: C4017W: tx_done_signal may be used before being set
 compiling slaveStateManager.cpp...
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-messagetypes.h(40): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=33972 RO-data=1880 RW-data=380 ZI-data=9444  
-After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 53 Warning(s).
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(179): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(180): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(246): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(292): error:  #20: identifier "store_states" is undefined
+slaveStateManager.cpp(303): warning:  #1-D: last line of file ends without a newline
+compiling state_manager.cpp...
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+fn_task_map.h(28): warning:  #1-D: last line of file ends without a newline
+".\build\MRK.axf" - 1 Errors, 25 Warning(s).
+Target not created
 Build target 'mbed NXP LPC1768'
-compiling basic_rf.cpp...
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(334): warning:  #61-D: integer operation result is out of range
-mrk_uvision_lpc1768\mrk\NanoRk\src\radio\mrf24j40\source\basic_rf.cpp(334): warning:  #68-D: integer conversion resulted in a change of sign
-compiling main.cpp...
-messageTypes.h(40): warning:  #1-D: last line of file ends without a newline
-packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
-slaveStates.h(22): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(117): warning:  #177-D: variable "i" was declared but never referenced
-main.cpp(174): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(316): warning:  #550-D: variable "val" was set but never used
-main.cpp(411): warning:  #550-D: variable "val" was set but never used
-main.cpp(462): warning:  #550-D: variable "val" was set but never used
-main.cpp(463): warning: C4017W: tx_done_signal may be used before being set
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(304): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=33980 RO-data=1880 RW-data=380 ZI-data=9444  
+Program Size: Code=35922 RO-data=1550 RW-data=544 ZI-data=56804  
 After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 12 Warning(s).
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(290): warning:  #550-D: variable "fp" was set but never used
+slaveStateManager.cpp(304): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35914 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(238): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(250): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(263): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(330): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(476): warning:  #550-D: variable "val" was set but never used
+main.cpp(571): warning:  #550-D: variable "val" was set but never used
+main.cpp(622): warning:  #550-D: variable "val" was set but never used
+main.cpp(623): warning: C4017W: tx_done_signal may be used before being set
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(291): warning:  #550-D: variable "fp" was set but never used
+slaveStateManager.cpp(305): warning:  #1-D: last line of file ends without a newline
+compiling function_manager.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35950 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 26 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(307): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35962 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling function_manager.cpp...
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35990 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 1 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(307): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35942 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+linking...
+Program Size: Code=35942 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 0 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(238): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(250): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(263): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(330): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(476): warning:  #550-D: variable "val" was set but never used
+main.cpp(571): warning:  #550-D: variable "val" was set but never used
+main.cpp(622): warning:  #550-D: variable "val" was set but never used
+main.cpp(623): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=35942 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 16 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(146): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(238): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(250): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(263): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(330): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(476): warning:  #550-D: variable "val" was set but never used
+main.cpp(571): warning:  #550-D: variable "val" was set but never used
+main.cpp(622): warning:  #550-D: variable "val" was set but never used
+main.cpp(623): warning: C4017W: tx_done_signal may be used before being set
+linking...
+Program Size: Code=35942 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 16 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(307): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35946 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(311): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=36002 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 8 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(292): warning:  #177-D: variable "test" was declared but never referenced
+slaveStateManager.cpp(311): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=35946 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).
+Build target 'mbed NXP LPC1768'
+compiling slaveStateManager.cpp...
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+messagetypes.h(41): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+slaveStateManager.cpp(180): warning:  #550-D: variable "namelen" was set but never used
+slaveStateManager.cpp(181): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(247): warning:  #177-D: variable "i" was declared but never referenced
+slaveStateManager.cpp(292): warning:  #177-D: variable "test" was declared but never referenced
+slaveStateManager.cpp(311): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=36022 RO-data=1550 RW-data=544 ZI-data=56804  
+After Build - User command #1: fromelf --bin -o F:\MRK.bin .\build\MRK.axf
+".\build\MRK.axf" - 0 Errors, 9 Warning(s).

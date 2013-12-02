@@ -31,7 +31,7 @@ int function_register(const char *fn_name, int namelen, char *address){
 void * get_function_handle(const char *name, int namelen) {
 	int i;
 	
-	printf("finding %s\n\r", name);
+	//printf("finding %s\n\r", name);
 	
 	if(namelen > MAX_NAME_LENGTH) {
 		printf("FN HANDLE: len > max\n\r");

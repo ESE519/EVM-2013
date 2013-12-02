@@ -71,20 +71,15 @@ void set_functionNames(uint8_t* recdata, const char *functionName){
 	globalIndex += strlen(functionName) + 1;
 	
 }
-void set_numofStates(uint8_t* recdata,uint8_t number){
-	recdata[globalIndex++] = number;
+
+
+void set_States(uint8_t* recdata,uint32_t *state){
+	memcpy(&recdata[globalIndex], state, sizeof(uint32_t) * 10);
+	resetIndex();
 }
 
-void set_States(uint8_t* recdata,uint32_t state,int number){
-	if(globalIndex < number)
-		memcpy(recdata+globalIndex,&state,4);
-	globalIndex+=4;
-	if(globalIndex+1 == number)
-		resetIndex();
-}
-
-void set_activate(uint8_t* recdata,uint8_t taskName){
-	recdata[globalIndex++] = taskName;
+void set_activate(uint8_t* recdata,const char *taskName){
+	strcpy((char *)&recdata[globalIndex], taskName);
 	resetIndex();
 }
 

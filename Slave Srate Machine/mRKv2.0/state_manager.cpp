@@ -41,3 +41,15 @@ int checkpoint_state(int task_num, uint8_t pos, uint32_t val) {
 	states[task_num][pos] = val;
 	return 0;
 }
+
+
+int store_states(int task_num, uint32_t *data) {
+	if(task_num < 0) {
+		printf("Incorrect task num\n\r");
+		return -1;
+	}
+	
+	
+	memcpy(states[task_num], data, sizeof(uint32_t) * 10);
+	return 0;
+}

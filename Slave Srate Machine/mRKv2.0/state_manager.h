@@ -10,5 +10,5 @@ int get_state(int task_num, uint8_t pos, uint32_t *ptr);
 
 int checkpoint_state(int task_num, uint8_t pos, uint32_t val);
 
-
+int store_states(int task_num, uint32_t *data);
 #endif

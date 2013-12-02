@@ -161,7 +161,22 @@ int set_scheduling_parameters(const char *task_name, uint16_t ps, uint16_t pms, 
 }
 	
 
+int set_task_states(const char *task_name, uint32_t *init_states) {
+	int i, flag = 0;
+	for( i = 0; i < current_num_task_functions; i++) {
+		if( strcmp(task_function_table[i].name, task_name) == 0) {
+			flag = 1;
+			break;
+		}
+	}
 	
+	if(!flag)
+		return -1;
+	
+	memcpy(task_function_table[i].states, init_states, sizeof(uint32_t) * MAX_NUM_STATES);
+	return 0;
+}
+
 	
 int find_unassigned_tasks() {
 	int i;

@@ -19,6 +19,9 @@ void send_task_params();
 void send_function_names();
 void send_task_function_code();
 void send_function_code();
+void send_init_state();
+void send_activate();
+void assign_node_task();
 int any_functions_left();
 int try_to_send();
 /*******************************************************/
@@ -91,15 +94,26 @@ void low_level_take_action () {
         printf("Func names\n\r");
         if(low_sig == ACK) {
             num_functions_sent = 0;
-            send_task_function_code();
-            if( try_to_send() )
-                low_state = FUNC_CODE;
-            else {
-                next_state = FUNC_CODE;
-                low_state = BLOCK_SEND;
-            }
+					
+						if(func_reply & 0x01) {
+							send_task_function_code();
+							if( try_to_send() )
+									low_state = FUNC_CODE;
+							else {
+									next_state = FUNC_CODE;
+									low_state = BLOCK_SEND;
+							}
 
-            low_sig = NO_SIGNAL_LOW;
+							low_sig = NO_SIGNAL_LOW;
+						}
+						else {
+							low_state = FUNC_CODE;
+							low_sig = NO_SIGNAL_LOW;
+							num_functions_sent = 0;
+						}
+						
+						func_reply = func_reply >> 1;
+						
         }
 
         break;
@@ -116,6 +130,13 @@ void low_level_take_action () {
                 //send initial state.... to be done
                 low_state = INIT_STATE;
                 low_sig = NO_SIGNAL_LOW;
+							  send_init_state();
+							  if( try_to_send() )
+									low_state = INIT_STATE;
+								else {
+									next_state = INIT_STATE;
+									low_state = BLOCK_SEND;
+								}
             }
             //if some functions code still left.
             //send next function.
@@ -137,8 +158,16 @@ void low_level_take_action () {
         printf("init state\n\r");
         if(low_sig == ACK) {
             //send deactivate signal to the current node with the task.
-            low_state = DEACTIVATE;
+            //low_state = DEACTIVATE;
+					  low_state = ACTIVATE;
             low_sig = NO_SIGNAL_LOW;
+					  send_activate();
+					  if( try_to_send() )
+							low_state = ACTIVATE;
+						else {
+							next_state = ACTIVATE;
+							low_state = BLOCK_SEND;
+						}
         }
         break;
 
@@ -160,6 +189,7 @@ void low_level_take_action () {
         printf("Activate\n\r");
         if(low_sig == ACK) {
             //done transferring the current task.
+					  assign_node_task();
             send_middle_level_signal(SENDING_DONE);
             low_state = IDLE_LOW;
             low_sig = NO_SIGNAL_LOW;
@@ -261,7 +291,7 @@ void send_task_function_code() {
 		
     num_bytes = 3 + MAX_NAME_LENGTH + 256;
 
-
+		printf("sending %s funciton code\n\r", fun_name);
 
 }
 
@@ -282,16 +312,60 @@ void send_function_code() {
     fn_ptr = (char *) get_function_handle(fun_name, MAX_NAME_LENGTH - 1);
     fn_ptr = (char *)((uint32_t)fn_ptr & ~(1));
 
-    set_MessageTypes(data, TYPE_FUNC_CODE);
-    set_FuncCode(data, fun_name, length, fn_ptr);
+    set_MessageTypes(&data[DATA_LOCATION(node_to_send)], TYPE_FUNC_CODE);
+    set_FuncCode(&data[DATA_LOCATION(node_to_send)], fun_name, length, fn_ptr);
 
     num_bytes = 3 + MAX_NAME_LENGTH + 256;
 
 
     num_functions_sent++;
+	
+		printf("sending %s function code\n\r", fun_name);
 }
 
 
+void send_init_state() {
+    int task_num;
+    struct task_function_info *task_ptr;
+
+    task_num = find_first_unassigned_task();
+    task_ptr = &task_function_table[task_num];
+
+
+    set_MessageTypes(&data[DATA_LOCATION(node_to_send)], TYPE_INIT_STATES);
+    set_States(&data[DATA_LOCATION(node_to_send)], task_ptr->states);
+    
+	  num_bytes = 2 + sizeof(uint32_t) * 10;
+
+		printf("sending init states\n\r");
+}		
+
+
+void send_activate() {
+	int task_num;
+	struct task_function_info *task_ptr;
+
+	task_num = find_first_unassigned_task();
+	task_ptr = &task_function_table[task_num];
+
+
+	set_MessageTypes(&data[DATA_LOCATION(node_to_send)], TASK_ACTIVATE);
+	set_activate(&data[DATA_LOCATION(node_to_send)], task_ptr->name);
+
+	num_bytes = 1 + strlen(task_ptr->name) + 2;
+
+	printf("sending activate signal\n\r");
+}
+
+void assign_node_task() {
+	int task_num;
+	struct task_function_info *task_ptr;
+
+	task_num = find_first_unassigned_task();
+	task_ptr = &task_function_table[task_num];
+	
+	task_ptr->assigned_node_id = node_to_send;
+}
 
 
 int any_functions_left() {
@@ -300,8 +374,13 @@ int any_functions_left() {
 
     task_num = find_first_unassigned_task();
     task_ptr = &task_function_table[task_num];
+	
+    while(((func_reply & 0x01) == 0) && (num_functions_sent <= task_ptr->num_references)) {
+			func_reply = func_reply >> 1;
+			num_functions_sent++;
+		}
 
-    if(num_functions_sent == task_ptr->num_references) {
+    if(num_functions_sent >= task_ptr->num_references) {
         printf("no more functions left\n\r");
         return 0;
     }

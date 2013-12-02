@@ -43,7 +43,6 @@
 #define COMM_UTILIZATION		0.5733
 #define NUM_VIRTUAL_TASKS		3
 
-Serial pc(USBTX,USBRX);
 
 
 
@@ -93,6 +92,8 @@ int is_schedulable(uint16_t period, uint16_t wcet);
 uint8_t enable_virtual_tasks[NUM_VIRTUAL_TASKS];
 uint32_t code_aligned[512];
 uint16_t func_reply;
+uint8_t current_task_num = 0;
+int (*virtual_functions[NUM_VIRTUAL_TASKS])(int);
 /**************************************************************/
 
 //Creates the task sets required 
@@ -151,6 +152,22 @@ void init ()
 }
 
 
+extern "C"
+void HardFault_Handler() {
+    register unsigned int _msp __asm("msp");
+    printf("Hard Fault! %x (%x)\r\n", SCB->HFSR, *((unsigned int *)(_msp + 24)));
+    printf("HFSR: 0x%X\n\r", SCB->HFSR);
+    printf("MMFAR: 0x%X\tMMFSR: 0x%X\n\r", SCB->MMFAR, SCB->CFSR);
+    printf("BFAR: 0x%X\tBFSR: 0x%X\n\r", SCB->BFAR, SCB->CFSR);
+    printf(" - %x\r\n", (*(volatile uint32_t*)0xe000ed24));
+//    printf("Hard Fault! %x\r\n", SCB->HFSR);
+
+
+    exit(-1);
+}
+
+
+
 
 void evm_init() {
 	int r;
@@ -204,17 +221,53 @@ int is_schedulable(uint16_t period_ms, uint16_t wcet_ms) {
 
 /*********************** virtual functions ***************************/
 void virtual_task_0() {
-	return;
+	int my_task_num = 0, ret_val;
+	while(1) {
+		
+		if(enable_virtual_tasks[my_task_num]) {
+			printf("virtual task 0: %x\n\r", (uint32_t)virtual_functions[my_task_num]);
+			ret_val = virtual_functions[my_task_num](my_task_num);
+			printf("Virtual T: Ret val = %d\n\r", ret_val);
+		}
+		
+		nrk_wait_until_next_period();
+	}
 }
 
 void virtual_task_1() {
-	return;
+	int my_task_num = 1, ret_val;
+	while(1) {
+		if(enable_virtual_tasks[my_task_num]) {
+			ret_val = virtual_functions[my_task_num](my_task_num);
+		}
+		
+		nrk_wait_until_next_period();
+	}
 }
+
+
 void virtual_task_2() {
-	return;
+	int my_task_num = 2, ret_val;
+	while(1) {
+		if(enable_virtual_tasks[my_task_num]) {
+			ret_val = virtual_functions[my_task_num](my_task_num);
+			
+		}
+		
+		nrk_wait_until_next_period();
+	}
 }
+
+
 void virtual_task_3() {
-	return;
+	int my_task_num = 3, ret_val;
+	while(1) {
+		if(enable_virtual_tasks[my_task_num]) {
+			ret_val = virtual_functions[my_task_num](my_task_num);
+		}
+		
+		nrk_wait_until_next_period();
+	}
 }
 /***************************************************************/
 
@@ -246,10 +299,10 @@ int main(void)
     init();
     initPacketHandler();
 		evm_init();
-		//function_register("test_ref", strlen("test_ref") + 1, (char *)&test_ref);
-    //Start transmission
-    //startDataTransmission(2,10);
-    //startDataTransmission(1,10);
+		function_register("toggle", strlen("toggle") + 1, (char *)&nrk_led_toggle);
+		function_register("print", strlen("print") + 1, (char *)&printf);
+		function_register("test_ref", strlen("test_ref") + 1, (char *)&test_ref);
+
 
     nrk_setup_ports();
     nrk_init();
@@ -286,7 +339,7 @@ void rx_task ()
 
     while(1) {
         
-
+				
         if( !bmac_rx_pkt_ready())
             continue;
         //printf("received packet\n\r");
@@ -343,11 +396,11 @@ void rx_task ()
                     {
                         receiveComplete[senderNode] =1;
 												lastPacketRead[senderNode]=1;
-                        for(int i=0;i<receivedPacketSize[senderNode];i++)
+                        /*for(int i=0;i<receivedPacketSize[senderNode];i++)
                         {
                            // printf("%d \t",receiveData[i]);
 
-                        }
+                        }*/
 
                     }
                     sendAckFlag[senderNode]=1;
@@ -399,7 +452,9 @@ void rx_task ()
             }
         }
         bmac_rx_pkt_release ();
-        nrk_wait_until_next_period();
+				//nrk_wait_until_next_period();
+			  nrk_led_toggle(ORANGE_LED);
+        
     }
     // pointing the function pointer to the copied code in the flash
 
@@ -618,6 +673,8 @@ void slave_task(){
 	Signals slaveSignal;
 	printf("Slave task\r\n");
 	while(1){
+		nrk_wait_until_next_period();
+		nrk_led_toggle(BLUE_LED);
 		if(checkReceivedDataReady(MASTER_NODE)){
 			
 			if(checkPacketRead(MASTER_NODE) ) {
@@ -710,14 +767,14 @@ void nrk_create_taskset ()
 
     RX_TASK.task = rx_task;
     nrk_task_set_stk( &RX_TASK, rx_task_stack, NRK_APP_STACKSIZE);
-    RX_TASK.prio = 3;
+    RX_TASK.prio = 1;
     RX_TASK.FirstActivation = TRUE;
     RX_TASK.Type = BASIC_TASK;
     RX_TASK.SchType = PREEMPTIVE;
     RX_TASK.period.secs = 1;
     RX_TASK.period.nano_secs =0;
     RX_TASK.cpu_reserve.secs = 0;
-    RX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
+    RX_TASK.cpu_reserve.nano_secs = 900 * NANOS_PER_MS;
     RX_TASK.offset.secs = 0;
     RX_TASK.offset.nano_secs = 0;
     
@@ -738,7 +795,7 @@ void nrk_create_taskset ()
 
     RE_TX_TASK.task = re_tx_task;
     nrk_task_set_stk( &RE_TX_TASK, re_tx_task_stack, NRK_APP_STACKSIZE);
-    RE_TX_TASK.prio = 1;
+    RE_TX_TASK.prio = 3;
     RE_TX_TASK.FirstActivation = TRUE;
     RE_TX_TASK.Type = BASIC_TASK;
     RE_TX_TASK.SchType = PREEMPTIVE;
@@ -753,7 +810,7 @@ void nrk_create_taskset ()
 
     ACK_TX_TASK.task = ack_tx_task;
     nrk_task_set_stk( &ACK_TX_TASK, ack_tx_task_stack, NRK_APP_STACKSIZE);
-    ACK_TX_TASK.prio = 2;
+    ACK_TX_TASK.prio = 3;
     ACK_TX_TASK.FirstActivation = TRUE;
     ACK_TX_TASK.Type = BASIC_TASK;
     ACK_TX_TASK.SchType = PREEMPTIVE;
@@ -767,7 +824,7 @@ void nrk_create_taskset ()
     
 		SLAVE_TASK.task = slave_task;
     nrk_task_set_stk( &SLAVE_TASK, slave_task_stack, NRK_APP_STACKSIZE);
-    SLAVE_TASK.prio = 9;
+    SLAVE_TASK.prio = 2;
     SLAVE_TASK.FirstActivation = TRUE;
     SLAVE_TASK.Type = BASIC_TASK;
     SLAVE_TASK.SchType = PREEMPTIVE;
@@ -785,7 +842,7 @@ void nrk_create_taskset ()
     nrk_activate_task (&SLAVE_TASK);
 		
 		
-			VIRTUAL_TASKS[0].task = virtual_task_0;
+		VIRTUAL_TASKS[0].task = virtual_task_0;
     nrk_task_set_stk( &VIRTUAL_TASKS[0], virtual_tasks_stack[0], NRK_APP_STACKSIZE);
     VIRTUAL_TASKS[0].prio = 1;
     VIRTUAL_TASKS[0].FirstActivation = TRUE;
@@ -794,7 +851,7 @@ void nrk_create_taskset ()
     VIRTUAL_TASKS[0].period.secs = 10;
     VIRTUAL_TASKS[0].period.nano_secs = 0;
     VIRTUAL_TASKS[0].cpu_reserve.secs = 0;
-    VIRTUAL_TASKS[0].cpu_reserve.nano_secs = 0;
+    VIRTUAL_TASKS[0].cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
     VIRTUAL_TASKS[0].offset.secs = 0;
     VIRTUAL_TASKS[0].offset.nano_secs = 0;
 	
@@ -826,7 +883,7 @@ void nrk_create_taskset ()
     VIRTUAL_TASKS[2].offset.secs = 0;
     VIRTUAL_TASKS[2].offset.nano_secs = 0;
 
-
+		//nrk_activate_task(&VIRTUAL_TASKS[0]);
     printf ("Create done\r\n");
 }
 
@@ -870,5 +927,5 @@ void send_ack_func_names(uint16_t reply) {
 		printf("Error ready to send returned 0\n\r");
 	
 	startDataTransmission(MASTER_NODE, 10);
-	printf("NACK signal sent\r\n");
+	printf("ACK FUNC NAMES signal sent\r\n");
 }

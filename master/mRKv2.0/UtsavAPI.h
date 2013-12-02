@@ -54,24 +54,19 @@ void set_number_of_functions(uint8_t* recdata,uint8_t number);
 **/
 void set_functionNames(uint8_t *data,const char *name);
 
-/**
-	sets number of states
-	params: number - number of states
-**/
-void set_numofStates(uint8_t* recdata,uint8_t number);
 
 /**
 	sets the state bits in the state variable
 	state : 32 bit state variable
 	number : number of states		
 **/
-void set_States(uint8_t* recdata,uint32_t state,int number);
+void set_States(uint8_t* recdata,uint32_t *state);
 
 /**
 	sends the activate signal for a task 
 	params: taskName- name of task to be activated
 **/
-void set_activate(uint8_t* recdata,uint8_t* taskName);
+void set_activate(uint8_t* recdata,const char *taskName);
 
 /**
 	sends the deactivate signal for a task 
