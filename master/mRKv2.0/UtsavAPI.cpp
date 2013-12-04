@@ -19,6 +19,9 @@
 int globalIndex=0;  //index of the send buffer array  
 char slavesList[MAX_SLAVES];
 
+
+void check_and_send_node_died_signal(int k);       //defined in senderNode.cpp  
+
 void set_MessageTypes(uint8_t* recdata,int messageName){
 	
 	globalIndex=0;
@@ -89,10 +92,16 @@ void set_deactivate(uint8_t* recdata,uint8_t taskName){
 }
 
 void checkPings(int recFrom){
-	slavesList[SOURCE_ADDRESS_LOCATION]=10;
+	slavesList[recFrom - 2]=10;
+}
+
+void reduceTTL() {
 	for(int k=1;k<MAX_SLAVES;k++){
-		if(slavesList[recFrom]!=0)
-				slavesList[recFrom]--;
+		if(slavesList[k]!=0)
+				slavesList[k]--;
+		
+		if(slavesList[k] == 0)
+			check_and_send_node_died_signal(k);
 	}
 }
 

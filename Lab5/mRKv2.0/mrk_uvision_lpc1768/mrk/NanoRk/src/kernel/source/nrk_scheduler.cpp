@@ -232,7 +232,8 @@ void _nrk_scheduler()
             if (nrk_task_TCB[task_ID].next_wakeup == 0)
             {
                 // printf( "Adding back %d\n",task_ID );
-                if(nrk_task_TCB[task_ID].event_suspend>0 && nrk_task_TCB[task_ID].nw_flag==1) nrk_task_TCB[task_ID].active_signal_mask=SIG(nrk_wakeup_signal);
+                if(nrk_task_TCB[task_ID].event_suspend>0 && nrk_task_TCB[task_ID].nw_flag==1) 
+									nrk_task_TCB[task_ID].active_signal_mask=SIG(nrk_wakeup_signal);
                 //if(nrk_task_TCB[task_ID].event_suspend==0) nrk_task_TCB[task_ID].active_signal_mask=0;
                 nrk_task_TCB[task_ID].event_suspend=0;
                 nrk_task_TCB[task_ID].nw_flag=0;
@@ -243,13 +244,13 @@ void _nrk_scheduler()
                     nrk_task_TCB[task_ID].task_state = READY;
                     nrk_task_TCB[task_ID].next_wakeup = nrk_task_TCB[task_ID].next_period;
 										
-                    //Added 
+                    //Added by Sumukh
 										nrk_task_TCB[task_ID].absolute_deadline = nrk_task_TCB[task_ID].next_period - nrk_task_TCB[task_ID].period + nrk_task_TCB[task_ID].relative_deadline;
 										
 									
 										// If there is no period set, don't wakeup periodically
                     if(nrk_task_TCB[task_ID].period==0) nrk_task_TCB[task_ID].next_wakeup = MAX_SCHED_WAKEUP_TIME;
-                    nrk_add_to_readyQ(task_ID);
+											nrk_add_to_readyQ(task_ID);
                 }
                 else
                 {

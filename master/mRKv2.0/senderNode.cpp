@@ -58,6 +58,9 @@ nrk_task_type ACK_TX_TASK;
 NRK_STK ack_tx_task_stack[NRK_APP_STACKSIZE];
 void ack_tx_task (void);
 
+
+
+
 //
 nrk_task_type TOP_LEVEL_STATE_MACHINE_TASK;
 NRK_STK top_level_sm_task_stack[NRK_APP_STACKSIZE];
@@ -120,6 +123,8 @@ int simple_function(int task_num);
 void print_function(char *ptr, int num);
 /*****************************************/
 extern char slavesList[MAX_SLAVES];
+extern struct task_function_info task_function_table[MAX_NUM_TASKS_IN_NETWORK];
+TOP_LEVEL_STATE my_state = STATE_START;
 
 void evm_init() {
 	int r;
@@ -195,6 +200,46 @@ int simple_function_setup() {
 
 
 
+int simple_function_setup2() {
+	int ret_val, i;
+	uint32_t init_states[10];
+	ret_val = task_function_register("simple_function2", strlen("simple_function2") + 1, (char *)&simple_function);
+	if(ret_val)
+		return 1;
+	
+	/*ret_val = register_reference("simple_function", "print", strlen("print") + 1);
+	if(ret_val)
+		return 2;
+	
+	ret_val = register_reference("simple_function", "toggle", strlen("toggle") + 1);
+	if(ret_val)
+		return 3;*/
+	
+	/*ret_val = register_reference("simple_function", "test_ref", strlen("test_ref") + 1);
+	if(ret_val)
+		return 3;*/
+	
+	/*ret_val = register_reference("simple_function2", "test_ref2", strlen("test_ref2") + 1);
+	if(ret_val)
+		return 3;*/
+	
+	ret_val = set_scheduling_parameters("simple_function2", 5, 0, 0, 100);
+	if(ret_val)
+		return 4;
+	
+	for(i = 0; i < 10; i++)
+		init_states[i] = i + 50;
+	
+	ret_val = set_task_states("simple_function2", init_states);
+	if(ret_val)
+		return 5;
+	
+	return 0;
+}
+
+
+
+
 int test_ref() {
 	int a, b;
 	a = 1;
@@ -230,11 +275,16 @@ int main(void)
 		
 	  evm_init();
 	  r = simple_function_setup();
+	  //r = simple_function_setup2();
+	
+		function_register("toggle", 8, (char *) &nrk_led_toggle);
+	  function_register("print", 7, (char *) &printf);
 	  function_register("test_ref", 10, (char *)&test_ref);
 		function_register("test_ref2", 14, (char *)&test_ref2);
 		if(r) printf("Error: return val is %d\n\r",r);
 	
-
+	
+		simple_function(0);
 	
 	  init();
     initPacketHandler();
@@ -315,6 +365,7 @@ int simple_function(int task_num){
 		
 	led_toggle(RED_LED);
 	print("current state: %d", task_state);
+	led_toggle(GREEN_LED);
 	
 	task_state++;
 	//checkpoint the state
@@ -323,7 +374,8 @@ int simple_function(int task_num){
 		return ret_val;
 	
 	ret_val = test_ref2_fn();
-	return ret_val;
+	//ret_val = test_ref2_fn();
+	return ret_val + 456;
 }
 
 
@@ -352,7 +404,7 @@ void rx_task ()
 
     while(1) {
         
-
+				nrk_wait_until_next_period();
         if( !bmac_rx_pkt_ready())
             continue;
         //printf("received packet\n\r");
@@ -368,7 +420,8 @@ void rx_task ()
         //Sample the data
         receivedSeqNo = local_rx_buf[SEQUENCE_NUM_LOCATION];
         senderNode = local_rx_buf[SOURCE_ADDRESS_LOCATION];
-
+				checkPings((char)senderNode);
+				
         //Check if the message is intended for me
         if(len!=0 && local_rx_buf[DESTINATION_ADDRESS_LOCATION]==MY_ID)
         {
@@ -465,7 +518,7 @@ void rx_task ()
             }
         }
         bmac_rx_pkt_release ();
-        nrk_wait_until_next_period();
+        
     }
     // pointing the function pointer to the copied code in the flash
 
@@ -684,7 +737,7 @@ void ack_tx_task()
    
    
 void top_level_sm_task () {
-	TOP_LEVEL_STATE my_state = STATE_START;
+	
 	my_signal = FOUND_NEIGHBORS;
 	slavesList[0] = 10;
 	
@@ -756,6 +809,7 @@ void top_level_sm_task () {
 				printf("Steady State\n\r");
 				switch(my_signal) {
 					case NODE_DIED:
+						printf("NODE DIED !!!!!!!!!!\n\r");
 						send_middle_level_signal(FIND_NODE_SIGNAL);
 						my_state = ASSIGN_TASKS;
 						my_signal = NO_SIGNAL_TOP;
@@ -767,7 +821,7 @@ void top_level_sm_task () {
 		
 		middle_level_take_action();
 		low_level_take_action();
-		
+		reduceTTL();
 		
 	}
 }
@@ -779,7 +833,19 @@ void send_top_level_signal(TOP_LEVEL_SIGNAL sig) {
 }
 						
    
- 
+extern unsigned int current_num_task_functions;
+void check_and_send_node_died_signal(int node_num) {	
+	int i;
+	for(i = 0; i < current_num_task_functions; i++) {
+		if(task_function_table[i].assigned_node_id == node_num) {
+			if(my_state == STEADY_STATE) {
+				task_function_table[i].assigned_node_id = 0;
+				my_signal = NODE_DIED;
+				return;
+			}
+		}
+	}
+}
 
 
 
@@ -791,10 +857,10 @@ void nrk_create_taskset ()
     RX_TASK.FirstActivation = TRUE;
     RX_TASK.Type = BASIC_TASK;
     RX_TASK.SchType = PREEMPTIVE;
-    RX_TASK.period.secs = 1;
-    RX_TASK.period.nano_secs =0;
+    RX_TASK.period.secs = 0;
+    RX_TASK.period.nano_secs = 100 * NANOS_PER_MS;
     RX_TASK.cpu_reserve.secs = 0;
-    RX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
+    RX_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
     RX_TASK.offset.secs = 0;
     RX_TASK.offset.nano_secs = 0;
     
@@ -808,7 +874,7 @@ void nrk_create_taskset ()
     TX_TASK.period.secs = 1;
     TX_TASK.period.nano_secs = 0;
     TX_TASK.cpu_reserve.secs = 0;
-    TX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
+    TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
     TX_TASK.offset.secs = 0;
     TX_TASK.offset.nano_secs = 0;
     
@@ -819,7 +885,7 @@ void nrk_create_taskset ()
     RE_TX_TASK.FirstActivation = TRUE;
     RE_TX_TASK.Type = BASIC_TASK;
     RE_TX_TASK.SchType = PREEMPTIVE;
-    RE_TX_TASK.period.secs = 4;
+    RE_TX_TASK.period.secs = 3;
     RE_TX_TASK.period.nano_secs = 0;
     RE_TX_TASK.cpu_reserve.secs = 0;
     RE_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
@@ -834,10 +900,10 @@ void nrk_create_taskset ()
     ACK_TX_TASK.FirstActivation = TRUE;
     ACK_TX_TASK.Type = BASIC_TASK;
     ACK_TX_TASK.SchType = PREEMPTIVE;
-    ACK_TX_TASK.period.secs = 1;
-    ACK_TX_TASK.period.nano_secs = 0;
+    ACK_TX_TASK.period.secs = 0;
+    ACK_TX_TASK.period.nano_secs = 500 * NANOS_PER_MS;
     ACK_TX_TASK.cpu_reserve.secs = 0;
-    ACK_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
+    ACK_TX_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
     ACK_TX_TASK.offset.secs = 0;
     ACK_TX_TASK.offset.nano_secs = 0;
 		
@@ -847,7 +913,7 @@ void nrk_create_taskset ()
     TOP_LEVEL_STATE_MACHINE_TASK.FirstActivation = TRUE;
     TOP_LEVEL_STATE_MACHINE_TASK.Type = BASIC_TASK;
     TOP_LEVEL_STATE_MACHINE_TASK.SchType = PREEMPTIVE;
-    TOP_LEVEL_STATE_MACHINE_TASK.period.secs = 6;
+    TOP_LEVEL_STATE_MACHINE_TASK.period.secs = 3;
     TOP_LEVEL_STATE_MACHINE_TASK.period.nano_secs = 0;
     TOP_LEVEL_STATE_MACHINE_TASK.cpu_reserve.secs = 0;
     TOP_LEVEL_STATE_MACHINE_TASK.cpu_reserve.nano_secs = 500 * NANOS_PER_MS;

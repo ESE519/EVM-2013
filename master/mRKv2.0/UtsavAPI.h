@@ -75,3 +75,5 @@ void set_activate(uint8_t* recdata,const char *taskName);
 void set_deactivate(uint8_t* recdata,uint8_t* taskName);
 
 void checkPings(int recFrom);
+
+void reduceTTL();

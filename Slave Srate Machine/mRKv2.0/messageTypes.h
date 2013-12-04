@@ -16,7 +16,7 @@
   #define DATA_TYPE 1
   #define TASK 1
     #define TASK_PACKET_ACK 2
-    #define PING 3
+    #define TYPE_PING 3
     #define TYPE_TASK_PARAMS  4
     #define TYPE_FUNC_NAMES 5
     #define TYPE_FUNC_CODE 6

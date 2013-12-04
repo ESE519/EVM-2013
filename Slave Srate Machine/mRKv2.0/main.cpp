@@ -40,10 +40,13 @@
 #define MASTER_NODE 1
 
 //Change this according to the utilization of the node (only for communication)
-#define COMM_UTILIZATION		0.5733
+#define COMM_UTILIZATION		0.01
 #define NUM_VIRTUAL_TASKS		3
 
-
+DigitalOut rxpin(p5);
+DigitalOut txpin(p6);
+DigitalOut retxpin(p7);
+DigitalOut ackpin(p8);
 
 
 
@@ -72,6 +75,13 @@ void ack_tx_task (void);
 nrk_task_type SLAVE_TASK;
 NRK_STK slave_task_stack[NRK_APP_STACKSIZE];
 void slave_task (void);
+
+
+//Ping task
+nrk_task_type PING_TASK;
+NRK_STK ping_task_stack[NRK_APP_STACKSIZE];
+void ping_task (void);
+extern States slaveState;   //defined in slaveStateManager.cpp
 
 /************ VIRTUAL TASKS **************************************/
 nrk_task_type VIRTUAL_TASKS[NUM_VIRTUAL_TASKS];
@@ -157,8 +167,9 @@ void HardFault_Handler() {
     register unsigned int _msp __asm("msp");
     printf("Hard Fault! %x (%x)\r\n", SCB->HFSR, *((unsigned int *)(_msp + 24)));
     printf("HFSR: 0x%X\n\r", SCB->HFSR);
-    printf("MMFAR: 0x%X\tMMFSR: 0x%X\n\r", SCB->MMFAR, SCB->CFSR);
-    printf("BFAR: 0x%X\tBFSR: 0x%X\n\r", SCB->BFAR, SCB->CFSR);
+    printf("MMFAR: 0x%X\tCFSR: 0x%X\n\r", SCB->MMFAR, SCB->CFSR);
+    printf("BFAR: 0x%X\tCFSR: 0x%X\n\r", SCB->BFAR, SCB->CFSR);
+		
     printf(" - %x\r\n", (*(volatile uint32_t*)0xe000ed24));
 //    printf("Hard Fault! %x\r\n", SCB->HFSR);
 
@@ -201,12 +212,15 @@ int is_schedulable(uint16_t period_ms, uint16_t wcet_ms) {
 	
 	for(i = 0; i < NUM_VIRTUAL_TASKS; i++) {
 		if(enable_virtual_tasks[i]) {
-			u += (VIRTUAL_TASKS[i].cpu_reserve.nano_secs / NANOS_PER_MS * 1000000 + VIRTUAL_TASKS[i].cpu_reserve.secs) / (VIRTUAL_TASKS[i].period.nano_secs / NANOS_PER_MS * 1000000 + VIRTUAL_TASKS[i].period.secs);
+			u += ((float)VIRTUAL_TASKS[i].cpu_reserve.nano_secs / NANOS_PER_MS * 1000000 + (float)VIRTUAL_TASKS[i].cpu_reserve.secs) / ((float)VIRTUAL_TASKS[i].period.nano_secs / NANOS_PER_MS * 1000000 + (float)VIRTUAL_TASKS[i].period.secs);
 	  }
 	}
 	
 	u += (float)wcet_ms/period_ms;
 	//printf("if added u is %.2f\n\r", u);
+	
+	return 1;   // *********************************** DONT FORGET TO CHANGE THIS *****************************/
+	
 	if(u < 0.69f)
 		return 1;
 	else
@@ -338,15 +352,16 @@ void rx_task ()
     printf("Receiver node Bmac initialised\n");
 
     while(1) {
-        
-				
+			  nrk_wait_until_next_period();
+        rxpin = 1;
+				//printf("Receiver TASK\n\r");
         if( !bmac_rx_pkt_ready())
             continue;
         //printf("received packet\n\r");
         nrk_led_toggle(ORANGE_LED);
         
         local_rx_buf = (uint8_t *)bmac_rx_pkt_get (&len, &rssi);
-
+				printf("Received Packet\n\r");
         //If my own packet then dont receive
         if(local_rx_buf[SOURCE_ADDRESS_LOCATION]==MY_ID)
         {
@@ -368,7 +383,7 @@ void rx_task ()
                 if(receivedSeqNo>lastReceivedSequenceNo[senderNode])
                 {
                     receiveComplete[senderNode] =0;
-                    printf("received new packet\n\r");
+                    //printf("received new packet\n\r");
                     //Process and send the acknowledgement to the receiver
                     lastReceivedSequenceNo[senderNode]=receivedSeqNo;
                     extractPacket(local_rx_buf,&receiveData[DATA_LOCATION(senderNode)],len,senderNode);
@@ -407,7 +422,7 @@ void rx_task ()
                 }
                 else
                 {
-                    printf("received old packet\n\r");
+                    //printf("received old packet\n\r");
                     ack_buf[senderNode][DESTINATION_ADDRESS_LOCATION]=senderNode;
                     ack_buf[senderNode][SOURCE_ADDRESS_LOCATION]= MY_ID;
                     ack_buf[senderNode][SEQUENCE_NUM_LOCATION] = lastReceivedSequenceNo[senderNode];
@@ -425,7 +440,7 @@ void rx_task ()
                 //If it is a new ACK packet then accept it. Else dont bother
                 if(lastSentSequenceNo[senderNode]==receivedSeqNo)
                 {
-                    printf("Received Ack\n");
+                    //printf("Received Ack\n");
                     switch(sendNextPacket[senderNode])
                     {
                     case WAIT_ACK:
@@ -447,14 +462,15 @@ void rx_task ()
 
                 break;
             default:
+							  printf("im in default rx\n\r");
                 break;
 
             }
         }
         bmac_rx_pkt_release ();
-				//nrk_wait_until_next_period();
+				
 			  nrk_led_toggle(ORANGE_LED);
-        
+        rxpin = 0;
     }
     // pointing the function pointer to the copied code in the flash
 
@@ -484,10 +500,11 @@ void tx_task ()
     {
         tx_buf[SOURCE_ADDRESS_LOCATION + TX_LOCATION(i)] = MY_ID;
     }
-    printf("Transmit Task\r\n");
+    
     while(1){
-
-
+					nrk_wait_until_next_period();
+			txpin = 1;
+			//printf("Transmit Task\r\n");
         for(i=1;i<=MAX_MOLES;i++)
         {
 
@@ -519,7 +536,7 @@ void tx_task ()
                 {
                     sendNextPacket[i] = LAST_PACKET_ACK;
                 }
-                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
+                val=bmac_tx_pkt_nonblocking(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
                 break;
 
             case IN_PROGRESS:
@@ -539,11 +556,12 @@ void tx_task ()
                     printf("last packet\n");
                     sendNextPacket[i] = LAST_PACKET_ACK;
                 }
-                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
+                val=bmac_tx_pkt_nonblocking(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
                 break;
             case WAIT_ACK:
             case END:
             default:
+							  
                 break;
 
 
@@ -551,7 +569,7 @@ void tx_task ()
             }
         }
 
-        nrk_wait_until_next_period();
+        txpin = 0;
     }
 
 }
@@ -579,6 +597,9 @@ void re_tx_task()
     //Retransmission
     while(1)
     {
+			//printf("RE TASK\n\r");
+			nrk_wait_until_next_period();
+				retxpin = 1;
         for(i=1;i<=MAX_MOLES;i++)
         {
 
@@ -590,8 +611,10 @@ void re_tx_task()
             {
             case LAST_PACKET_ACK:
             case WAIT_ACK:
-                val=bmac_tx_pkt(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
-                printf("Retransmitted\r\n");
+                
+								val=bmac_tx_pkt_nonblocking(&tx_buf[TX_LOCATION(i)], transmittedPacketLength[i]);
+                
+								printf("Retransmitted\r\n");
                 break;
             default:
                 break;
@@ -600,8 +623,9 @@ void re_tx_task()
 
 
         }
-        nrk_wait_until_next_period();
-
+				
+				retxpin = 0;
+        
 
 
     }
@@ -631,7 +655,9 @@ void ack_tx_task()
     //printf("Ack task\n");
     while(1)
     {
-
+			//printf("ACK TASK\n\r");
+				nrk_wait_until_next_period();
+				ackpin = 1;
 
         for(i=1;i<=MAX_MOLES;i++)
         {
@@ -648,11 +674,15 @@ void ack_tx_task()
                 switch(receiverNextPacket[i])
                 {
                 case SEND_ACK:
-                    val=bmac_tx_pkt(&(ack_buf[i][0]),5);
-                    printf("Sent Ack\n");
-                    receiverNextPacket[i] = STOP;
+										
+										receiverNextPacket[i] = STOP;
+										val=bmac_tx_pkt_nonblocking(&(ack_buf[i][0]),5);
+                    
+										printf("Sent Ack\n");
+                    
                     break;
                 default:
+									  printf("im in default ack\n\r");
                     break;
 
                 }
@@ -660,9 +690,9 @@ void ack_tx_task()
 
             }
         }
-        nrk_wait_until_next_period();
-
-
+				
+				ackpin = 0;
+        
 
     }
 
@@ -671,14 +701,15 @@ void ack_tx_task()
 
 void slave_task(){
 	Signals slaveSignal;
-	printf("Slave task\r\n");
+	
 	while(1){
 		nrk_wait_until_next_period();
 		nrk_led_toggle(BLUE_LED);
+		//printf("Slave task\r\n");
 		if(checkReceivedDataReady(MASTER_NODE)){
 			
 			if(checkPacketRead(MASTER_NODE) ) {
-				
+				printf("Slave task\n\r");
 				slaveSignal = slave_sm(receiveData[DATA_LOCATION(MASTER_NODE)]);
 				setPacketRead(MASTER_NODE);
 				switch(slaveSignal) {
@@ -695,12 +726,42 @@ void slave_task(){
 					break;
 					
 					default:
+						printf("I shouldnt be here \n\r");
 					break;
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+
+
+
+/*********** PING TASK ********************/
+void ping_task() {
+	while(1) {
+		nrk_wait_until_next_period();
+		if(slaveState != IDLE_STATE)
+			continue;
+		
+		
+		
+		if(ReadyToSendData(MASTER_NODE)){
+			set_MessageTypes(&data[DATA_LOCATION(MASTER_NODE)], TYPE_PING);
+			startDataTransmission(MASTER_NODE, 10);
+		}
+		
+	}
+}
+
+
+
+
+
 /******************************************************************
 
 
@@ -767,14 +828,14 @@ void nrk_create_taskset ()
 
     RX_TASK.task = rx_task;
     nrk_task_set_stk( &RX_TASK, rx_task_stack, NRK_APP_STACKSIZE);
-    RX_TASK.prio = 1;
+    RX_TASK.prio = 10;
     RX_TASK.FirstActivation = TRUE;
     RX_TASK.Type = BASIC_TASK;
     RX_TASK.SchType = PREEMPTIVE;
-    RX_TASK.period.secs = 1;
-    RX_TASK.period.nano_secs =0;
+    RX_TASK.period.secs = 0;
+    RX_TASK.period.nano_secs = 100 * NANOS_PER_MS;
     RX_TASK.cpu_reserve.secs = 0;
-    RX_TASK.cpu_reserve.nano_secs = 900 * NANOS_PER_MS;
+    RX_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
     RX_TASK.offset.secs = 0;
     RX_TASK.offset.nano_secs = 0;
     
@@ -788,7 +849,7 @@ void nrk_create_taskset ()
     TX_TASK.period.secs = 1;
     TX_TASK.period.nano_secs = 0;
     TX_TASK.cpu_reserve.secs = 0;
-    TX_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
+    TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
     TX_TASK.offset.secs = 0;
     TX_TASK.offset.nano_secs = 0;
     
@@ -810,14 +871,14 @@ void nrk_create_taskset ()
 
     ACK_TX_TASK.task = ack_tx_task;
     nrk_task_set_stk( &ACK_TX_TASK, ack_tx_task_stack, NRK_APP_STACKSIZE);
-    ACK_TX_TASK.prio = 3;
+    ACK_TX_TASK.prio = 1;
     ACK_TX_TASK.FirstActivation = TRUE;
     ACK_TX_TASK.Type = BASIC_TASK;
     ACK_TX_TASK.SchType = PREEMPTIVE;
-    ACK_TX_TASK.period.secs = 1;
-    ACK_TX_TASK.period.nano_secs = 0;
+    ACK_TX_TASK.period.secs = 0;
+    ACK_TX_TASK.period.nano_secs = 500 * NANOS_PER_MS;
     ACK_TX_TASK.cpu_reserve.secs = 0;
-    ACK_TX_TASK.cpu_reserve.nano_secs = 100 * NANOS_PER_MS;
+    ACK_TX_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
     ACK_TX_TASK.offset.secs = 0;
     ACK_TX_TASK.offset.nano_secs = 0;
 
@@ -827,13 +888,30 @@ void nrk_create_taskset ()
     SLAVE_TASK.prio = 2;
     SLAVE_TASK.FirstActivation = TRUE;
     SLAVE_TASK.Type = BASIC_TASK;
-    SLAVE_TASK.SchType = PREEMPTIVE;
-    SLAVE_TASK.period.secs = 5;
+    SLAVE_TASK.SchType = NONPREEMPTIVE;
+    SLAVE_TASK.period.secs = 3;
     SLAVE_TASK.period.nano_secs = 0;
     SLAVE_TASK.cpu_reserve.secs = 0;
     SLAVE_TASK.cpu_reserve.nano_secs = 200 * NANOS_PER_MS;
     SLAVE_TASK.offset.secs = 0;
     SLAVE_TASK.offset.nano_secs = 0;
+		
+		
+		
+		PING_TASK.task = ping_task;
+    nrk_task_set_stk( &PING_TASK, ping_task_stack, NRK_APP_STACKSIZE);
+    PING_TASK.prio = 1;
+    PING_TASK.FirstActivation = TRUE;
+    PING_TASK.Type = BASIC_TASK;
+    PING_TASK.SchType = PREEMPTIVE;
+    PING_TASK.period.secs = 5;
+    PING_TASK.period.nano_secs = 0;
+    PING_TASK.cpu_reserve.secs = 0;
+    PING_TASK.cpu_reserve.nano_secs = 50 * NANOS_PER_MS;
+    PING_TASK.offset.secs = 0;
+    PING_TASK.offset.nano_secs = 0;
+		
+		
     
 		nrk_activate_task (&RX_TASK);
     nrk_activate_task (&TX_TASK);
