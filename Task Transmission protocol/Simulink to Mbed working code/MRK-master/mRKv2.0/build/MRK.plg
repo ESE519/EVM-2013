@@ -4,25 +4,6 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 S:\ese 519\GIT\EVM-2013\Task Transmission protocol\Simulink to Mbed working code\MRK-master\mRKv2.0\MRK.uvproj
-Project File Date:  11/23/2013
+Project File Date:  11/25/2013
 
 <h2>Output:</h2>
-Build target 'mbed NXP LPC1768'
-compiling UtsavAPI.cpp...
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-packethandler.h(49): warning:  #1-D: last line of file ends without a newline
-compiling main.cpp...
-packetHandler.h(49): warning:  #1-D: last line of file ends without a newline
-UtsavAPI.h(82): warning:  #1-D: last line of file ends without a newline
-main.cpp(102): warning:  #177-D: variable "funcname" was declared but never referenced
-main.cpp(130): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(289): warning:  #177-D: variable "slaves" was declared but never referenced
-main.cpp(258): warning:  #177-D: variable "v" was declared but never referenced
-main.cpp(259): warning:  #550-D: variable "receivedSeqNo" was set but never used
-main.cpp(485): warning:  #550-D: variable "val" was set but never used
-main.cpp(524): warning:  #177-D: variable "readVal" was declared but never referenced
-main.cpp(486): warning: C4017W: tx_done_signal may be used before being set
-linking...
-Program Size: Code=25164 RO-data=1900 RW-data=304 ZI-data=6896  
-After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
-".\build\MRK.axf" - 0 Errors, 12 Warning(s).

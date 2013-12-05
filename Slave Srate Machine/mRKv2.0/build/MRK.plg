@@ -7,3 +7,74 @@ S:\ese 519\GIT\EVM-2013\Slave Srate Machine\mRKv2.0\MRK.uvproj
 Project File Date:  12/02/2013
 
 <h2>Output:</h2>
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(159): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(227): warning:  #111-D: statement is unreachable
+main.cpp(255): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(267): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(280): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(347): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(495): warning:  #550-D: variable "val" was set but never used
+main.cpp(592): warning:  #550-D: variable "val" was set but never used
+main.cpp(649): warning:  #550-D: variable "val" was set but never used
+main.cpp(650): warning: C4017W: tx_done_signal may be used before being set
+linking...
+.\build\MRK.axf: Error: L6218E: Undefined symbol Servo::write(float) (referred from main.o).
+.\build\MRK.axf: Error: L6218E: Undefined symbol Servo::Servo(PinName) (referred from main.o).
+".\build\MRK.axf" - 2 Errors, 17 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(52): error:  #20: identifier "Servo" is undefined
+main.cpp(159): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(227): warning:  #111-D: statement is unreachable
+main.cpp(255): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(267): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(280): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(347): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(495): warning:  #550-D: variable "val" was set but never used
+main.cpp(592): warning:  #550-D: variable "val" was set but never used
+main.cpp(649): warning:  #550-D: variable "val" was set but never used
+".\build\MRK.axf" - 1 Errors, 16 Warning(s).
+Target not created
+Build target 'mbed NXP LPC1768'
+compiling main.cpp...
+messageTypes.h(41): warning:  #1-D: last line of file ends without a newline
+packetHandler.h(79): warning:  #1-D: last line of file ends without a newline
+transmitProtocol.h(40): warning:  #1-D: last line of file ends without a newline
+slaveStates.h(23): warning:  #1-D: last line of file ends without a newline
+UtsavAPI.h(84): warning:  #1-D: last line of file ends without a newline
+function_manager.h(27): warning:  #1-D: last line of file ends without a newline
+state_manager.h(14): warning:  #1-D: last line of file ends without a newline
+main.cpp(159): warning:  #177-D: variable "i" was declared but never referenced
+main.cpp(227): warning:  #111-D: statement is unreachable
+main.cpp(255): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(267): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(280): warning:  #550-D: variable "ret_val" was set but never used
+main.cpp(347): warning:  #177-D: variable "v" was declared but never referenced
+main.cpp(495): warning:  #550-D: variable "val" was set but never used
+main.cpp(592): warning:  #550-D: variable "val" was set but never used
+main.cpp(649): warning:  #550-D: variable "val" was set but never used
+main.cpp(650): warning: C4017W: tx_done_signal may be used before being set
+compiling Servo.cpp...
+linking...
+Program Size: Code=38560 RO-data=1868 RW-data=572 ZI-data=56776  
+After Build - User command #1: fromelf --bin -o E:\MRK.bin .\build\MRK.axf
+Error: Q0108E: Could not create output file 'E:\MRK.bin': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+".\build\MRK.axf" - 0 Errors, 17 Warning(s).

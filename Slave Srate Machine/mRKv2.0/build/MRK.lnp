@@ -30,6 +30,7 @@
 ".\build\state_manager.o"
 ".\build\memory_manager.o"
 ".\build\iap.o"
+".\build\servo.o"
 --strict --scatter ".\mbed\LPC1768\LPC1768.sct"
 
 .\mbed\LPC1768\startup_LPC17xx.o

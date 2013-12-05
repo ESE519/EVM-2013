@@ -36,7 +36,7 @@ DigitalOut led(LED1);
 DigitalIn  enable(p21);
 AnalogIn ain(p20);
 PwmOut servo(p21); 
-Servo myservo(p21);
+Servo myservo(p23);
 float duty=0;
 /* Model step function */
 void simulinkmodeltoblinkLed_step(void)

@@ -96,12 +96,12 @@ void checkPings(int recFrom){
 }
 
 void reduceTTL() {
-	for(int k=1;k<MAX_SLAVES;k++){
+	for(int k=0;k<MAX_SLAVES;k++){
 		if(slavesList[k]!=0)
 				slavesList[k]--;
 		
 		if(slavesList[k] == 0)
-			check_and_send_node_died_signal(k);
+			check_and_send_node_died_signal(k+2);
 	}
 }
 

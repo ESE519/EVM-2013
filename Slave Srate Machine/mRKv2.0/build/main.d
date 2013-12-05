@@ -84,3 +84,4 @@
 .\build\main.o: memory_manager.h
 .\build\main.o: IAP.h
 .\build\main.o: state_manager.h
+.\build\main.o: Servo.h

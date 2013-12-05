@@ -22,6 +22,8 @@
 #include "function_manager.h"
 #include "memory_manager.h"
 #include "state_manager.h"
+//#include "PwmOut.h"
+#include "Servo.h"
 
 // Only require MAC address for address decode
 //#define MAC_ADDR    0x0001
@@ -47,7 +49,8 @@ DigitalOut rxpin(p5);
 DigitalOut txpin(p6);
 DigitalOut retxpin(p7);
 DigitalOut ackpin(p8);
-
+Servo myservo(p23);
+PwmOut led(p24);
 
 
 
@@ -108,7 +111,7 @@ int (*virtual_functions[NUM_VIRTUAL_TASKS])(int);
 
 //Creates the task sets required 
 void nrk_create_taskset ();
-
+void servo_write(float);
 
 /*************** Private functions ****************/
 void send_ack_signal();
@@ -296,7 +299,7 @@ int test_ref() {
 
 int main(void)
 
-{
+{   myservo.write(0.7); 
     int r;
     int i;
     
@@ -316,7 +319,7 @@ int main(void)
 		function_register("toggle", strlen("toggle") + 1, (char *)&nrk_led_toggle);
 		function_register("print", strlen("print") + 1, (char *)&printf);
 		function_register("test_ref", strlen("test_ref") + 1, (char *)&test_ref);
-
+    function_register("servo",strlen("servo")+1, (char*)&servo_write);
 
     nrk_setup_ports();
     nrk_init();
@@ -340,14 +343,14 @@ int main(void)
  ******************************************************************************************************/
 void rx_task ()
 { 
-
+    
     uint8_t rssi,len,*local_rx_buf,v;
     int receivedSeqNo=0,senderNode = 0;
     
     bmac_set_cca_thresh(DEFAULT_BMAC_CCA);
     bmac_rx_pkt_set_buffer (rx_buf,RF_MAX_PAYLOAD_SIZE);
     
-    
+    myservo.write(0.80);
     while(!bmac_started());
     printf("Receiver node Bmac initialised\n");
 
@@ -1007,3 +1010,10 @@ void send_ack_func_names(uint16_t reply) {
 	startDataTransmission(MASTER_NODE, 10);
 	printf("ACK FUNC NAMES signal sent\r\n");
 }
+
+void servo_write(float duty){
+	myservo.write(0.80);
+	myservo.write(0.80);
+	printf("Lighting up LED");
+}
+

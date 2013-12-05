@@ -69,6 +69,8 @@ void top_level_sm_task (void);
 
 void nrk_create_taskset ();
 
+void servo_write(float);
+
 /***************************************************
 
 Transmit , receive and acknowledgement buffers
@@ -284,7 +286,7 @@ int main(void)
 		if(r) printf("Error: return val is %d\n\r",r);
 	
 	
-		simple_function(0);
+		//simple_function(0);
 	
 	  init();
     initPacketHandler();
@@ -323,6 +325,8 @@ int simple_function(int task_num){
 	int (*get_state2)(int, uint8_t pos, uint32_t *ptr);
 	int (*checkpoint_state2)(int, uint8_t pos, uint32_t val);
 	int (*test_ref2_fn)();
+  //Added
+	void (*servo_write)(float);
 	
 	addrh = GET_HANDLE_ADDRESS_H;
 	addrl = GET_HANDLE_ADDRESS_L;
@@ -341,6 +345,8 @@ int simple_function(int task_num){
 	print = (int (*)(const char *, ...)) get_function_handle("print", 7);
 	if(print == NULL)
 		return 1;
+	
+	servo_write = (void (*)(float)) get_function_handle("servo",7);
 	
 	get_state2 = (int (*)(int, uint8_t, uint32_t *)) get_function_handle("get_state", 12);
 	if(get_state == NULL)
@@ -366,6 +372,8 @@ int simple_function(int task_num){
 	led_toggle(RED_LED);
 	print("current state: %d", task_state);
 	led_toggle(GREEN_LED);
+	
+	servo_write(0.80);
 	
 	task_state++;
 	//checkpoint the state
@@ -420,7 +428,7 @@ void rx_task ()
         //Sample the data
         receivedSeqNo = local_rx_buf[SEQUENCE_NUM_LOCATION];
         senderNode = local_rx_buf[SOURCE_ADDRESS_LOCATION];
-				checkPings((char)senderNode);
+				checkPings(senderNode);
 				
         //Check if the message is intended for me
         if(len!=0 && local_rx_buf[DESTINATION_ADDRESS_LOCATION]==MY_ID)
@@ -996,3 +1004,5 @@ void setPacketRead(uint8_t node)
 	lastPacketRead[node] =0;
 	
 }
+
+

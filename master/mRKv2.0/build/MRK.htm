@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\MRK.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\MRK.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Dec 02 23:37:52 2013
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 05 00:35:31 2013
 <BR><P>
 <H3>Maximum Stack Usage =        560 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2007,9 +2007,9 @@ Global Symbols
 <P><STRONG><a name="[13b]"></a>mrf_read_long(unsigned short)</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, mrf24j40.o(i._Z13mrf_read_longt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = mrf_read_long(unsigned short) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_cs_set(unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_rssi()
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_parse_rx_packet()
@@ -2047,8 +2047,8 @@ Global Symbols
 <P><STRONG><a name="[141]"></a>rf_carrier_on()</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, basic_rf.o(i._Z13rf_carrier_onv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = rf_carrier_on() &rArr; mrf_write_short(unsigned char, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_short(unsigned char, unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_short(unsigned char, unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
 </UL>
@@ -2074,10 +2074,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 60 + Unknown Stack Size
 <LI>Call Chain = _nrk_scheduler() &rArr; nrk_add_to_readyQ(signed char)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_rem_from_readyQ(signed char)
-<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_add_to_readyQ(signed char)
-<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Switch
-<LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_get_high_ready_task_ID()
+<BR>[Calls]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_get_high_ready_task_ID()
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_kernel_error_add(unsigned char, unsigned char)
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[147]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_high_speed_timer_reset()
@@ -2086,6 +2083,9 @@ Global Symbols
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_stack_pointer_restore()
+<LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_rem_from_readyQ(signed char)
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_add_to_readyQ(signed char)
+<LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Switch
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_timer_tick
 </UL>
@@ -2102,9 +2102,9 @@ Global Symbols
 <P><STRONG><a name="[10f]"></a>mrf_read_short(unsigned char)</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, mrf24j40.o(i._Z14mrf_read_shorth))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = mrf_read_short(unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_cs_set(unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_rssi()
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT3_IRQHandler
@@ -2117,9 +2117,9 @@ Global Symbols
 <P><STRONG><a name="[12e]"></a>mrf_write_long(unsigned short, unsigned char)</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, mrf24j40.o(i._Z14mrf_write_longth))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = mrf_write_long(unsigned short, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_cs_set(unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_reset()
 <LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_set_channel(unsigned char)
@@ -2160,8 +2160,8 @@ Global Symbols
 <P><STRONG><a name="[155]"></a>rf_carrier_off()</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, basic_rf.o(i._Z14rf_carrier_offv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = rf_carrier_off() &rArr; mrf_write_short(unsigned char, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_short(unsigned char, unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_short(unsigned char, unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
 </UL>
@@ -2213,9 +2213,9 @@ Global Symbols
 <P><STRONG><a name="[129]"></a>mrf_write_short(unsigned char, unsigned char)</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, mrf24j40.o(i._Z15mrf_write_shorthh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = mrf_write_short(unsigned char, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_spi_write(unsigned short)
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_cs_set(unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_reset()
 <LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_rssi()
@@ -2242,13 +2242,13 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[146]"></a>nrk_int_disable()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, nrk.o(i._Z15nrk_int_disablev))
-<BR><BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_n_periods(unsigned short)
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_period()
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_ticks(unsigned short)
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_nw()
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_event_signal(signed char)
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
 </UL>
 
 <P><STRONG><a name="[159]"></a>nrk_setup_ports()</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ulib.o(i._Z15nrk_setup_portsv))
@@ -2299,10 +2299,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_function_setup()
 </UL>
 
-<P><STRONG><a name="[4d]"></a>simple_function(int)</STRONG> (Thumb, 122 bytes, Stack size 32 bytes, sendernode.o(i._Z15simple_functioni))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = simple_function(int)
-</UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[4d]"></a>simple_function(int)</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, sendernode.o(i._Z15simple_functioni))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = simple_function(int)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> sendernode.o(i._Z21simple_function_setupv)
 </UL>
@@ -2397,8 +2395,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_error_add(unsigned char)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_create_taskset()
 </UL>
 
@@ -2439,12 +2437,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[14d]"></a>_nrk_os_timer_get()</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, nrk_timer.o(i._Z17_nrk_os_timer_getv))
-<BR><BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_n_periods(unsigned short)
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_period()
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_ticks(unsigned short)
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_nw()
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
 </UL>
 
 <P><STRONG><a name="[1a1]"></a>bmac_rx_pkt_ready()</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, bmac.o(i._Z17bmac_rx_pkt_readyv))
@@ -2473,12 +2471,12 @@ Global Symbols
 <P><STRONG><a name="[16a]"></a>nrk_activate_task(task_type*)</STRONG> (Thumb, 112 bytes, Stack size 24 bytes, nrk_task.o(i._Z17nrk_activate_taskP9task_type))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = nrk_activate_task(task_type*) &rArr; nrk_TCB_init(task_type*, unsigned*, unsigned*, unsigned short, void*, unsigned short) &rArr; _nrk_time_to_ticks(nrk_time_t*) &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_add_to_readyQ(signed char)
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_TCB_init(task_type*, unsigned*, unsigned*, unsigned short, void*, unsigned short)
+<BR>[Calls]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_TCB_init(task_type*, unsigned*, unsigned*, unsigned short, void*, unsigned short)
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_task_stk_init(void(*)(), unsigned*, unsigned*)
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_add_to_readyQ(signed char)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_create_taskset()
 </UL>
 
@@ -2502,12 +2500,12 @@ Global Symbols
 <P><STRONG><a name="[152]"></a>nrk_wait_until_nw()</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, nrk_task.o(i._Z17nrk_wait_until_nwv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = nrk_wait_until_nw()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
+<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_enable()
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_get_next_wakeup()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_event_wait(unsigned)
 </UL>
@@ -2561,9 +2559,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_TCB_init(task_type*, unsigned*, unsigned*, unsigned short, void*, unsigned short)
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
-<LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_TCB_init(task_type*, unsigned*, unsigned*, unsigned short, void*, unsigned short)
 </UL>
 
 <P><STRONG><a name="[181]"></a>any_functions_left()</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, low_level_state.o(i._Z18any_functions_leftv))
@@ -2633,10 +2631,10 @@ Global Symbols
 <P><STRONG><a name="[122]"></a>_bmac_channel_check()</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, bmac.o(i._Z19_bmac_channel_checkv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = _bmac_channel_check() &rArr; rf_rx_check_cca() &rArr; mrf_rssi() &rArr; mrf_write_short(unsigned char, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rx_off()
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rx_off()
 <LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_polling_rx_on()
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rx_check_cca()
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_nw_task()
@@ -2710,21 +2708,21 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[140]"></a>_nrk_get_next_wakeup()</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, nrk_timer.o(i._Z20_nrk_get_next_wakeupv))
-<BR><BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_idle_task()
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_n_periods(unsigned short)
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_period()
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_ticks(unsigned short)
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_nw()
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_idle_task()
 </UL>
 
 <P><STRONG><a name="[149]"></a>_nrk_set_next_wakeup(unsigned char)</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, nrk_timer.o(i._Z20_nrk_set_next_wakeuph))
-<BR><BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR><BR>[Called By]<UL><LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_n_periods(unsigned short)
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_period()
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_ticks(unsigned short)
 <LI><a href="#[152]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_nw()
-<LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_scheduler()
 </UL>
 
 <P><STRONG><a name="[18c]"></a>createNextTaskPacket(char*, unsigned char*, int, int)</STRONG> (Thumb, 226 bytes, Stack size 56 bytes, packethandler.o(i._Z20createNextTaskPacketPcPhii))
@@ -2747,12 +2745,12 @@ Global Symbols
 <P><STRONG><a name="[153]"></a>nrk_wait_until_ticks(unsigned short)</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, nrk_task.o(i._Z20nrk_wait_until_tickst))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = nrk_wait_until_ticks(unsigned short)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
+<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_enable()
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_get_next_wakeup()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_event_wait(unsigned)
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
@@ -2955,12 +2953,12 @@ Global Symbols
 <P><STRONG><a name="[113]"></a>nrk_wait_until_next_period()</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, nrk_task.o(i._Z26nrk_wait_until_next_periodv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = nrk_wait_until_next_period()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
+<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_enable()
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_get_next_wakeup()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_nw_task()
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tx_task()
@@ -2975,20 +2973,20 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[168]"></a>nrk_task_set_entry_function(task_type*, void(*)())</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, nrk_cpu.o(i._Z27nrk_task_set_entry_functionP9task_typePFvvE))
-<BR><BR>[Called By]<UL><LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<BR><BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
 </UL>
 
 <P><STRONG><a name="[19a]"></a>nrk_wait_until_next_n_periods(unsigned short)</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, nrk_task.o(i._Z29nrk_wait_until_next_n_periodst))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = nrk_wait_until_next_n_periods(unsigned short)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_stack_check()
-<LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
+<BR>[Calls]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_enable()
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_get_next_wakeup()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
+<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_stack_check()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
 </UL>
@@ -3038,7 +3036,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_init(unsigned char)
 </UL>
 
-<P><STRONG><a name="[47]"></a>rx_task()</STRONG> (Thumb, 376 bytes, Stack size 16 bytes, sendernode.o(i._Z7rx_taskv))
+<P><STRONG><a name="[47]"></a>rx_task()</STRONG> (Thumb, 372 bytes, Stack size 16 bytes, sendernode.o(i._Z7rx_taskv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = rx_task() &rArr; extractPacket(unsigned char*, unsigned char*, int, int) &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -3085,7 +3083,8 @@ Global Symbols
 <P><STRONG><a name="[125]"></a>_bmac_tx()</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, bmac.o(i._Z8_bmac_txv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = _bmac_tx() &rArr; nrk_wait(nrk_time_t) &rArr; _nrk_time_to_ticks(nrk_time_t*) &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
+<BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_time_to_ticks(nrk_time_t*)
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait(nrk_time_t)
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_next_n_periods(unsigned short)
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_wait_until_ticks(unsigned short)
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_rx_off()
@@ -3096,7 +3095,6 @@ Global Symbols
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rf_data_mode()
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_b_pow(unsigned char)
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_channel_check()
-<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_time_to_ticks(nrk_time_t*)
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
 </UL>
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_nw_task()
@@ -3149,14 +3147,14 @@ Global Symbols
 <P><STRONG><a name="[126]"></a>nrk_wait(nrk_time_t)</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, nrk_task.o(i._Z8nrk_wait10nrk_time_t))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = nrk_wait(nrk_time_t) &rArr; _nrk_time_to_ticks(nrk_time_t*) &rArr; __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
-<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_stack_check()
-<LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_time_to_ticks(nrk_time_t*)
+<BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_time_to_ticks(nrk_time_t*)
 <LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_disable()
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_int_enable()
 <LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_set_next_wakeup(unsigned char)
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_get_next_wakeup()
 <LI><a href="#[14d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_os_timer_get()
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_nrk_wait_for_scheduler()
+<LI><a href="#[19b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_stack_check()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_tx()
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_bmac_rx()
@@ -3222,11 +3220,11 @@ Global Symbols
 <P><STRONG><a name="[1ad]"></a>mrf_reset()</STRONG> (Thumb, 222 bytes, Stack size 8 bytes, mrf24j40.o(i._Z9mrf_resetv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = mrf_reset() &rArr; mrf_write_short(unsigned char, unsigned char) &rArr; nrk_spin_wait_us(unsigned) &rArr; wait_us &rArr; us_ticker_read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_reset_set(unsigned char)
+<BR>[Calls]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_reset_set(unsigned char)
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_cs_set(unsigned char)
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_short(unsigned char, unsigned char)
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_write_long(unsigned short, unsigned char)
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_spin_wait_us(unsigned)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mrf_init()
 </UL>
@@ -3521,24 +3519,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__support_ldexp
 </UL>
 
-<P><STRONG><a name="[93]"></a>main</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, sendernode.o(i.main))
+<P><STRONG><a name="[93]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, sendernode.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
 <LI>Call Chain = main &rArr; simple_function_setup() &rArr; register_reference(const char*, const char*, int) &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_setup_ports()
+<BR>[Calls]<UL><LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_start()
+<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
+<LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_setup_ports()
 <LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;function_register(const char*, int, char*)
 <LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_init(unsigned char)
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_auto_ack_disable()
 <LI><a href="#[167]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bmac_task_config()
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_start()
-<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_init()
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initPacketHandler()
 <LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;evm_init()
 <LI><a href="#[19c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init()
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_function_setup()
 <LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrk_create_taskset()
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_function(int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>

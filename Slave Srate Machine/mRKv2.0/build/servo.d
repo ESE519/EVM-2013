@@ -1,5 +1,5 @@
-.\build\servo.o: Servo.cpp
-.\build\servo.o: Servo.h
+.\build\servo.o: Servo\Servo.cpp
+.\build\servo.o: Servo\Servo.h
 .\build\servo.o: .\mbed\mbed.h
 .\build\servo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\build\servo.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
