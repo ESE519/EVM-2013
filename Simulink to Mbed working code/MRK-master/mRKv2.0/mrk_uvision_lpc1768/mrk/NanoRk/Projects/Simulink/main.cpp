@@ -21,6 +21,9 @@
 #include <stdio.h>
 #include <string.h>
 #include "mbed.h"
+#include "Servo.h"
+PwmOut myservo(p22);
+//Servo myservo(p24);
 volatile int IsrOverrun = 0;
 static boolean_T OverrunFlag = 0;
 void rt_OneStep(void)
@@ -51,7 +54,8 @@ int main(void)
 {
 	nrk_setup_ports();
 
-  
+  myservo= 0.5;
+	//wait(0.2);
 	volatile boolean_T noErr;
   float modelBaseRate = 0.5;
   float systemClock = 0;

@@ -54,7 +54,6 @@
 .\build\simulinkmodeltoblinkled.o: .\mbed\InterruptIn.h
 .\build\simulinkmodeltoblinkled.o: .\mbed\wait_api.h
 .\build\simulinkmodeltoblinkled.o: .\mbed\rtc_time.h
-.\build\simulinkmodeltoblinkled.o: .\mbed\Servo.h
 .\build\simulinkmodeltoblinkled.o: .\mbed\nrk.h
 .\build\simulinkmodeltoblinkled.o: .\mbed\nrk_cpu.h
 .\build\simulinkmodeltoblinkled.o: .\mbed\nrk_cfg.h

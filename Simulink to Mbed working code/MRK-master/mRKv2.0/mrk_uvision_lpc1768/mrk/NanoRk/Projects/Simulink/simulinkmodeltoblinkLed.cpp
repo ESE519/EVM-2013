@@ -16,7 +16,7 @@
 #include "simulinkmodeltoblinkLed.h"
 #include "simulinkmodeltoblinkLed_private.h"
 #include "mbed.h"
-#include "Servo.h"
+//#include "Servo.h"
 #include "nrk.h"
 
 /* Block states (auto storage) */
@@ -36,7 +36,7 @@ DigitalOut led(LED1);
 DigitalIn  enable(p21);
 AnalogIn ain(p20);
 PwmOut servo(p21); 
-Servo myservo(p23);
+//Servo myservo(p23);
 float duty=0;
 /* Model step function */
 void simulinkmodeltoblinkLed_step(void)
@@ -53,7 +53,7 @@ void simulinkmodeltoblinkLed_step(void)
 	 duty+=0.1;
 	 if(duty>1)
 		 duty=0;
-	 myservo.write(duty);
+//	 myservo.write(duty);
 	 wait(1);
 
 	if(ain.read_u16()  > 48000){
